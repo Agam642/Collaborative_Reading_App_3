@@ -10,6 +10,7 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let viewControllerFile = UIViewController.self
     let cellId = "cellId"
     
     override func viewDidLoad() {
@@ -37,9 +38,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         return CGSize(width: view.frame.width, height: 200)
     }
+    
+    //Eliminates space between images
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
 
-//Shows existing books in Home
+//Home feed
 class bookCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,13 +56,38 @@ class bookCell: UICollectionViewCell {
     let thumbNailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.blue
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    //Adds sperating line between cells
+    let seperatorView : UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.black
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     func setUpViews() {
         
         addSubview(thumbNailImageView)
-        thumbNailImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        addSubview(seperatorView)
+        
+        //Determines the scale of the images in feed
+        let widthConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView])
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView, "v1":seperatorView])
+
+        self.addConstraints(widthConstraints)
+        self.addConstraints(verticalConstraints)
+        
+        //Constraints for line seperator
+        let wLine = NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView])
+        //let vLine = NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView])
+        
+        self.addConstraints(wLine)
+        //self.addConstraints(vLine)
+
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
