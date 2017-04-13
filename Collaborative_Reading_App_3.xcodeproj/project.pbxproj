@@ -14,6 +14,7 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */; };
+		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstRunTutorial.storyboard; sourceTree = "<group>"; };
+		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
@@ -132,6 +135,7 @@
 			files = (
 				3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
+				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
 			);
