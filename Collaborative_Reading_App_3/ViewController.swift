@@ -60,6 +60,27 @@ class bookCell: UICollectionViewCell {
         return imageView
     }()
     
+    let titleLabel : UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor.purple
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let subtitleTextView : UITextView = {
+        let textview = UITextView()
+        textview.backgroundColor = UIColor.red
+        textview.translatesAutoresizingMaskIntoConstraints = false
+        return textview
+    }()
+    
+    let userProfileImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.green
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     //Adds sperating line between cells
     let seperatorView : UIView = {
         let view = UIView()
@@ -72,22 +93,39 @@ class bookCell: UICollectionViewCell {
         
         addSubview(thumbNailImageView)
         addSubview(seperatorView)
+        addSubview(userProfileImageView)
+        addSubview(titleLabel)
+        addSubview(subtitleTextView)
         
         //Determines the scale of the images in feed
-        let widthConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView])
-        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView, "v1":seperatorView])
-
-        self.addConstraints(widthConstraints)
-        self.addConstraints(verticalConstraints)
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView]))
+        
+        //Profile image constraint
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(44)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":userProfileImageView]))
+        
+       self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView, "v1":userProfileImageView, "v2":seperatorView]))
         
         //Constraints for line seperator
-        let wLine = NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView])
-        //let vLine = NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView])
+       self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView]))
         
-        self.addConstraints(wLine)
-        //self.addConstraints(vLine)
+        //Top constraints (used for title)
+        self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbNailImageView, attribute: .bottom, multiplier: 1.0, constant: 8.0)])
+        //Left constraint
+        self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1.0, constant: 8.0)])
+        //Right constraint
+        self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbNailImageView, attribute: .right, multiplier: 1.0, constant: 0.0)])
+        //Height constriant
+        self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 20.0)])
+        
+        //Top constraints (used for subtitle)
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: 8.0)])
+        //Left constraint
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1.0, constant: 8.0)])
+        //Right constraint
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbNailImageView, attribute: .right, multiplier: 1.0, constant: 0.0)])
+        //Height constriant 
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 20.0)])
 
-    
     }
     
     required init?(coder aDecoder: NSCoder) {
