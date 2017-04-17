@@ -56,6 +56,7 @@ class bookCell: UICollectionViewCell {
     let thumbNailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.blue
+        imageView.image = UIImage(named: "RedEyesBDragon-LDK2-EN-C-1E")//Temporary name
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
