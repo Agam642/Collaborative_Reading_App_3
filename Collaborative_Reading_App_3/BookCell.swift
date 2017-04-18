@@ -1,51 +1,12 @@
 //
-//  ViewController.swift
+//  BookCell.swift
 //  Collaborative_Reading_App_3
 //
-//  Created by Student on 2017-04-11.
+//  Created by Saif Al-Din Ali on 2017-04-18.
 //  Copyright © 2017 Student. All rights reserved.
 //
 
 import UIKit
-
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-    let viewControllerFile = UIViewController.self
-    let cellId = "cellId"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = "Home"
-        
-        collectionView?.backgroundColor = UIColor.white
-        
-        collectionView?.register(bookCell.self, forCellWithReuseIdentifier: cellId)
-    }
-    
-    //Displays the cells of the Home feed
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let Height = (view.frame.width - 16 - 16) * 9 / 16//Determines ratio for the size of the image
-        
-        return CGSize(width: view.frame.width, height: Height + 16 + 68)//Adds missing pixels to the image size
-    }
-    
-    //Eliminates space between images
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-}
 
 //Home feed
 class bookCell: UICollectionViewCell {
@@ -91,7 +52,7 @@ class bookCell: UICollectionViewCell {
     //Adds sperating line between cells
     let seperatorView : UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)//RGB Value for light balck colur of the seperator line 
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)//RGB Value for light balck colur of the seperator line
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -110,10 +71,10 @@ class bookCell: UICollectionViewCell {
         //Profile image constraint
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(44)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":userProfileImageView]))
         
-       self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView, "v1":userProfileImageView, "v2":seperatorView]))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":thumbNailImageView, "v1":userProfileImageView, "v2":seperatorView]))
         
         //Constraints for line seperator
-       self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView]))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["v0":seperatorView]))
         
         //Top constraints (used for title)
         self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbNailImageView, attribute: .bottom, multiplier: 1.0, constant: 8.0)])
@@ -130,9 +91,9 @@ class bookCell: UICollectionViewCell {
         self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1.0, constant: 8.0)])
         //Right constraint
         self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbNailImageView, attribute: .right, multiplier: 1.0, constant: 0.0)])
-        //Height constriant 
+        //Height constriant
         self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 30.0)])
-
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
