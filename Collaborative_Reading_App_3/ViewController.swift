@@ -55,29 +55,32 @@ class bookCell: UICollectionViewCell {
     
     let thumbNailImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
         imageView.image = UIImage(named: "RedEyesBDragon-LDK2-EN-C-1E")//Temporary name
+        imageView.contentMode = .scaleAspectFill//Enlarges image to proper bounds
+        imageView.clipsToBounds = true//Clips the image to the proper bounds
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     let titleLabel : UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor.purple
+        label.text = "Red-Eyes Black Dragon"//Temporary name
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let subtitleTextView : UITextView = {
         let textview = UITextView()
-        textview.backgroundColor = UIColor.red
+        textview.text = "2400 Attack, 2000 Defense"//Temporary name
         textview.translatesAutoresizingMaskIntoConstraints = false
         return textview
     }()
     
     let userProfileImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.green
+        imageView.image = UIImage(named: "RedEyesDarknessDragon-LCJW-EN-C-1E")//Temporary name
+        imageView.layer.cornerRadius = 22//Makes the profile image circular
+        imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
