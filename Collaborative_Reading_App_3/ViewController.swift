@@ -36,7 +36,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 200)
+        let Height = (view.frame.width - 16 - 16) * 9 / 16//Determines ratio for the size of the image
+        
+        return CGSize(width: view.frame.width, height: Height + 16 + 68)//Adds missing pixels to the image size
     }
     
     //Eliminates space between images
@@ -72,6 +74,7 @@ class bookCell: UICollectionViewCell {
     let subtitleTextView : UITextView = {
         let textview = UITextView()
         textview.text = "2400 Attack, 2000 Defense"//Temporary name
+        textview.textContainerInset = UIEdgeInsetsMake(0.0, -4.0, 0.0, 0.0)
         textview.translatesAutoresizingMaskIntoConstraints = false
         return textview
     }()
@@ -88,7 +91,7 @@ class bookCell: UICollectionViewCell {
     //Adds sperating line between cells
     let seperatorView : UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)//RGB Value for light balck colur of the seperator line 
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -122,13 +125,13 @@ class bookCell: UICollectionViewCell {
         self.addConstraints([NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 20.0)])
         
         //Top constraints (used for subtitle)
-        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: 8.0)])
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: 4.0)])
         //Left constraint
         self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1.0, constant: 8.0)])
         //Right constraint
         self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbNailImageView, attribute: .right, multiplier: 1.0, constant: 0.0)])
         //Height constriant 
-        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 20.0)])
+        self.addConstraints([NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.0, constant: 30.0)])
 
     }
     
