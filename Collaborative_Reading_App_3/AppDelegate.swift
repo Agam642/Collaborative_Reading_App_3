@@ -14,11 +14,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    /*
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
+    */
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
+        UserDefaults.standard.set("1", forKey: "userAsLoggedInBefore")
+        if (defaults.object(forKey: "userAsLoggedInBefore") != nil) {
+            
+            //here you insert the code to go to the home screen
+            let storyboard = UIStoryboard(name: "main", bundle: nil) //Write your storyboard name
+            _ = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            
+        } else {
+            
+            //this means the user hasn't logged in before and you can redirect him to the registeration page
+            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil) //Write your storyboard name
+            _ = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            
+        }
+        return true
+    }
+    
+    /*
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil) //Write your storyboard name
+            let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.window.rootViewController = UsernameNameInputScene
+            self.window.makeKeyAndVisible()
+        }
+        return true
+    }*/
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

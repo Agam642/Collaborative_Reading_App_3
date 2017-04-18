@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TcV-9x-vd1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TcV-9x-vd1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,12 +31,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="28"/>
                                 <state key="normal" title="New Book"/>
+                                <connections>
+                                    <action selector="NewBookPressed:" destination="f8L-UF-2Jp" eventType="touchUpInside" id="6rv-b2-g8h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFP-WI-Vhj">
                                 <rect key="frame" x="71" y="414" width="233" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="Existing Book"/>
+                                <connections>
+                                    <action selector="ExistingBookPressed:" destination="f8L-UF-2Jp" eventType="touchUpInside" id="aNH-mE-4Y3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpH-am-nir">
                                 <rect key="frame" x="166" y="323" width="42" height="21"/>
@@ -52,6 +58,8 @@
                         <barButtonItem key="leftBarButtonItem" image="Menu-50" id="2dJ-bc-CWr"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ExistingBook" destination="iFP-WI-Vhj" id="j9r-wV-H75"/>
+                        <outlet property="ExistingBookButton" destination="iFP-WI-Vhj" id="e10-f5-bfG"/>
                         <outlet property="NewBook" destination="HKf-jE-egT" id="6Op-sy-oBO"/>
                     </connections>
                 </viewController>
@@ -62,7 +70,7 @@
         <!--Adding Books-->
         <scene sceneID="iEz-eR-4jj">
             <objects>
-                <viewController id="3hy-mp-7dr" userLabel="Adding Books" sceneMemberID="viewController">
+                <viewController id="3hy-mp-7dr" userLabel="Adding Books" customClass="AddingBookViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Bx-zq-97a"/>
                         <viewControllerLayoutGuide type="bottom" id="DXp-GB-9dK"/>
@@ -84,6 +92,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="BookTitleTextFieldChanged:" destination="3hy-mp-7dr" eventType="editingChanged" id="nyJ-fN-wV8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Pages" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbt-ip-RWs">
                                 <rect key="frame" x="54" y="333" width="257" height="30"/>
@@ -91,6 +102,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="PageCountTextFieldChanged:" destination="3hy-mp-7dr" eventType="editingChanged" id="2Wm-qP-N3O"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-H1-uCv">
                                 <rect key="frame" x="54" y="206" width="267" height="93"/>
@@ -112,10 +126,18 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="AuthorNameTextFieldChanged:" destination="3hy-mp-7dr" eventType="editingChanged" id="Z1c-YQ-wwn"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="AuthorNameTextField" destination="Rjv-uC-UHu" id="i69-sX-Pwy"/>
+                        <outlet property="BookTitleTextField" destination="SrT-sj-Oyw" id="1KI-8K-e9g"/>
+                        <outlet property="PageCountTextField" destination="vbt-ip-RWs" id="Y5A-RA-1Hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmI-9T-cow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +148,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gR4-wt-M7F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gR4-wt-M7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
