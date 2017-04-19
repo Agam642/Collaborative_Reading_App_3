@@ -11,27 +11,32 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout : layout))
+        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
-        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 69, green: 179, blue: 231, alpha: 1)//RGB colour value for baby blue
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(69, green: 179, blue: 231)
+        
+        // get rid of black bar underneath navbar
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(),for : .default)
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
-        application.statusBarStyle = .lightContent//Makes the status bar white
-        let statusBarBackGroundView = UIView()
-        statusBarBackGroundView.backgroundColor = UIColor.rgb(red: 26, green: 143, blue: 198, alpha: 1)
+        application.statusBarStyle = .lightContent
         
-        window?.addSubview(statusBarBackGroundView)
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(26, green: 143, blue: 198)
+        
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
+        window?.addConstraintsWithFormat("V:|[v0(20)]", views: statusBarBackgroundView)
         
         return true
     }
