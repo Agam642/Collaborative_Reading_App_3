@@ -17,7 +17,7 @@
         <!--Username View Input-->
         <scene sceneID="NNe-xa-Y9G">
             <objects>
-                <viewController id="Rme-wi-QoM" userLabel="Username View Input" sceneMemberID="viewController">
+                <viewController id="Rme-wi-QoM" userLabel="Username View Input" customClass="NameInput" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5I-AV-Vgm"/>
                         <viewControllerLayoutGuide type="bottom" id="15h-eF-683"/>
@@ -39,6 +39,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NameInputTextFieldChanged:" destination="Rme-wi-QoM" eventType="editingChanged" id="eax-66-Lqr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-Pf-9PJ">
                                 <rect key="frame" x="133" y="394" width="122" height="84"/>

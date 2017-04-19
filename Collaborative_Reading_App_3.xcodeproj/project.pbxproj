@@ -17,6 +17,7 @@
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
+		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
+		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
@@ -157,6 +160,7 @@
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
+				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 			);
