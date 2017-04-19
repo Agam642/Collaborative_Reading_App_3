@@ -185,6 +185,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="Yes"/>
+                                <connections>
+                                    <segue destination="6Ya-wE-ob3" kind="show" id="tLP-nd-ZqB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOC-8o-ALK">
                                 <rect key="frame" x="268" y="447" width="46" height="30"/>
@@ -200,6 +203,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzr-9b-ScI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="98.50074962518741"/>
+        </scene>
+        <!--FirstRunTutorial-->
+        <scene sceneID="ALH-fL-u66">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="6Ya-wE-ob3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A54-8z-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="514"/>
         </scene>
     </scenes>
     <resources>
