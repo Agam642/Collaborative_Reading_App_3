@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opK-uS-7KO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="1742" y="-647"/>
         </scene>
         <!--Adding Books-->
         <scene sceneID="iEz-eR-4jj">
@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmI-9T-cow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="2530" y="-647"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PN0-uG-LDe">
@@ -174,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would You Like to go Through the Tutorial?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5p-qK-Iad">
-                                <rect key="frame" x="16" y="133" width="343" height="137"/>
+                                <rect key="frame" x="16" y="144" width="343" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -194,6 +194,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="No"/>
+                                <connections>
+                                    <segue destination="iBa-Gq-ARr" kind="show" id="bZH-Eh-DLG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,13 +207,55 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="98.50074962518741"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yWY-rG-kwh">
+            <objects>
+                <viewController id="iBa-Gq-ARr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iNa-C4-xCf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZRl-U3-Oyv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yZu-QQ-02j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would You Like to Add a New Book?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aec-fN-uHY">
+                                <rect key="frame" x="39" y="143" width="297" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GM-5b-G9L">
+                                <rect key="frame" x="69" y="463" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <segue destination="f8L-UF-2Jp" kind="show" id="Qis-3C-5dN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfd-vD-a3r">
+                                <rect key="frame" x="260" y="462" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
+                                <state key="normal" title="No"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xh4-iP-uHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="99"/>
+        </scene>
         <!--FirstRunTutorial-->
         <scene sceneID="ALH-fL-u66">
             <objects>
                 <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="6Ya-wE-ob3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A54-8z-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="514"/>
+            <point key="canvasLocation" x="25" y="501"/>
         </scene>
     </scenes>
     <resources>
