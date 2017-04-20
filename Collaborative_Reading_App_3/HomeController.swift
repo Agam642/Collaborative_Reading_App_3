@@ -85,37 +85,58 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     lazy var menuBar: MenuBar = {
         let mb = MenuBar()
-        //mb.homeController = self
+        mb.homeController = self
         return mb
     }()
     
     fileprivate func setupMenuBar() {
+        navigationController?.hidesBarsOnSwipe = true
+        
+        let redView = UIView()
+        redView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
+        view.addSubview(redView)
+        view.addConstraintsWithFormat("H:|[v0]|", views: redView)
+        view.addConstraintsWithFormat("V:[v0(50)]", views: redView)
+        
         view.addSubview(menuBar)
         view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
-        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
+        view.addConstraintsWithFormat("V:[v0(50)]", views: menuBar)
+        
+        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        menuBar.horizontalBarLeftAnchorConstraint?.constant = scrollView.contentOffset.x / 4
+    }
+    
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let index = targetContentOffset.pointee.x / view.frame.width
+        
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition())
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        let colors: [UIColor] = [.blue, .green, UIColor.gray, .purple]
+        
+        cell.backgroundColor = colors[indexPath.item]
         
         return cell
-    }
+}
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = (view.frame.width - 16 - 16) * 9 / 16
-        return CGSize(width: view.frame.width, height: height + 16 + 68)
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-}
 
+}
 
 
 
