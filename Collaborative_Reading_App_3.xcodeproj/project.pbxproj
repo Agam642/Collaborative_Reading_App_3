@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F13420B1EAA3F5D003A7625 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13420A1EAA3F5D003A7625 /* Extensions.swift */; };
+		3F13420D1EAA3F6C003A7625 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13420C1EAA3F6C003A7625 /* BookCell.swift */; };
+		3F13420F1EAA3F76003A7625 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13420E1EAA3F76003A7625 /* MenuBar.swift */; };
+		3F1342111EAA3F7E003A7625 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1342101EAA3F7E003A7625 /* SettingCell.swift */; };
+		3F1342131EAA3F8D003A7625 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1342121EAA3F8D003A7625 /* HomeController.swift */; };
+		3F1342151EAA3F9A003A7625 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1342141EAA3F9A003A7625 /* SettingsLauncher.swift */; };
 		3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F8E1E9D033400A6B555 /* AppDelegate.swift */; };
 		3F155F911E9D033400A6B555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F901E9D033400A6B555 /* ViewController.swift */; };
 		3F155F941E9D033400A6B555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F921E9D033400A6B555 /* Main.storyboard */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F13420A1EAA3F5D003A7625 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/Extensions.swift; sourceTree = "<group>"; };
+		3F13420C1EAA3F6C003A7625 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookCell.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/BookCell.swift; sourceTree = "<group>"; };
+		3F13420E1EAA3F76003A7625 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/MenuBar.swift; sourceTree = "<group>"; };
+		3F1342101EAA3F7E003A7625 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/SettingCell.swift; sourceTree = "<group>"; };
+		3F1342121EAA3F8D003A7625 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/HomeController.swift; sourceTree = "<group>"; };
+		3F1342141EAA3F9A003A7625 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsLauncher.swift; path = ../../../Documents/Collaborative_Reading_App_3/Collaborative_Reading_App_3/SettingsLauncher.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F155F901E9D033400A6B555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1342071EAA3EC5003A7625 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F1342121EAA3F8D003A7625 /* HomeController.swift */,
+				3F1342141EAA3F9A003A7625 /* SettingsLauncher.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F1342081EAA3ECC003A7625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F13420C1EAA3F6C003A7625 /* BookCell.swift */,
+				3F13420E1EAA3F76003A7625 /* MenuBar.swift */,
+				3F1342101EAA3F7E003A7625 /* SettingCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F1342091EAA3ED2003A7625 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3F13420A1EAA3F5D003A7625 /* Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		3F155F821E9D033300A6B555 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +105,9 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F1342091EAA3ED2003A7625 /* Helpers */,
+				3F1342081EAA3ECC003A7625 /* View */,
+				3F1342071EAA3EC5003A7625 /* Controller */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
@@ -159,10 +201,16 @@
 			files = (
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
+				3F1342131EAA3F8D003A7625 /* HomeController.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
+				3F13420D1EAA3F6C003A7625 /* BookCell.swift in Sources */,
+				3F13420F1EAA3F76003A7625 /* MenuBar.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
+				3F1342151EAA3F9A003A7625 /* SettingsLauncher.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
+				3F1342111EAA3F7E003A7625 /* SettingCell.swift in Sources */,
+				3F13420B1EAA3F5D003A7625 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
