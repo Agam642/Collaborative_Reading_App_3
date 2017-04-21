@@ -125,7 +125,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
-        let colors: [UIColor] = [.blue, .green, UIColor.gray, .purple]
+        let colors: [UIColor] = [.blue, .green, UIColor.gray, .purple]//Temporary colours
         
         cell.backgroundColor = colors[indexPath.item]
         
