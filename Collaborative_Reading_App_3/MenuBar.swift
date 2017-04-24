@@ -20,7 +20,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }()
     
     let cellId = "cellId"
-    let imageNames = ["home", "trending", "subscriptions", "account"]
+    let imageNames = ["home", "Add Filled-50", "subscriptions", "account"]
     
     var homeController: HomeController?
     
@@ -47,13 +47,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(horizontalBarView)
         
-        //old school frame way of doing things
-        //        horizontalBarView.frame = CGRectMake(<#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>, <#T##width: CGFloat##CGFloat#>, <#T##height: CGFloat##CGFloat#>)
-        
-        //new school way of laying out our views
-        //in ios9
-        //need x, y, width, height constraints
-        
         horizontalBarLeftAnchorConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
         horizontalBarLeftAnchorConstraint?.isActive = true
         
@@ -63,15 +56,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        //        print(indexPath.item)
-        //        let x = CGFloat(indexPath.item) * frame.width / 4
-        //        horizontalBarLeftAnchorConstraint?.constant = x
-        //
-        //        UIView.animateWithDuration(0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
-        //            self.layoutIfNeeded()
-        //            }, completion: nil)
-        
         homeController?.scrollToMenuIndex(indexPath.item)
     }
     

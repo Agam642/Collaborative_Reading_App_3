@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  Collaborative_Reading_App_3
 //
 //  Created by Student on 2017-04-11.
