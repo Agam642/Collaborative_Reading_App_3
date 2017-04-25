@@ -20,7 +20,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }()
     
     let cellId = "cellId"
-    var books = [Book]?
+    var books : [Book]?
     
     override func setupViews() {
       super.setupViews()
@@ -34,19 +34,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         collectionView.register(BookCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    //Number of Items
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    //Cell for index path
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        
-        return cell
-    }
-    
+    /*
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                 return books?.count ?? 0
             }
@@ -71,6 +59,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
 
     
 }
+ */
 
 
 
