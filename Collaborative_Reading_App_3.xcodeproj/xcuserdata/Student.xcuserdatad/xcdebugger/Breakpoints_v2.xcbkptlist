@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Collaborative_Reading_App_3/SettingsLauncher.swift"
-            timestampString = "514384851.12447"
+            timestampString = "514817047.902322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "init()"
-            landmarkType = "7">
+            startingLineNumber = "266"
+            endingLineNumber = "266">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
