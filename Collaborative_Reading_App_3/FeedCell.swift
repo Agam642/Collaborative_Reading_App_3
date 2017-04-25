@@ -8,9 +8,96 @@
 
 import UIKit
 
-class FeedCell: BaseCell {
+class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    //override func setupViews() {
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .white
+        cv.dataSource = self//Used to run the feed and compile the other classes
+        cv.delegate = self
+        return cv
+    }()
+    
+    let cellId = "cellId"
+    var books = [Book]?
+    
+    override func setupViews() {
+      super.setupViews()
         
-    //}
+        backgroundColor = UIColor.brown
+        
+        addSubview(collectionView)
+        addConstraintsWithFormat("H:|[v0]|", views: collectionView)
+        addConstraintsWithFormat("V:|[v0]|", views: collectionView)
+        
+        collectionView.register(BookCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
+    //Number of Items
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    //Cell for index path
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        
+        return cell
+    }
+    
+     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+                return books?.count ?? 0
+            }
+    
+             func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+                let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! BookCell
+          
+                    cell.video = books?[indexPath.item]
+                
+                return cell
+            }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+               let height = (frame.width - 16 - 16) * 9 / 16
+                return CGSizeMake(frame.width, height + 16 + 88)
+            }
+    
+            func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+                return 0
+            }
+        
+
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

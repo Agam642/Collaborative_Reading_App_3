@@ -90,14 +90,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return mb
     }()
     
-    fileprivate func setupMenuBar() {
+    fileprivate func setupMenuBar() {//Used for the feature opf sliding the title off screen
         navigationController?.hidesBarsOnSwipe = true
         
-        let redView = UIView()
-        redView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
-        view.addSubview(redView)
-        view.addConstraintsWithFormat("H:|[v0]|", views: redView)
-        view.addConstraintsWithFormat("V:[v0(50)]", views: redView)
+        let BlueView = UIView()
+        BlueView.backgroundColor = UIColor.rgb(69, green: 179, blue: 231)
+        view.addSubview(BlueView)
+        view.addConstraintsWithFormat("H:|[v0]|", views: BlueView)
+        view.addConstraintsWithFormat("V:[v0(50)]", views: BlueView)
         
         view.addSubview(menuBar)
         view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
