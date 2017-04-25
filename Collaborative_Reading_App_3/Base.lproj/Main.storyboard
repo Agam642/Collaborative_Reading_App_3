@@ -33,6 +33,7 @@
                                 <state key="normal" title="New Book"/>
                                 <connections>
                                     <action selector="NewBookPressed:" destination="f8L-UF-2Jp" eventType="touchUpInside" id="6rv-b2-g8h"/>
+                                    <segue destination="3hy-mp-7dr" kind="show" id="L1Q-Uv-gZm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFP-WI-Vhj">
@@ -148,7 +149,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gR4-wt-M7F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gR4-wt-M7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
