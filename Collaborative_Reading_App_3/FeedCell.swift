@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*
 class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     lazy var collectionView: UICollectionView = {
@@ -34,7 +35,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         collectionView.register(BookCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    /*
+    
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                 return books?.count ?? 0
             }
@@ -56,10 +57,11 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
                 return 0
             }
         
+/*
 
-    
 }
- */
+
+
 
 
 
