@@ -101,7 +101,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
 
 
 
-}
+
 
 
 

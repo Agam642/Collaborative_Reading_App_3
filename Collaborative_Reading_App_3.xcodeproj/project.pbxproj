@@ -29,6 +29,7 @@
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
+		B04DDB041EB147AA0057BCC5 /* UploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DDB031EB147AA0057BCC5 /* UploadCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
+		B04DDB031EB147AA0057BCC5 /* UploadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				3F1321841EAF7B77002D82BD /* SettingCell.swift */,
 				3F1321861EAF7B9E002D82BD /* MenuBar.swift */,
 				3F1321881EAF7BBC002D82BD /* BookCell.swift */,
+				B04DDB031EB147AA0057BCC5 /* UploadCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */,
 				3F1321851EAF7B77002D82BD /* SettingCell.swift in Sources */,
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
+				B04DDB041EB147AA0057BCC5 /* UploadCell.swift in Sources */,
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
