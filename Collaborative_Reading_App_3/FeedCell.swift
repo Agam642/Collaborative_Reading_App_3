@@ -36,7 +36,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     override func setupViews() {
         super.setupViews()
         
-        //fetchVideos()
+        CameraUpload()
         
         backgroundColor = .brown
         
