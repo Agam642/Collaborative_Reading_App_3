@@ -38,7 +38,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         //        collectionView?.registerClass(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         //collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)//Connects Homecontroller to FeedCell to display feeds
+        collectionView?.register(MenuCell.self, forCellWithReuseIdentifier: cellId)//Connects Homecontroller to FeedCell to display feeds
         
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)

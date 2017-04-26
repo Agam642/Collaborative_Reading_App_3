@@ -22,6 +22,7 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */; };
+		3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
@@ -46,6 +47,7 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstRunTutorial.storyboard; sourceTree = "<group>"; };
+		3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
+				3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
@@ -219,6 +222,7 @@
 				3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */,
 				3F1321851EAF7B77002D82BD /* SettingCell.swift in Sources */,
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
+				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,
