@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F131BBD1EB0CF2C0015071A /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F131BBC1EB0CF2C0015071A /* Camera.storyboard */; };
+		3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BBE1EB0CFF80015071A /* CameraUpload.swift */; };
 		3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217C1EAF78B1002D82BD /* FeedCell.swift */; };
 		3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217E1EAF7B07002D82BD /* HomeController.swift */; };
 		3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F131BBC1EB0CF2C0015071A /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F13217C1EAF78B1002D82BD /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3F13217E1EAF7B07002D82BD /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
@@ -126,8 +130,10 @@
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
+				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
+				3F131BBC1EB0CF2C0015071A /* Camera.storyboard */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
@@ -199,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */,
+				3F131BBD1EB0CF2C0015071A /* Camera.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
@@ -221,6 +228,7 @@
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
+				3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,
 				3F13218B1EAF7BD9002D82BD /* Extensions.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
