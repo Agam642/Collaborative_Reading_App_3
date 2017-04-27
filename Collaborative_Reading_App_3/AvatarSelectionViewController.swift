@@ -10,6 +10,13 @@ import UIKit
 
 class AvatarSelectionViewController: UIViewController {
 
+    @IBOutlet weak var selectAvatarLbl: UILabel!
+
+    
+    
+    
+    
+    
     @IBAction func touchWolf(_ sender: Any) {
     }
     
@@ -57,8 +64,8 @@ class AvatarSelectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    
     /*
     // MARK: - Navigation
 
