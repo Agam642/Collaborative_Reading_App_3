@@ -2,8 +2,8 @@
 //  HomeController.swift
 //  Collaborative_Reading_App_3
 //
-//  Created by Student on 2017-04-11.
-//  Copyright © 2017 Student. All rights reserved.
+//  Created by Saif Al-Din on 2017-04-11.
+//  Copyright © 2017 Saif Al-Din. All rights reserved.
 //
 
 import UIKit
@@ -35,10 +35,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
         
         collectionView?.backgroundColor = UIColor.white
-        
-        //        collectionView?.registerClass(VideoCell.self, forCellWithReuseIdentifier: "cellId")
-        //collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.register(MenuCell.self, forCellWithReuseIdentifier: cellId)//Connects Homecontroller to FeedCell to display feeds
+        collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
         
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)

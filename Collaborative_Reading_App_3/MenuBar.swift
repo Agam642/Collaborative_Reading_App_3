@@ -3,7 +3,7 @@
 //  Collaborative_Reading_App_3
 //
 //  Created by Saif Al-Din Ali on 2017-04-18.
-//  Copyright © 2017 Student. All rights reserved.
+//  Copyright © 2017 Saif Al-Din. All rights reserved.
 //
 
 import UIKit
