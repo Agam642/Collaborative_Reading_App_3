@@ -5,7 +5,7 @@
 //  Created by Saif Al-Din Ali on 2017-04-18.
 //  Copyright © 2017 Student. All rights reserved.
 //
-
+/*
 import UIKit
 
 extension UIColor {
@@ -69,4 +69,4 @@ class CustomImageView: UIImageView {
     
 }
 
-
+*/

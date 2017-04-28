@@ -6,6 +6,7 @@
 //  Copyright © 2017 Student. All rights reserved.
 //
 
+/*
 import UIKit
 
 class BaseCell: UICollectionViewCell {
@@ -98,3 +99,4 @@ class BookCell: BaseCell {
         addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
 }
+*/

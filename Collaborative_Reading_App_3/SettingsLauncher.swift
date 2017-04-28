@@ -5,7 +5,7 @@
 //  Created by Student on 2017-04-20.
 //  Copyright © 2017 Student. All rights reserved.
 //
-
+/*
 import UIKit
 
 class Setting: NSObject {
@@ -135,9 +135,5 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
 }
 
 
-
-
-
-
-
+*/
 

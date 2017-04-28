@@ -10,6 +10,8 @@ import UIKit
 
 class NameInput: UIViewController {
 
+    @IBOutlet weak var nameInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,9 +34,13 @@ class NameInput: UIViewController {
     }
     */
     
-    @IBAction func NameInputTextFieldChanged(_ sender: Any) {
+    @IBAction func goToNext(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToNext", sender: self)
     }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destination = segue.destination as! AvatarSelectionViewController
+        destination.passedData = nameInput.text!
+    }
 }

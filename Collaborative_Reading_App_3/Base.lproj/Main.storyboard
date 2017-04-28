@@ -149,18 +149,54 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gR4-wt-M7F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gR4-wt-M7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bPf-eu-JNT" kind="relationship" relationship="rootViewController" id="Lpq-4n-rSP"/>
+                        <segue destination="cYw-SP-gga" kind="relationship" relationship="rootViewController" id="7xA-ha-KLM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4I-DL-Nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="25" y="-647"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="i1Y-VI-K3c">
+            <objects>
+                <viewController id="cYw-SP-gga" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bKF-ZG-V2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="fu0-tQ-JOI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6EE-oh-MJp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press The Arrow To Set Up Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-c0-ei9">
+                                <rect key="frame" x="49" y="167" width="277" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-gE-fIv">
+                                <rect key="frame" x="155" y="383" width="64" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="button"/>
+                                <connections>
+                                    <segue destination="6Ya-wE-ob3" kind="show" id="Lzr-6S-Prr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Lk-1V-LJO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yl-GQ-P7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="99"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K9v-nt-DLV">
@@ -186,9 +222,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="Yes"/>
-                                <connections>
-                                    <segue destination="6Ya-wE-ob3" kind="show" id="tLP-nd-ZqB"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOC-8o-ALK">
                                 <rect key="frame" x="268" y="447" width="46" height="30"/>
@@ -256,10 +289,11 @@
                 <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="6Ya-wE-ob3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A54-8z-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="501"/>
+            <point key="canvasLocation" x="-775" y="609"/>
         </scene>
     </scenes>
     <resources>
         <image name="Menu-50" width="16" height="16"/>
+        <image name="button" width="61" height="61"/>
     </resources>
 </document>

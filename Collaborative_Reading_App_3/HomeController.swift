@@ -5,7 +5,7 @@
 //  Created by Student on 2017-04-11.
 //  Copyright © 2017 Student. All rights reserved.
 //
-
+/*
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -135,7 +135,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
 }
-
+*/
 
 
 

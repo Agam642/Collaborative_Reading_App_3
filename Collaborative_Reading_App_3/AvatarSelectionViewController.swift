@@ -10,6 +10,11 @@ import UIKit
 
 class AvatarSelectionViewController: UIViewController {
 
+    @IBOutlet weak var namelbl: UILabel!
+    
+    var passedData = ""
+    
+    
     @IBAction func touchWolf(_ sender: Any) {
     }
     
@@ -49,8 +54,9 @@ class AvatarSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        namelbl.text = passedData
     }
 
     override func didReceiveMemoryWarning() {

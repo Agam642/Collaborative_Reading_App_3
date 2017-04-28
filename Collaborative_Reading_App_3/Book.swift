@@ -6,7 +6,7 @@
 //  Copyright © 2017 Student. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 class Book: NSObject {
     
@@ -24,3 +24,4 @@ class User: NSObject {
     var profileImageName: String?
 }
 
+*/

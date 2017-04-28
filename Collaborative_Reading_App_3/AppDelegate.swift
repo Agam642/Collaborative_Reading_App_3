@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
+        //window = UIWindow(frame: UIScreen.main.bounds)
+        //window?.makeKeyAndVisible()
+        /*
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintsWithFormat("V:|[v0(20)]", views: statusBarBackgroundView)
         
+ */
         return true
     }
     
