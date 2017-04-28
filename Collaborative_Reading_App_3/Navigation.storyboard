@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="1594" y="2203"/>
         </scene>
-        <!--Item-->
+        <!--Upload-->
         <scene sceneID="Ycq-no-xhE">
             <objects>
                 <viewController id="5zN-4L-8KG" customClass="CameraUpload" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dch-Fp-Wpr"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="Photo" selectedImage="Photo" id="dch-Fp-Wpr"/>
                     <connections>
                         <outlet property="myImageView" destination="Upj-By-lsI" id="Nuo-uW-mhq"/>
                     </connections>
@@ -149,6 +149,7 @@
     <resources>
         <image name="Home" width="21" height="23"/>
         <image name="Home_Selected" width="21" height="23"/>
+        <image name="Photo" width="22" height="23"/>
         <image name="Search" width="23" height="22"/>
         <image name="Search_Selected" width="23" height="22"/>
     </resources>

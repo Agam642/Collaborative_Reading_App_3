@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TcV-9x-vd1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AsR-WT-LAl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opK-uS-7KO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="-647"/>
+            <point key="canvasLocation" x="3465" y="-683"/>
         </scene>
         <!--Adding Books-->
         <scene sceneID="iEz-eR-4jj">
@@ -142,12 +142,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmI-9T-cow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2530" y="-647"/>
+            <point key="canvasLocation" x="4252" y="-683"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Add Book-->
         <scene sceneID="PN0-uG-LDe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Book" image="Plus Math-50" selectedImage="Plus Math Filled-50" id="hKV-DJ-Lwy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gR4-wt-M7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -160,9 +161,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4I-DL-Nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="1721" y="-683"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Book-->
         <scene sceneID="K9v-nt-DLV">
             <objects>
                 <viewController id="bPf-eu-JNT" sceneMemberID="viewController">
@@ -202,11 +203,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Add Book" image="Plus Math-50" selectedImage="Plus Math Filled-50" id="Nuw-iL-Lss"/>
                     <navigationItem key="navigationItem" id="A18-Qd-995"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzr-9b-ScI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="98.50074962518741"/>
+            <point key="canvasLocation" x="1721" y="205"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yWY-rG-kwh">
@@ -248,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xh4-iP-uHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="99"/>
+            <point key="canvasLocation" x="2671" y="63"/>
         </scene>
         <!--FirstRunTutorial-->
         <scene sceneID="ALH-fL-u66">
@@ -256,43 +258,84 @@
                 <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="6Ya-wE-ob3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A54-8z-d4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="501"/>
+            <point key="canvasLocation" x="1748" y="533"/>
         </scene>
-        <!--Saved Books-->
-        <scene sceneID="bvS-yW-VTW">
+        <!--Discover-->
+        <scene sceneID="P0A-a2-vf4">
             <objects>
-                <viewController id="9T6-nH-FOn" userLabel="Saved Books" sceneMemberID="viewController">
+                <viewController id="Pkd-Qi-Low" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ebb-zi-qC8"/>
-                        <viewControllerLayoutGuide type="bottom" id="V89-9j-fCo"/>
+                        <viewControllerLayoutGuide type="top" id="sng-sN-j1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Eu-n7-Lp0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mJh-mt-hTj">
+                    <view key="view" contentMode="scaleToFill" id="JXD-69-grf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Discover" image="Search" selectedImage="Search_Selected" id="z7M-uh-Q4m"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zk4-mO-cnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZf-hF-tRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="294" y="912"/>
+            <point key="canvasLocation" x="620" y="495"/>
         </scene>
-        <!--Camera Upload-->
-        <scene sceneID="8nG-bi-cL2">
+        <!--Home-->
+        <scene sceneID="ESi-t2-ecu">
             <objects>
-                <viewController id="Q3S-pu-utI" customClass="CameraUpload" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m2L-V7-bv9" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PmG-Gd-ZED"/>
-                        <viewControllerLayoutGuide type="bottom" id="P4R-0I-W5h"/>
+                        <viewControllerLayoutGuide type="top" id="REf-ga-fbZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="zxE-HY-Wsg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0nI-sD-zeE">
+                    <view key="view" contentMode="scaleToFill" id="d3n-iS-VKi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_Selected" id="Ydc-5V-ldB" userLabel="Home"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dec-T4-Gvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cLE-gQ-Lx6">
+            <objects>
+                <tabBarController id="AsR-WT-LAl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kbq-PT-JtR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="m2L-V7-bv9" kind="relationship" relationship="viewControllers" id="wvl-sh-bEj"/>
+                        <segue destination="Pkd-Qi-Low" kind="relationship" relationship="viewControllers" id="KpX-g0-2O4"/>
+                        <segue destination="snj-zs-0FH" kind="relationship" relationship="viewControllers" id="34h-JS-rKq"/>
+                        <segue destination="Fh3-yL-PAA" kind="relationship" relationship="viewControllers" id="Ab2-o4-70B"/>
+                        <segue destination="bPf-eu-JNT" kind="relationship" relationship="viewControllers" id="cxM-qJ-zI7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ap1-Iz-Cax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="-45"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="TOe-GP-m8s">
+            <objects>
+                <viewController id="snj-zs-0FH" customClass="CameraUpload" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kn3-Zd-dah"/>
+                        <viewControllerLayoutGuide type="bottom" id="HyT-6M-Cc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sx6-Sd-sVS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whO-mM-chs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybh-z2-FNM">
                                 <rect key="frame" x="0.0" y="39" width="375" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="day-eX-Xsq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-jo-sm1">
                                 <rect key="frame" x="0.0" y="460" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,40 +343,52 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ImageUpload:" destination="Q3S-pu-utI" eventType="touchUpInside" id="s6P-pN-QWh"/>
+                                    <action selector="ImageUpload:" destination="snj-zs-0FH" eventType="touchUpInside" id="V1G-y8-8zy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="Photo" selectedImage="Photo" id="5xa-Kq-4jG"/>
                     <connections>
-                        <outlet property="myImageView" destination="whO-mM-chs" id="qlP-Rj-cgM"/>
+                        <outlet property="myImageView" destination="Ybh-z2-FNM" id="7XJ-YM-WNe"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f78-gm-dBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kg6-oR-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="895"/>
+            <point key="canvasLocation" x="-874" y="1200"/>
         </scene>
         <!--Profile-->
-        <scene sceneID="MUz-Nq-6Xe">
+        <scene sceneID="l3U-op-TsX">
             <objects>
-                <viewController id="wF5-uM-hI8" userLabel="Profile" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhe-Hq-oVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Fh3-yL-PAA" userLabel="Profile" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ECF-km-Q2v"/>
-                        <viewControllerLayoutGuide type="bottom" id="XeO-py-uIG"/>
+                        <viewControllerLayoutGuide type="top" id="lJr-LZ-vLS"/>
+                        <viewControllerLayoutGuide type="bottom" id="GoC-gO-BaY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ygu-On-rvr">
+                    <view key="view" contentMode="scaleToFill" id="Bw7-CB-Dbk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="DSh-Su-puL"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EbI-ze-jUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2104" y="970"/>
+            <point key="canvasLocation" x="33" y="1200"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="21" height="23"/>
+        <image name="Home_Selected" width="21" height="23"/>
         <image name="Menu-50" width="16" height="16"/>
+        <image name="Photo" width="22" height="23"/>
+        <image name="Plus Math Filled-50" width="50" height="50"/>
+        <image name="Plus Math-50" width="50" height="50"/>
+        <image name="Search" width="23" height="22"/>
+        <image name="Search_Selected" width="23" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cxM-qJ-zI7"/>
+    </inferredMetricsTieBreakers>
 </document>
