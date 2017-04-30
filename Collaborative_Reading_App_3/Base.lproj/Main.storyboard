@@ -335,15 +335,12 @@
                                 <rect key="frame" x="0.0" y="39" width="375" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-jo-sm1">
-                                <rect key="frame" x="0.0" y="460" width="375" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CD-ly-Fdg">
+                                <rect key="frame" x="135" y="484" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="import Image">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Choose Image"/>
                                 <connections>
-                                    <action selector="ImageUpload:" destination="snj-zs-0FH" eventType="touchUpInside" id="V1G-y8-8zy"/>
+                                    <action selector="ChooseImage:" destination="snj-zs-0FH" eventType="touchUpInside" id="QX0-cg-vhX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -356,12 +353,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg6-oR-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874" y="1200"/>
+            <point key="canvasLocation" x="-874.39999999999998" y="1199.5502248875564"/>
         </scene>
         <!--Profile-->
         <scene sceneID="l3U-op-TsX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhe-Hq-oVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Fh3-yL-PAA" userLabel="Profile" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lJr-LZ-vLS"/>
@@ -374,6 +370,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="DSh-Su-puL"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhe-Hq-oVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="1200"/>
         </scene>

@@ -9,15 +9,15 @@
 import UIKit
 
 class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     @IBOutlet weak var myImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,21 +33,31 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         }
         
         self.dismiss(animated: true, completion: nil)
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
     }
     
-    @IBAction func ImageUpload(_ sender: Any) {
+        @IBAction func ChooseImage(_ sender: Any) {
         
-        let image = UIImagePickerController()
-        image.delegate = self
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.sourceType = UIImagePickerControllerSourceType.camera
+        let actionSheet = UIAlertController(title: "Photo Shource", message: "Choose a source", preferredStyle: .actionSheet)
         
-        image.allowsEditing = false
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } }))
         
-        self.present(image, animated: true)
-        {
-            //After completed
-        }
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)}))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }
