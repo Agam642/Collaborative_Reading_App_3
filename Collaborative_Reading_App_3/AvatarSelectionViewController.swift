@@ -9,12 +9,10 @@
 import UIKit
 
 class AvatarSelectionViewController: UIViewController {
-
+    //create outlet for the label which will display the users name
     @IBOutlet weak var namelbl: UILabel!
     
-    var passedData = ""
-    
-    
+    //Action for each button pressed (avater chosen)
     @IBAction func touchWolf(_ sender: Any) {
     }
     
@@ -52,11 +50,16 @@ class AvatarSelectionViewController: UIViewController {
     @IBAction func touchPenguin(_ sender: Any) {
     }
     
+    //sets the variable passedData as an empty string
+    var passedData = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        namelbl.text = passedData
+        //Prints the message in the viewcontroller
+        namelbl.text = "Hi " + passedData + ", Please Select an Avatar"
     }
 
     override func didReceiveMemoryWarning() {
