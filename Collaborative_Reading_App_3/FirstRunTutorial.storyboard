@@ -196,6 +196,9 @@
                                 <rect key="frame" x="220" y="563" width="71" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ForwardButton" image="button"/>
+                                <connections>
+                                    <segue destination="OzD-1b-aiw" kind="show" id="vBH-54-n28"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Wu-8mV">
                                 <rect key="frame" x="95" y="563" width="63" height="60"/>
@@ -235,22 +238,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMR-xO-chY">
-                                <rect key="frame" x="50" y="295" width="91" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="25"/>
-                                <state key="normal" title="Yes"/>
-                                <connections>
-                                    <action selector="YesToStartReadingPressed:" destination="OzD-1b-aiw" eventType="touchUpInside" id="tVS-05-75f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-tu-G07">
-                                <rect key="frame" x="256" y="295" width="75" height="60"/>
+                                <rect key="frame" x="240" y="303" width="75" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="25"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
                                     <action selector="SkipPressed:" destination="OzD-1b-aiw" eventType="touchUpInside" id="Wah-C7-onn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMR-xO-chY">
+                                <rect key="frame" x="50" y="303" width="91" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="25"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <action selector="YesToStartReadingPressed:" destination="OzD-1b-aiw" eventType="touchUpInside" id="tVS-05-75f"/>
+                                    <segue destination="ubk-a5-KfD" kind="show" id="dYL-Po-k3A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,7 +263,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Nm-8o-IpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="-212"/>
+            <point key="canvasLocation" x="2532" y="593"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="wpN-zr-ZyH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="f80-zK-8s5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6J-Bg-EY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="608"/>
+        </scene>
+        <!--New Book-->
+        <scene sceneID="g2u-lD-DW4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="New Book" id="ubk-a5-KfD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NfI-Ts-3sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2452" y="1045"/>
         </scene>
     </scenes>
     <resources>

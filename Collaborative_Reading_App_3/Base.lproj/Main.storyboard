@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="98.50074962518741"/>
         </scene>
-        <!--View Controller-->
+        <!--New Book-->
         <scene sceneID="yWY-rG-kwh">
             <objects>
-                <viewController id="iBa-Gq-ARr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="New Book" id="iBa-Gq-ARr" userLabel="New Book" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iNa-C4-xCf"/>
                         <viewControllerLayoutGuide type="bottom" id="ZRl-U3-Oyv"/>
@@ -282,6 +282,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xh4-iP-uHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="948" y="99"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iBh-D2-yNp">
+            <objects>
+                <viewController id="NiS-yr-9cV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NIF-AA-q4l"/>
+                        <viewControllerLayoutGuide type="bottom" id="4u1-Wv-kKL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cn8-jn-mAX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wm-98-bJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="861"/>
         </scene>
         <!--FirstRunTutorial-->
         <scene sceneID="ALH-fL-u66">
