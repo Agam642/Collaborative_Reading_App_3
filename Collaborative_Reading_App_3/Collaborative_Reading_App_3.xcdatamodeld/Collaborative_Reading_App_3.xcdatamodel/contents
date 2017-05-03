@@ -6,14 +6,11 @@
         <attribute name="bookpagecount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
-        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="avatarClicked" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="bookTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pageCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="BookInfo" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="UserInfo" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="UserInfo" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>
