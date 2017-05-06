@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -366,16 +367,38 @@
                     <view key="view" contentMode="scaleToFill" id="Bw7-CB-Dbk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTF-uS-UOA">
+                                <rect key="frame" x="292" y="33" width="50" height="75"/>
+                                <state key="normal" image="Add-50"/>
+                                <connections>
+                                    <segue destination="B1d-SM-CAV" kind="show" id="dJN-kd-FVs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oTF-uS-UOA" secondAttribute="trailing" constant="17" id="jAm-5B-PgV"/>
+                            <constraint firstItem="oTF-uS-UOA" firstAttribute="top" secondItem="lJr-LZ-vLS" secondAttribute="bottom" constant="38" id="z0X-1L-D7F"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="DSh-Su-puL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhe-Hq-oVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="1200"/>
+            <point key="canvasLocation" x="32.799999999999997" y="1199.5502248875564"/>
+        </scene>
+        <!--ProfileCameraUpload-->
+        <scene sceneID="vgR-Sp-G79">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileCameraUpload" id="B1d-SM-CAV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1B-sY-OX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="979"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Add-50" width="50" height="50"/>
         <image name="Home" width="21" height="23"/>
         <image name="Home_Selected" width="21" height="23"/>
         <image name="Menu-50" width="16" height="16"/>

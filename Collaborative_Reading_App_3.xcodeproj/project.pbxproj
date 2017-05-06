@@ -21,6 +21,8 @@
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
 		B04DDB061EB224BD0057BCC5 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */; };
+		B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */; };
+		B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
 		B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
+		B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileCameraUpload.storyboard; sourceTree = "<group>"; };
+		B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
 				B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */,
+				B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */,
+				B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
+				B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +212,7 @@
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
+				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
