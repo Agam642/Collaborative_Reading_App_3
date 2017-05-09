@@ -15,12 +15,14 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */; };
+		3F15A6E01EC09E5E005158A9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F15A6DF1EC09E5E005158A9 /* Home.storyboard */; };
+		3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */; };
+		3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */; };
 		3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
-		B04DDB061EB224BD0057BCC5 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */; };
 		B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */; };
 		B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */; };
 /* End PBXBuildFile section */
@@ -36,12 +38,14 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstRunTutorial.storyboard; sourceTree = "<group>"; };
+		3F15A6DF1EC09E5E005158A9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tic Tac Toe.storyboard"; sourceTree = "<group>"; };
+		3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
-		B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileCameraUpload.storyboard; sourceTree = "<group>"; };
 		B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,34 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F13218C1EAF837C002D82BD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		3F1342071EAA3EC5003A7625 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		3F1342081EAA3ECC003A7625 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		3F1342091EAA3ED2003A7625 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		3F155F821E9D033300A6B555 = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +80,8 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
-				3F13218C1EAF837C002D82BD /* Model */,
-				3F1342091EAA3ED2003A7625 /* Helpers */,
-				3F1342081EAA3ECC003A7625 /* View */,
-				3F1342071EAA3EC5003A7625 /* Controller */,
+				3F6AA91C1EC1F58600300C5A /* Games */,
+				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
@@ -121,11 +95,35 @@
 				3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */,
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
-				B04DDB051EB224BD0057BCC5 /* Navigation.storyboard */,
+				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
+			);
+			path = Collaborative_Reading_App_3;
+			sourceTree = "<group>";
+		};
+		3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */ = {
+			isa = PBXGroup;
+			children = (
 				B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */,
 				B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */,
 			);
-			path = Collaborative_Reading_App_3;
+			name = ProfileCameraUpload;
+			sourceTree = "<group>";
+		};
+		3F6AA91C1EC1F58600300C5A /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				3F6AA91D1EC1F58E00300C5A /* Tic Tac Toe */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		3F6AA91D1EC1F58E00300C5A /* Tic Tac Toe */ = {
+			isa = PBXGroup;
+			children = (
+				3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */,
+				3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */,
+			);
+			name = "Tic Tac Toe";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,13 +186,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04DDB061EB224BD0057BCC5 /* Navigation.storyboard in Resources */,
 				3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
+				3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
 				B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */,
+				3F15A6E01EC09E5E005158A9 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +213,7 @@
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
+				3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
