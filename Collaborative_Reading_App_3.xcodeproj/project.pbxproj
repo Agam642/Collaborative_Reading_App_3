@@ -25,6 +25,8 @@
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
 		B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */; };
 		B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */; };
+		B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF40921EC495D800F61ABD /* AddBooksVC.swift */; };
+		B0EF40951EC4967600F61ABD /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
 		B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileCameraUpload.storyboard; sourceTree = "<group>"; };
 		B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
+		B0EF40921EC495D800F61ABD /* AddBooksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBooksVC.swift; path = ../AddBooksVC.swift; sourceTree = "<group>"; };
+		B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookTableViewCell.swift; path = ../BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */,
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
+				B0EF40921EC495D800F61ABD /* AddBooksVC.swift */,
+				B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */,
 				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
 			);
 			path = Collaborative_Reading_App_3;
@@ -207,6 +213,8 @@
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
+				B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */,
+				B0EF40951EC4967600F61ABD /* BookTableViewCell.swift in Sources */,
 				3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
