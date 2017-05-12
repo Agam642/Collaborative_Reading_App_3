@@ -11,7 +11,7 @@ import CoreData
 
 class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var presents = [Add_Books]()
+    var books = [Add_Books]()
     
     var managedObjextContext:NSManagedObjectContext!
     
@@ -29,10 +29,10 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     }
     
     func loadData(){
-        let presentRequest:NSFetchRequest<Add_Books> = Add_Books.fetchRequest()
+        let bookRequest:NSFetchRequest<Add_Books> = Add_Books.fetchRequest()
         
         do {
-            presents = try managedObjextContext.fetch(presentRequest)
+            books = try managedObjextContext.fetch(bookRequest)
             self.tableView.reloadData()
         }catch {
             print("Could not load data from database \(error.localizedDescription)")
@@ -61,27 +61,29 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return presents.count
+        return books.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookTableViewCell
         
-        let presentItem = presents[indexPath.row]
+        let bookItem = books[indexPath.row]
         
-        if let presentImage = UIImage(data: presentItem.image! as Data) {
-            cell.backgroundImageView.image = presentImage
+        if let bookImage = UIImage(data: bookItem.image! as Data) {
+            cell.backgroundImageView.image = bookImage
         }
         
-        cell.nameLabel.text = presentItem.author
-        cell.itemLabel.text = presentItem.bookName
+        cell.titleLabel.text = bookItem.bookName
+        cell.authorLabel.text = bookItem.author
+        cell.pageNumberLabel.text = bookItem.numberOfPages
         
         
         return cell
     }
     
-    @IBAction func addPresent(_ sender: Any) {
+    
+    @IBAction func addBook(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -90,10 +92,8 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
         
         self.present(imagePicker, animated: true, completion: nil)
         
-        
+
     }
-    
-    
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -105,7 +105,7 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
-                self.createPresentItem(with: image)
+                self.createBookItem(with: image)
             })
         }
         
@@ -114,28 +114,33 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     
     
     
-    func createPresentItem (with image:UIImage) {
+    func createBookItem (with image:UIImage) {
         
-        let presentItem = Add_Books(context: managedObjextContext)
-        presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+        let bookItem = Add_Books(context: managedObjextContext)
+        bookItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
-        let inputAlert = UIAlertController(title: "New Present", message: "Enter a person and a present.", preferredStyle: .alert)
+        let inputAlert = UIAlertController(title: "New Book", message: "Enter a new book.", preferredStyle: .alert)
         inputAlert.addTextField { (textfield:UITextField) in
-            textfield.placeholder = "Person"
+            textfield.placeholder = "Book Name"
         }
         inputAlert.addTextField { (textfield:UITextField) in
-            textfield.placeholder = "Present"
+            textfield.placeholder = "Author"
+        }
+        inputAlert.addTextField { (textfield:UITextField) in
+            textfield.placeholder = "Number Of Pages"
         }
         
         inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
             
-            let personTextField = inputAlert.textFields?.first
-            let presentTextField = inputAlert.textFields?.last
+            let BookNameTextField = inputAlert.textFields?[0]
+            let AuthorTextField = inputAlert.textFields?[1]
+            let PagesTextField = inputAlert.textFields?[2]
             
-            if personTextField?.text != "" && presentTextField?.text != "" {
-                presentItem.author = personTextField?.text
-                presentItem.bookName = presentTextField?.text
+            if BookNameTextField?.text != "" && AuthorTextField?.text != "" {
+                bookItem.bookName = BookNameTextField?.text
+                bookItem.author = AuthorTextField?.text
+                bookItem.numberOfPages = PagesTextField?.text
                 
                 do {
                     try self.managedObjextContext.save()

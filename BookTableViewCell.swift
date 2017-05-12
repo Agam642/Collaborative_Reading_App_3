@@ -9,24 +9,25 @@
 import UIKit
 
 class BookTableViewCell : UITableViewCell {
-        
-        @IBOutlet weak var nameLabel: UILabel!
+    
+        @IBOutlet weak var titleLabel: UILabel!
+    
+        @IBOutlet weak var authorLabel: UILabel!
     
     
-        @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var pageNumberLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
         
-        @IBOutlet weak var backgroundImageView: UIImageView!
-        
-        
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            // Initialization code
-        }
-        
-        override func setSelected(_ selected: Bool, animated: Bool) {
-            super.setSelected(selected, animated: animated)
-            
-            // Configure the view for the selected state
-        }
-        
+        // Configure the view for the selected state
+    }
+    
 }
