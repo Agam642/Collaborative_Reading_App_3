@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AsR-WT-LAl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AsR-WT-LAl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -298,43 +298,6 @@
             </objects>
             <point key="canvasLocation" x="1112" y="319"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="ESi-t2-ecu">
-            <objects>
-                <viewController id="m2L-V7-bv9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="REf-ga-fbZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="zxE-HY-Wsg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="d3n-iS-VKi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGg-IC-Egf">
-                                <rect key="frame" x="288" y="28" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Add-50"/>
-                                <connections>
-                                    <segue destination="rvj-AW-F0X" kind="show" id="TmF-ay-Y8I"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_Selected" id="Ydc-5V-ldB" userLabel="Home"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dec-T4-Gvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="-805.54722638680664"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="f1z-tJ-qop">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="rvj-AW-F0X" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ghz-XA-awD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="718" y="-1051"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cLE-gQ-Lx6">
             <objects>
@@ -345,7 +308,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="m2L-V7-bv9" kind="relationship" relationship="viewControllers" id="gph-9q-EDm"/>
                         <segue destination="Pkd-Qi-Low" kind="relationship" relationship="viewControllers" id="KpX-g0-2O4"/>
                         <segue destination="Fh3-yL-PAA" kind="relationship" relationship="viewControllers" id="Ab2-o4-70B"/>
                         <segue destination="bPf-eu-JNT" kind="relationship" relationship="viewControllers" id="cxM-qJ-zI7"/>
@@ -423,15 +385,15 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OxH-pU-wlI" id="OEf-jh-jxw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="a85-tX-KZK">
-                                            <rect key="frame" x="-3" y="-2" width="377" height="144"/>
+                                            <rect key="frame" x="-3" y="-2" width="377" height="143.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90Z-KQ-GqJ">
-                                            <rect key="frame" x="-3" y="-2" width="377" height="144"/>
+                                            <rect key="frame" x="-3" y="-2" width="377" height="143.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
