@@ -55,12 +55,12 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return books.count
     }
     
@@ -68,6 +68,7 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookTableViewCell
         
+        //Where the items are saved in Core Data
         let bookItem = books[indexPath.row]
         
         if let bookImage = UIImage(data: bookItem.image! as Data) {
