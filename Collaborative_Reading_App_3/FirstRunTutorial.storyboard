@@ -6,6 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -42,30 +45,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's Your Name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0p-2k-uGY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0p-2k-uGY">
                                 <rect key="frame" x="47" y="193" width="295" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="g9E-d3-PLc"/>
+                                    <constraint firstAttribute="height" constant="97" id="rHl-Wy-ird"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-Pf-9PJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-Pf-9PJ">
                                 <rect key="frame" x="133" y="362" width="122" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
                                 <connections>
                                     <action selector="goToNext:" destination="Rme-wi-QoM" eventType="touchUpInside" id="xG0-uM-lYT"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-N2-lAz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-N2-lAz">
                                 <rect key="frame" x="53" y="288" width="269" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CQZ-Qc-DPD"/>
+                                    <constraint firstAttribute="width" constant="269" id="w03-I6-ol4"/>
+                                </constraints>
                                 <color key="textColor" red="0.16078431372549018" green="0.6705882352941176" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cJf-N2-lAz" firstAttribute="centerX" secondItem="L2g-4u-OQr" secondAttribute="centerX" id="2MN-RU-8ep"/>
+                            <constraint firstItem="mz9-Pf-9PJ" firstAttribute="top" secondItem="cJf-N2-lAz" secondAttribute="bottom" constant="44" id="4Ra-Jy-wGs"/>
+                            <constraint firstItem="y0p-2k-uGY" firstAttribute="centerX" secondItem="mz9-Pf-9PJ" secondAttribute="centerX" id="jbx-Ai-yOq"/>
+                            <constraint firstItem="y0p-2k-uGY" firstAttribute="leading" secondItem="L2g-4u-OQr" secondAttribute="leadingMargin" constant="31" id="riV-yF-6u1"/>
+                            <constraint firstItem="mz9-Pf-9PJ" firstAttribute="top" secondItem="y0p-2k-uGY" secondAttribute="bottom" constant="72" id="wl0-68-aVE"/>
+                            <constraint firstItem="y0p-2k-uGY" firstAttribute="top" secondItem="z5I-AV-Vgm" secondAttribute="bottom" constant="173" id="yOv-YY-L0q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oP9-bH-8LL"/>
                     <connections>
@@ -89,127 +105,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi NAME, please select an avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-tU-Pa1">
-                                <rect key="frame" x="30" y="72" width="329" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi NAME, please select an avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrL-tU-Pa1">
+                                <rect key="frame" x="23" y="28" width="329" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="gmo-kY-peQ"/>
+                                    <constraint firstAttribute="height" constant="59" id="scq-fv-66o"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBT-f3-Smb">
-                                <rect key="frame" x="16" y="149" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Wolf" image="Wolf"/>
-                                <connections>
-                                    <action selector="touchWolf:" destination="E83-Uk-But" eventType="touchUpInside" id="HQD-ey-nmO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shH-B5-jOq">
-                                <rect key="frame" x="135" y="150" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bear" image="Bear"/>
-                                <connections>
-                                    <action selector="touchBear:" destination="E83-Uk-But" eventType="touchUpInside" id="xVI-lu-32T"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-f2-mIg">
-                                <rect key="frame" x="254" y="150" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sheep" image="SHEEP"/>
-                                <connections>
-                                    <action selector="touchSheep:" destination="E83-Uk-But" eventType="touchUpInside" id="nCR-Sc-Bnx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbD-CH-3vf">
-                                <rect key="frame" x="254" y="440" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cow" image="Cow"/>
-                                <connections>
-                                    <action selector="touchCow:" destination="E83-Uk-But" eventType="touchUpInside" id="nNt-FH-BDR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFt-bo-QVY">
-                                <rect key="frame" x="135" y="440" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pig" image="Pig"/>
-                                <connections>
-                                    <action selector="touchPig:" destination="E83-Uk-But" eventType="touchUpInside" id="EQD-a9-AAE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIE-7V-mfD">
-                                <rect key="frame" x="16" y="440" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dolphin" image="Dolphin"/>
-                                <connections>
-                                    <action selector="touchDolphin:" destination="E83-Uk-But" eventType="touchUpInside" id="pxs-fO-yAi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw1-MF-n2x">
-                                <rect key="frame" x="16" y="343" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Elephant" image="Elephant"/>
-                                <connections>
-                                    <action selector="touchElephant:" destination="E83-Uk-But" eventType="touchUpInside" id="YiQ-zr-uPJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-3V-5ya">
-                                <rect key="frame" x="135" y="343" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flamingo" image="Flamingo"/>
-                                <connections>
-                                    <action selector="touchFlamingo:" destination="E83-Uk-But" eventType="touchUpInside" id="D44-B0-Big"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPv-ar-YqZ">
-                                <rect key="frame" x="254" y="342" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fox" image="Fox"/>
-                                <connections>
-                                    <action selector="touchFox:" destination="E83-Uk-But" eventType="touchUpInside" id="CT2-zf-Vkq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTb-Yu-Lwx">
-                                <rect key="frame" x="16" y="246" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hippo" image="Hippo"/>
-                                <connections>
-                                    <action selector="touchHippo:" destination="E83-Uk-But" eventType="touchUpInside" id="sVp-FN-ydV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ry-32-kQl">
-                                <rect key="frame" x="135" y="246" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="JellyFish" image="Jellyfish"/>
-                                <connections>
-                                    <action selector="touchJellyfish:" destination="E83-Uk-But" eventType="touchUpInside" id="Zpa-we-xEp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4d-9n-CTR">
-                                <rect key="frame" x="254" y="247" width="105" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Penguin" image="Penguin"/>
-                                <connections>
-                                    <action selector="touchPenguin:" destination="E83-Uk-But" eventType="touchUpInside" id="vLm-zU-Hk9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjP-lb-NoS">
-                                <rect key="frame" x="220" y="563" width="71" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ForwardButton" image="button"/>
-                                <connections>
-                                    <segue destination="OzD-1b-aiw" kind="show" id="vBH-54-n28"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Wu-8mV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Wu-8mV">
                                 <rect key="frame" x="95" y="563" width="63" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2k5-bd-Riy"/>
+                                    <constraint firstAttribute="width" constant="63" id="eFC-ap-ZdC"/>
+                                </constraints>
                                 <state key="normal" title="BackButton" image="backButton"/>
                                 <connections>
                                     <segue destination="Rme-wi-QoM" kind="show" id="c4g-MY-kLm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjP-lb-NoS">
+                                <rect key="frame" x="231" y="563" width="71" height="60"/>
+                                <state key="normal" title="ForwardButton" image="button"/>
+                                <connections>
+                                    <segue destination="OzD-1b-aiw" kind="show" id="vBH-54-n28"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SL5-Wu-8mV" firstAttribute="leading" secondItem="0tg-yT-NTi" secondAttribute="leadingMargin" constant="79" id="HGf-7H-o1B"/>
+                            <constraint firstItem="ZrL-tU-Pa1" firstAttribute="centerX" secondItem="0tg-yT-NTi" secondAttribute="centerX" id="OGV-Lz-q73"/>
+                            <constraint firstItem="SL5-Wu-8mV" firstAttribute="top" secondItem="WjP-lb-NoS" secondAttribute="top" id="UFf-Us-JeL"/>
+                            <constraint firstItem="ZrL-tU-Pa1" firstAttribute="top" secondItem="AmJ-7Y-UUw" secondAttribute="bottom" constant="8" symbolic="YES" id="UFv-2n-0aO"/>
+                            <constraint firstItem="SL5-Wu-8mV" firstAttribute="firstBaseline" secondItem="WjP-lb-NoS" secondAttribute="baseline" id="hhL-wO-9e8"/>
+                            <constraint firstItem="WjP-lb-NoS" firstAttribute="leading" secondItem="SL5-Wu-8mV" secondAttribute="trailing" constant="73" id="vWF-8B-F06"/>
+                            <constraint firstItem="SL5-Wu-8mV" firstAttribute="baseline" secondItem="WjP-lb-NoS" secondAttribute="firstBaseline" id="vmi-9r-jMU"/>
+                            <constraint firstItem="0Js-FM-ERw" firstAttribute="top" secondItem="SL5-Wu-8mV" secondAttribute="bottom" constant="44" id="zz0-Vd-z5M"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="namelbl" destination="ZrL-tU-Pa1" id="QsN-Dl-QXZ"/>
@@ -283,18 +218,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bear" width="125" height="125"/>
-        <image name="Cow" width="125" height="125"/>
-        <image name="Dolphin" width="125" height="125"/>
-        <image name="Elephant" width="125" height="125"/>
-        <image name="Flamingo" width="125" height="125"/>
-        <image name="Fox" width="125" height="125"/>
-        <image name="Hippo" width="125" height="125"/>
-        <image name="Jellyfish" width="125" height="125"/>
-        <image name="Penguin" width="125" height="125"/>
-        <image name="Pig" width="125" height="125"/>
-        <image name="SHEEP" width="125" height="125"/>
-        <image name="Wolf" width="125" height="125"/>
         <image name="backButton" width="61" height="61"/>
         <image name="button" width="61" height="61"/>
     </resources>

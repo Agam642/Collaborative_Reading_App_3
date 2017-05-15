@@ -149,7 +149,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gR4-wt-M7F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gR4-wt-M7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -174,16 +174,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press The Arrow To Set Up Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-c0-ei9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Arrow To Set Up Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-c0-ei9">
                                 <rect key="frame" x="49" y="167" width="277" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="LqF-6H-jMC"/>
+                                    <constraint firstAttribute="width" constant="277" id="odf-pf-FSC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-gE-fIv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-gE-fIv">
                                 <rect key="frame" x="155" y="383" width="64" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="64K-xU-ROo"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="button"/>
                                 <connections>
                                     <segue destination="6Ya-wE-ob3" kind="show" id="Lzr-6S-Prr"/>
@@ -191,6 +196,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6S4-c0-ei9" firstAttribute="top" secondItem="bKF-ZG-V2n" secondAttribute="bottom" constant="103" id="DEx-n2-XOe"/>
+                            <constraint firstItem="6S4-c0-ei9" firstAttribute="centerX" secondItem="6EE-oh-MJp" secondAttribute="centerX" id="Wra-7r-Cfl"/>
+                            <constraint firstItem="6S4-c0-ei9" firstAttribute="centerX" secondItem="Hol-gE-fIv" secondAttribute="centerX" id="mtV-Xn-EVe"/>
+                            <constraint firstItem="fu0-tQ-JOI" firstAttribute="top" secondItem="Hol-gE-fIv" secondAttribute="bottom" constant="223" id="ucF-Ud-7dn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Lk-1V-LJO"/>
                 </viewController>
