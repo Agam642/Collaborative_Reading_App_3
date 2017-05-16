@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class NameInput: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +24,22 @@ class NameInput: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let nameInput = Name_Input(context: context) // Link Task & Context
+        nameInput.name = nameTextField.text!
+        
+        // Save the data to coredata
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        let _ = navigationController?.popViewController(animated: true)
+    }
 
-    /*
+    }
+    
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
