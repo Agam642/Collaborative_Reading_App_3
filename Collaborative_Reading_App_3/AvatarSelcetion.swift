@@ -12,10 +12,8 @@ class AvatarSelcetion: UIViewController {
     //create outlet for the label which will display the users name
     @IBOutlet weak var namelbl: UILabel!
     
-    
     //sets the variable passedData as an empty string
     var passedData = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
