@@ -86,16 +86,14 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F3428A91ECB2941006A7714 /* SetUp */,
 				3F6AA91C1EC1F58600300C5A /* Games */,
 				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
-				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
 				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
-				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
-				3F3428A71ECB27A0006A7714 /* AvatarSelcetion.swift */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
@@ -116,6 +114,16 @@
 				B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */,
 			);
 			name = ProfileCameraUpload;
+			sourceTree = "<group>";
+		};
+		3F3428A91ECB2941006A7714 /* SetUp */ = {
+			isa = PBXGroup;
+			children = (
+				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
+				3F3428A71ECB27A0006A7714 /* AvatarSelcetion.swift */,
+				3FD340641EA7904100688BD3 /* NameInput.swift */,
+			);
+			name = SetUp;
 			sourceTree = "<group>";
 		};
 		3F6AA91C1EC1F58600300C5A /* Games */ = {

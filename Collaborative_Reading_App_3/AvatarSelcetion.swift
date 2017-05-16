@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AvatarSelectionViewController: UIViewController {
+class AvatarSelcetion: UIViewController {
     //create outlet for the label which will display the users name
     @IBOutlet weak var namelbl: UILabel!
     

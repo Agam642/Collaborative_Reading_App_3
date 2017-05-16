@@ -18,7 +18,7 @@
         <scene sceneID="TuE-XA-0qP">
             <objects>
                 <navigationController id="mIo-yH-X0X" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bHI-OL-CRR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bHI-OL-CRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -53,9 +53,6 @@
                                 <rect key="frame" x="133" y="362" width="122" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
-                                <connections>
-                                    <segue destination="E83-Uk-But" kind="show" id="qnC-oF-TRE"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-N2-lAz">
                                 <rect key="frame" x="53" y="288" width="269" height="30"/>
@@ -72,6 +69,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="oP9-bH-8LL"/>
+                    <connections>
+                        <segue destination="E83-Uk-But" kind="show" identifier="goToNext" id="qWo-cz-LRm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86p-b8-NVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
