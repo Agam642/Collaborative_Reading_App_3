@@ -10,20 +10,12 @@ import UIKit
 
 class AvatarSelcetion: UIViewController {
     //create outlet for the label which will display the users name
-    @IBOutlet weak var namelbl: UILabel!
-    
-    //sets the variable passedData as an empty string
-    var passedData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //Prints the message in the viewcontroller
-        namelbl.text = "Hi " + passedData + ", Please Select an Avatar"
-    }
-    
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -38,5 +30,7 @@ class AvatarSelcetion: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
+
+    }
+
 }
