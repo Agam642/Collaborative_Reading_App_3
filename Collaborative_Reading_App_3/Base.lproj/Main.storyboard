@@ -112,7 +112,7 @@
                 <viewControllerPlaceholder storyboardName="ProfileCameraUpload" id="M8s-HN-DXG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myG-4j-ZFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="1035"/>
+            <point key="canvasLocation" x="642" y="1052"/>
         </scene>
         <!--Add BooksVC-->
         <scene sceneID="eeN-g6-bh7">
@@ -235,7 +235,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ciM-ZH-RbS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="Home" selectedImage="Home_Selected" id="ZVK-Eg-gFP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="IKT-sU-AcW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IKT-sU-AcW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69803921570000005" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>

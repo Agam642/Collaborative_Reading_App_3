@@ -14,7 +14,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     @IBOutlet weak var collectionView: UICollectionView!
     
     //array to store the images
-    var images = ["Bear", "Cow", "Elephant", "Flamingo", "Fox", "Hippo", "Jellyfish", "SHEEP", "Parrot", "Penguin", "Wolf", "SLOTH", "Pig", "Panda", "Moose"]
+    var images = ["Bear", "Cow", "Elephant", "Flamingo", "Fox", "Hippo", "Jellyfish", "SHEEP", "Parrot", "Penguin", "Wolf", "Panda"]
         
     override func viewDidLoad() {
         super.viewDidLoad()
