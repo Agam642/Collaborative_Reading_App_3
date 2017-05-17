@@ -16,7 +16,8 @@
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */; };
 		3F15A6E01EC09E5E005158A9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F15A6DF1EC09E5E005158A9 /* Home.storyboard */; };
-		3F3428A81ECB27A0006A7714 /* AvatarSelcetion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3428A71ECB27A0006A7714 /* AvatarSelcetion.swift */; };
+		3F40D3B81ECBE7F1008B55E7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40D3B71ECBE7F1008B55E7 /* CustomCell.swift */; };
+		3F40D3BA1ECBE8D0008B55E7 /* AvatarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F40D3B91ECBE8D0008B55E7 /* AvatarSelection.swift */; };
 		3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */; };
 		3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */; };
 		3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */; };
@@ -42,7 +43,8 @@
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstRunTutorial.storyboard; sourceTree = "<group>"; };
 		3F15A6DF1EC09E5E005158A9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		3F3428A71ECB27A0006A7714 /* AvatarSelcetion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelcetion.swift; sourceTree = "<group>"; };
+		3F40D3B71ECBE7F1008B55E7 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		3F40D3B91ECBE8D0008B55E7 /* AvatarSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelection.swift; sourceTree = "<group>"; };
 		3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tic Tac Toe.storyboard"; sourceTree = "<group>"; };
 		3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
-				3F3428A71ECB27A0006A7714 /* AvatarSelcetion.swift */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
+				3F40D3B71ECBE7F1008B55E7 /* CustomCell.swift */,
+				3F40D3B91ECBE8D0008B55E7 /* AvatarSelection.swift */,
 			);
 			name = SetUp;
 			sourceTree = "<group>";
@@ -221,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3428A81ECB27A0006A7714 /* AvatarSelcetion.swift in Sources */,
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
+				3F40D3B81ECBE7F1008B55E7 /* CustomCell.swift in Sources */,
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */,
@@ -234,6 +237,7 @@
 				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 				3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */,
+				3F40D3BA1ECBE8D0008B55E7 /* AvatarSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
