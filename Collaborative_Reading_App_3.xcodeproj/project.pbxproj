@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F12B0141ECC796B007B4508 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F12B0131ECC796B007B4508 /* SideMenu.storyboard */; };
+		3F12B0161ECC7A2C007B4508 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12B0151ECC7A2C007B4508 /* SideMenuVC.swift */; };
+		3F12B01B1ECC7FAC007B4508 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12B01A1ECC7FAC007B4508 /* SWRevealViewController.m */; };
 		3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BBE1EB0CFF80015071A /* CameraUpload.swift */; };
 		3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F8E1E9D033400A6B555 /* AppDelegate.swift */; };
 		3F155F911E9D033400A6B555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F901E9D033400A6B555 /* ViewController.swift */; };
@@ -32,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F12B0131ECC796B007B4508 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SideMenu.storyboard; path = ../SideMenu.storyboard; sourceTree = "<group>"; };
+		3F12B0151ECC7A2C007B4508 /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuVC.swift; path = ../SideMenuVC.swift; sourceTree = "<group>"; };
+		3F12B0171ECC7F7F007B4508 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Collaborative Reading App/Collaborative Reading App/SWRevealViewController-master-2/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		3F12B0181ECC7F9D007B4508 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Collaborative Reading App/Collaborative Reading App/SWRevealViewController-master-2/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		3F12B0191ECC7FAB007B4508 /* Collaborative_Reading_App_3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Collaborative_Reading_App_3-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F12B01A1ECC7FAC007B4508 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../Collaborative Reading App/Collaborative Reading App/SWRevealViewController-master-2/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +97,8 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F12B0181ECC7F9D007B4508 /* SWRevealViewController.h */,
+				3F12B01A1ECC7FAC007B4508 /* SWRevealViewController.m */,
 				3F3428A91ECB2941006A7714 /* SetUp */,
 				3F6AA91C1EC1F58600300C5A /* Games */,
 				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
@@ -95,16 +106,19 @@
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
 				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
+				3F12B0131ECC796B007B4508 /* SideMenu.storyboard */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
 				3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */,
+				3F12B0151ECC7A2C007B4508 /* SideMenuVC.swift */,
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
 				B0EF40921EC495D800F61ABD /* AddBooksVC.swift */,
 				B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */,
 				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
+				3F12B0191ECC7FAB007B4508 /* Collaborative_Reading_App_3-Bridging-Header.h */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -112,6 +126,7 @@
 		3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */ = {
 			isa = PBXGroup;
 			children = (
+				3F12B0171ECC7F7F007B4508 /* SWRevealViewController.h */,
 				B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */,
 				B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */,
 			);
@@ -179,6 +194,7 @@
 					3F155F8A1E9D033300A6B555 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = BEW9E8B5DC;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +225,7 @@
 				3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
+				3F12B0141ECC796B007B4508 /* SideMenu.storyboard in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 				3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
@@ -235,9 +252,11 @@
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
+				3F12B01B1ECC7FAC007B4508 /* SWRevealViewController.m in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 				3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */,
 				3F40D3BA1ECBE8D0008B55E7 /* AvatarSelection.swift in Sources */,
+				3F12B0161ECC7A2C007B4508 /* SideMenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +379,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BEW9E8B5DC;
 				INFOPLIST_FILE = Collaborative_Reading_App_3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Saif.Collaborative-Reading-App-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Collaborative_Reading_App_3/Collaborative_Reading_App_3-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -373,11 +395,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BEW9E8B5DC;
 				INFOPLIST_FILE = Collaborative_Reading_App_3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Saif.Collaborative-Reading-App-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Collaborative_Reading_App_3/Collaborative_Reading_App_3-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
