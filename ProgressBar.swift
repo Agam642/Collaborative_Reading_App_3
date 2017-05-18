@@ -140,7 +140,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
     
     
     func resetAnimation() {
-        fgProgressLayer.speed = 1.0
+        fgProgressLayer.speed = 0.5
         fgProgressLayer.timeOffset = 0.0
         fgProgressLayer.beginTime = 0.0
         fgProgressLayer.strokeEnd = 0.0
@@ -149,7 +149,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
     
     
     func stopAnimation() {
-        fgProgressLayer.speed = 1.0
+        fgProgressLayer.speed = 0.5
         fgProgressLayer.timeOffset = 0.0
         fgProgressLayer.beginTime = 0.0
         fgProgressLayer.strokeEnd = 0.0
