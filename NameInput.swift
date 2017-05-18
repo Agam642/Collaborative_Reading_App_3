@@ -44,7 +44,7 @@ class NameInput: UIViewController {
     //func that allows passing data with the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        let destination = segue.destination as! AvatarSelectionViewController
+        let destination = segue.destination as! AvatarSelection
         //sets the variable passedData (an empty string from avaterselction swift file) as the text inputted
         destination.passedData = nameInput.text!
     }
