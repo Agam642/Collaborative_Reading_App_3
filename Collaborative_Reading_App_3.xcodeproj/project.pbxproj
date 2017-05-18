@@ -23,6 +23,10 @@
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
+		B0E797611ECD2D1100DFC99C /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E797601ECD2D1100DFC99C /* Timer.storyboard */; };
+		B0E797641ECD2D7100DFC99C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E797631ECD2D7100DFC99C /* ProgressBar.swift */; };
+		B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */; };
+		B0E797681ECD2E0400DFC99C /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E797671ECD2E0400DFC99C /* CustomColors.swift */; };
 		B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */; };
 		B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */; };
 		B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF40921EC495D800F61ABD /* AddBooksVC.swift */; };
@@ -33,7 +37,7 @@
 		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F155F901E9D033400A6B555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F155F901E9D033400A6B555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Collaborative_Reading_App_3/ViewController.swift; sourceTree = "<group>"; };
 		3F155F931E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F155F961E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Collaborative_Reading_App_3.xcdatamodel; sourceTree = "<group>"; };
 		3F155F981E9D033400A6B555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +52,10 @@
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
+		B0E797601ECD2D1100DFC99C /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		B0E797631ECD2D7100DFC99C /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		B0E797671ECD2E0400DFC99C /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileCameraUpload.storyboard; sourceTree = "<group>"; };
 		B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
 		B0EF40921EC495D800F61ABD /* AddBooksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBooksVC.swift; path = ../AddBooksVC.swift; sourceTree = "<group>"; };
@@ -86,10 +94,10 @@
 			children = (
 				3F6AA91C1EC1F58600300C5A /* Games */,
 				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
+				B0E797621ECD2D4D00DFC99C /* Timer */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
-				3F155F901E9D033400A6B555 /* ViewController.swift */,
 				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
@@ -130,6 +138,19 @@
 				3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */,
 			);
 			name = "Tic Tac Toe";
+			sourceTree = "<group>";
+		};
+		B0E797621ECD2D4D00DFC99C /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B0E797601ECD2D1100DFC99C /* Timer.storyboard */,
+				B0E797631ECD2D7100DFC99C /* ProgressBar.swift */,
+				B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */,
+				3F155F901E9D033400A6B555 /* ViewController.swift */,
+				B0E797671ECD2E0400DFC99C /* CustomColors.swift */,
+			);
+			name = Timer;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +217,7 @@
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
+				B0E797611ECD2D1100DFC99C /* Timer.storyboard in Resources */,
 				3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
 				B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */,
@@ -211,8 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
+				B0E797681ECD2E0400DFC99C /* CustomColors.swift in Sources */,
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
+				B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */,
 				B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */,
 				B0EF40951EC4967600F61ABD /* BookTableViewCell.swift in Sources */,
 				3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */,
@@ -220,6 +244,7 @@
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
+				B0E797641ECD2D7100DFC99C /* ProgressBar.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 				3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */,
 			);
