@@ -53,13 +53,15 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: nextNum, sender: nil)
     }
     
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //if segue.identifier == nextNum {
-            //let destination = segue.destination as! ViewController
-            //destination.text
-        //}
-    //}
+        if segue.identifier == nextNum {
+            let destination = segue.destination as! ViewController
+            destination.selectedSecs = secondsResult
+            destination.selectedMins = minutesResult
+            destination.selectedHours = hoursResult
+        }
+    }
 
     
 

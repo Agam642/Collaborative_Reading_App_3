@@ -22,9 +22,11 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     var countdownTimerDidStart = false
     
     // Test, for dev
-    let selectedSecs : Int = 20
+    var selectedSecs : Int = 20
     
-    let selectedMins : Int = 0
+    var selectedMins : Int = 0
+    
+    var selectedHours : Int = 0
     
     
     //let selectedHours : Int = selectedMins % 60
@@ -43,13 +45,14 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countdownTimer.setTimer(hours: 0, minutes: selectedMins, seconds: selectedSecs)
+        countdownTimer.setTimer(hours: selectedHours, minutes: selectedMins, seconds: selectedSecs)
         countdownTimer.delegate = self
-        progressBar.setProgressBar(hours: 0, minutes: selectedMins, seconds: selectedSecs)
+        progressBar.setProgressBar(hours: selectedHours, minutes: selectedMins, seconds: selectedSecs)
         stopBtn.isEnabled = false
         stopBtn.alpha = 0.5
         seconds.text = String(selectedSecs)
         minutes.text = String(selectedMins)
+        hours.text = String(selectedHours)
         
         view.addSubview(messageLabel)
         
