@@ -21,11 +21,9 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     let countdownTimer = CountdownTimer()
     var countdownTimerDidStart = false
     
-    // Test, for dev
-    var selectedSecs : Int = 20
-    
-    var selectedMins : Int = 0
-    
+    // Variables usd for the timer
+    var selectedSecs : Int = 0
+    var selectedMins : Int = 30
     var selectedHours : Int = 0
     
     

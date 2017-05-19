@@ -149,8 +149,8 @@
 				B0E797631ECD2D7100DFC99C /* ProgressBar.swift */,
 				B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
-				B0E797671ECD2E0400DFC99C /* CustomColors.swift */,
 				3F880AD21ECDCEA700E81782 /* UserInputVC.swift */,
+				B0E797671ECD2E0400DFC99C /* CustomColors.swift */,
 			);
 			name = Timer;
 			path = ..;

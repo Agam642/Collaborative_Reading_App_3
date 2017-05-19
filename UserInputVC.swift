@@ -43,7 +43,7 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
         return allowedCharacters.isSuperset(of: characterSet)
     }
     
-    //ued to pass data from one view controller to the next 
+    //The button to press to pass data from one view controller to the next 
     @IBAction func NextButton(_ sender: Any) {
         
         hoursResult = Int(hoursField.text!)
@@ -53,13 +53,16 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: nextNum, sender: nil)
     }
     
+    //Passes the User Input to View Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == nextNum {
             let destination = segue.destination as! ViewController
+            if (secondsResult != nil) && (minutesResult != nil) && (hoursResult != nil) {
             destination.selectedSecs = secondsResult
             destination.selectedMins = minutesResult
             destination.selectedHours = hoursResult
+            }
         }
     }
 
