@@ -17,28 +17,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //window = UIWindow(frame: UIScreen.main.bounds)
-        //window?.makeKeyAndVisible()
-        /*
-        let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        func isAppAlreadyLaunchedOnce()->Bool {
+            let defaults = UserDefaults.standard
+            
+            if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+                print("App already launched : \(isAppAlreadyLaunchedOnce)")
+                return true
+            }else{
+                defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+                print("App launched first time")
+                return false
+            }
+        }
         
-        UINavigationBar.appearance().barTintColor = UIColor.rgb(69, green: 179, blue: 231)
-        
-        // get rid of black bar underneath navbar
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
-        application.statusBarStyle = .lightContent
-        
-        let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.rgb(26, green: 143, blue: 198)
-        
-        window?.addSubview(statusBarBackgroundView)
-        window?.addConstraintsWithFormat("H:|[v0]|", views: statusBarBackgroundView)
-        window?.addConstraintsWithFormat("V:|[v0(20)]", views: statusBarBackgroundView)
-        
- */
+        if isAppAlreadyLaunchedOnce() == true {
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "intial")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
+        } else {
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
+        }
         return true
     }
     
