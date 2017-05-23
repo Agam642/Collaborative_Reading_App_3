@@ -17,8 +17,8 @@
         <!--Navigation Controller-->
         <scene sceneID="nHc-7I-dBV">
             <objects>
-                <navigationController storyboardIdentifier="Name" id="f5K-YR-Wbg" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FWU-Jb-Uve">
+                <navigationController id="f5K-YR-Wbg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FWU-Jb-Uve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -28,7 +28,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aW1-t0-oNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-150" y="-188"/>
+            <point key="canvasLocation" x="-94" y="-892"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="9i3-ee-Wau">
@@ -45,8 +45,8 @@
                     </view>
                     <connections>
                         <segue destination="fth-o6-idK" kind="show" id="hCc-Dp-csM"/>
-                        <segue destination="f5K-YR-Wbg" kind="show" id="s55-33-LDJ"/>
                         <segue destination="SbN-wT-lhT" kind="show" id="6Oq-IN-S4a"/>
+                        <segue destination="OzD-V7-02H" kind="custom" id="paC-Kc-IlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocx-FG-oAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,7 +56,7 @@
         <!--Username View Input-->
         <scene sceneID="A7e-it-XW9">
             <objects>
-                <viewController id="OzD-V7-02H" userLabel="Username View Input" customClass="NameInput" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Name" id="OzD-V7-02H" userLabel="Username View Input" customClass="NameInput" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZSd-ud-kt8"/>
                         <viewControllerLayoutGuide type="bottom" id="vRt-HT-glM"/>
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUK-5D-udu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="-188"/>
+            <point key="canvasLocation" x="-26" y="-188"/>
         </scene>
         <!--Timer-->
         <scene sceneID="R2z-NY-VIz">
@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yye-B2-zYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="-188.45577211394306"/>
+            <point key="canvasLocation" x="913" y="-188"/>
         </scene>
         <!--Ready to Start Reading-->
         <scene sceneID="gba-dH-LuR">
@@ -615,4 +615,7 @@
         <image name="backButton" width="61" height="61"/>
         <image name="button" width="61" height="61"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="paC-Kc-IlW"/>
+    </inferredMetricsTieBreakers>
 </document>

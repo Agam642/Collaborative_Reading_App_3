@@ -60,9 +60,9 @@ class MenuViewController: UIViewController, SideBarDelegate {
 
         
         
-        if index == 0{
+        if index == 0 {
             view.addSubview((controller?.view)!)
-        } else if index == 1{
+        } else if index == 1 {
             view.addSubview((controller2?.view)!)
         } else if index == 2 {
             view.addSubview((controller3?.view)!)
