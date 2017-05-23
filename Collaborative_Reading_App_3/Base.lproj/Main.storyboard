@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TcV-9x-vd1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cYw-SP-gga">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -144,28 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2530" y="-647"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="PN0-uG-LDe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TcV-9x-vd1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gR4-wt-M7F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cYw-SP-gga" kind="relationship" relationship="rootViewController" id="7xA-ha-KLM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K4I-DL-Nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="25" y="-647"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="i1Y-VI-K3c">
             <objects>
-                <viewController id="cYw-SP-gga" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="intial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cYw-SP-gga" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bKF-ZG-V2n"/>
                         <viewControllerLayoutGuide type="bottom" id="fu0-tQ-JOI"/>
@@ -175,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Arrow To Set Up Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-c0-ei9">
-                                <rect key="frame" x="49" y="167" width="277" height="108"/>
+                                <rect key="frame" x="49" y="123" width="277" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="108" id="LqF-6H-jMC"/>
                                     <constraint firstAttribute="width" constant="277" id="odf-pf-FSC"/>
@@ -209,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="-775" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--First-->
         <scene sceneID="K9v-nt-DLV">
             <objects>
-                <viewController id="bPf-eu-JNT" sceneMemberID="viewController">
+                <viewController title="First" id="bPf-eu-JNT" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aDq-yL-xmx"/>
                         <viewControllerLayoutGuide type="bottom" id="6gd-qe-CZ7"/>
