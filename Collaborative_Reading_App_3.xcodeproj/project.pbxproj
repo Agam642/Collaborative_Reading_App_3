@@ -24,6 +24,10 @@
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
 		3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */; };
 		3FD340651EA7904100688BD3 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340641EA7904100688BD3 /* NameInput.swift */; };
+		B00E082F1ED43D12000C299A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00E082E1ED43D12000C299A /* Menu.storyboard */; };
+		B00E08311ED43E32000C299A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E08301ED43E32000C299A /* MenuViewController.swift */; };
+		B00E08331ED43E5C000C299A /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E08321ED43E5C000C299A /* SideBarTableViewController.swift */; };
+		B00E08351ED43E90000C299A /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E08341ED43E90000C299A /* SideBar.swift */; };
 		B0E797611ECD2D1100DFC99C /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E797601ECD2D1100DFC99C /* Timer.storyboard */; };
 		B0E797641ECD2D7100DFC99C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E797631ECD2D7100DFC99C /* ProgressBar.swift */; };
 		B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */; };
@@ -54,6 +58,10 @@
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
 		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
+		B00E082E1ED43D12000C299A /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		B00E08301ED43E32000C299A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B00E08321ED43E5C000C299A /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
+		B00E08341ED43E90000C299A /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		B0E797601ECD2D1100DFC99C /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		B0E797631ECD2D7100DFC99C /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B0E797651ECD2D9C00DFC99C /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 				3F6AA91C1EC1F58600300C5A /* Games */,
 				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
 				B0E797621ECD2D4D00DFC99C /* Timer */,
+				B00E082D1ED43CDE000C299A /* Side Menu */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
@@ -140,6 +149,17 @@
 				3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */,
 			);
 			name = "Tic Tac Toe";
+			sourceTree = "<group>";
+		};
+		B00E082D1ED43CDE000C299A /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B00E082E1ED43D12000C299A /* Menu.storyboard */,
+				B00E08301ED43E32000C299A /* MenuViewController.swift */,
+				B00E08321ED43E5C000C299A /* SideBarTableViewController.swift */,
+				B00E08341ED43E90000C299A /* SideBar.swift */,
+			);
+			name = "Side Menu";
 			sourceTree = "<group>";
 		};
 		B0E797621ECD2D4D00DFC99C /* Timer */ = {
@@ -221,6 +241,7 @@
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 				B0E797611ECD2D1100DFC99C /* Timer.storyboard in Resources */,
+				B00E082F1ED43D12000C299A /* Menu.storyboard in Resources */,
 				3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
 				B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */,
@@ -242,10 +263,13 @@
 				3F880AD31ECDCEA700E81782 /* UserInputVC.swift in Sources */,
 				B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */,
 				B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */,
+				B00E08351ED43E90000C299A /* SideBar.swift in Sources */,
 				B0EF40951EC4967600F61ABD /* BookTableViewCell.swift in Sources */,
 				3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
+				B00E08331ED43E5C000C299A /* SideBarTableViewController.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
+				B00E08311ED43E32000C299A /* MenuViewController.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				B0E8E5DC1EBE774D006871DC /* ProfileCameraVC.swift in Sources */,
 				B0E797641ECD2D7100DFC99C /* ProgressBar.swift in Sources */,
