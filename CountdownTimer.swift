@@ -8,6 +8,8 @@
 
 import UIKit
 
+//use popover
+
 protocol CountdownTimerDelegate {
     func countdownTimerDone()
     func countdownTime(time: (hours: String, minutes:String, seconds:String))

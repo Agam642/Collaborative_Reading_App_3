@@ -19,6 +19,8 @@
 		3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */; };
 		3F6AA91B1EC1F11500300C5A /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */; };
 		3F880AD31ECDCEA700E81782 /* UserInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F880AD21ECDCEA700E81782 /* UserInputVC.swift */; };
+		3F90FD981ED7040300DD3758 /* AddBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F90FD971ED7040300DD3758 /* AddBooks.storyboard */; };
+		3F90FD9C1ED711CE00DD3758 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */; };
 		3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -53,6 +55,8 @@
 		3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tic Tac Toe.storyboard"; sourceTree = "<group>"; };
 		3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		3F880AD21ECDCEA700E81782 /* UserInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputVC.swift; sourceTree = "<group>"; };
+		3F90FD971ED7040300DD3758 /* AddBooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBooks.storyboard; sourceTree = "<group>"; };
+		3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
 		3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				B0EF40921EC495D800F61ABD /* AddBooksVC.swift */,
 				B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */,
 				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
+				3F90FD971ED7040300DD3758 /* AddBooks.storyboard */,
+				3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				B0E797611ECD2D1100DFC99C /* Timer.storyboard in Resources */,
 				B00E082F1ED43D12000C299A /* Menu.storyboard in Resources */,
 				3F6AA9191EC1EF0C00300C5A /* Tic Tac Toe.storyboard in Resources */,
+				3F90FD981ED7040300DD3758 /* AddBooks.storyboard in Resources */,
 				3F155FA41E9D04E800A6B555 /* FirstRunTutorial.storyboard in Resources */,
 				B0E8E5DA1EBE770C006871DC /* ProfileCameraUpload.storyboard in Resources */,
 				3F15A6E01EC09E5E005158A9 /* Home.storyboard in Resources */,
@@ -263,6 +270,7 @@
 				3F880AD31ECDCEA700E81782 /* UserInputVC.swift in Sources */,
 				B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */,
 				B0EF40931EC495D800F61ABD /* AddBooksVC.swift in Sources */,
+				3F90FD9C1ED711CE00DD3758 /* BookViewCell.swift in Sources */,
 				B00E08351ED43E90000C299A /* SideBar.swift in Sources */,
 				B0EF40951EC4967600F61ABD /* BookTableViewCell.swift in Sources */,
 				3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */,

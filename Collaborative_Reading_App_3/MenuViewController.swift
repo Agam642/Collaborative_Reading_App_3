@@ -10,8 +10,6 @@ import UIKit
 
 class MenuViewController: UIViewController, SideBarDelegate {
     
-    @IBOutlet var imageView: UIImageView!
-    
     var sideBar:SideBar = SideBar()
     
     
@@ -20,7 +18,6 @@ class MenuViewController: UIViewController, SideBarDelegate {
         //imageView.image = UIImage(named: "image2")
         sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Name", "Start Reading", "Timer"])
         sideBar.delegate = self
-        
         
     }
     
