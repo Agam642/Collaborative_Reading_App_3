@@ -39,6 +39,7 @@ class CameraUse: UIViewController, UINavigationControllerDelegate, UIImagePicker
         }
     }
     
+   
     @IBAction func shootPhoto(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
@@ -61,27 +62,4 @@ class CameraUse: UIViewController, UINavigationControllerDelegate, UIImagePicker
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
-    /*
-    @IBAction func ChooseImage(_ sender: Any) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        
-        let actionSheet = UIAlertController(title: "Photo Shource", message: "Choose a source", preferredStyle: .actionSheet)
-        
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
-            
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                imagePicker.sourceType = .camera
-                self.present(imagePicker, animated: true, completion: nil)
-            } }))
-        
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in imagePicker.sourceType = .photoLibrary
-            self.present(imagePicker, animated: true, completion: nil)}))
-        
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(actionSheet, animated: true, completion: nil)
-    }
-}
- */
+
