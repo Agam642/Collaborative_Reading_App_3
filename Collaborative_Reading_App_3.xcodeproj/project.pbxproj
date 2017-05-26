@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F12BD241ED85C1C00414962 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12BD231ED85C1C00414962 /* BookViewController.swift */; };
 		3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BBE1EB0CFF80015071A /* CameraUpload.swift */; };
 		3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F8E1E9D033400A6B555 /* AppDelegate.swift */; };
 		3F155F911E9D033400A6B555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F901E9D033400A6B555 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F12BD231ED85C1C00414962 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
 				3F90FD971ED7040300DD3758 /* AddBooks.storyboard */,
 				3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */,
+				3F12BD231ED85C1C00414962 /* BookViewController.swift */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				B0E797681ECD2E0400DFC99C /* CustomColors.swift in Sources */,
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
+				3F12BD241ED85C1C00414962 /* BookViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F880AD31ECDCEA700E81782 /* UserInputVC.swift in Sources */,
 				B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */,
