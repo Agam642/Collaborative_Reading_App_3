@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -28,6 +29,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        //displays message
         namelbl.text = "Hi " + passedData + ","
     }
 
@@ -42,14 +44,25 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         return images.count
     }
     
+    //function used to place image in each cell
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //sets customcell as a reusable cell for each image
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         
-        
+        //places image in each cell
         cell.myImage.image = UIImage(named: images[indexPath.row])
         
         return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //next 4 lines allow one cell to be highlighted when selected
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = .none
+        cell!.layer.borderWidth = 2.0
+        cell!.layer.borderColor = UIColor.white.cgColor
+
     }
 
 
