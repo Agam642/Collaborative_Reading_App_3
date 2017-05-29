@@ -11,7 +11,7 @@ import CoreData
 
 class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var presents = [Add_Books]()
+    var books = [Add_Books]()
     
     var managedObjextContext:NSManagedObjectContext!
     
@@ -29,10 +29,10 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     }
     
     func loadData(){
-        let presentRequest:NSFetchRequest<Add_Books> = Add_Books.fetchRequest()
+        let bookRequest:NSFetchRequest<Add_Books> = Add_Books.fetchRequest()
         
         do {
-            presents = try managedObjextContext.fetch(presentRequest)
+            books = try managedObjextContext.fetch(bookRequest)
             self.tableView.reloadData()
         }catch {
             print("Could not load data from database \(error.localizedDescription)")
@@ -61,27 +61,27 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return presents.count
+        return books.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookTableViewCell
         
-        let presentItem = presents[indexPath.row]
+        let bookItem = books[indexPath.row]
         
-        if let presentImage = UIImage(data: presentItem.image! as Data) {
-            cell.backgroundImageView.image = presentImage
+        if let bookImage = UIImage(data: bookItem.image! as Data) {
+            cell.backgroundImageView.image = bookImage
         }
         
-        cell.nameLabel.text = presentItem.author
-        cell.itemLabel.text = presentItem.bookName
+        cell.nameLabel.text = bookItem.author
+        cell.itemLabel.text = bookItem.bookName
         
         
         return cell
     }
     
-    @IBAction func addPresent(_ sender: Any) {
+    @IBAction func addBook(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -105,7 +105,7 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
-                self.createPresentItem(with: image)
+                self.createBookItem(with: image)
             })
         }
         
@@ -114,10 +114,10 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
     
     
     
-    func createPresentItem (with image:UIImage) {
+    func createBookItem (with image:UIImage) {
         
-        let presentItem = Add_Books(context: managedObjextContext)
-        presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+        let bookItem = Add_Books(context: managedObjextContext)
+        bookItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
         let inputAlert = UIAlertController(title: "New Present", message: "Enter a person and a present.", preferredStyle: .alert)
@@ -134,8 +134,8 @@ class AddBooksVC: UITableViewController, UIImagePickerControllerDelegate, UINavi
             let presentTextField = inputAlert.textFields?.last
             
             if personTextField?.text != "" && presentTextField?.text != "" {
-                presentItem.author = personTextField?.text
-                presentItem.bookName = presentTextField?.text
+                bookItem.author = personTextField?.text
+                bookItem.bookName = presentTextField?.text
                 
                 do {
                     try self.managedObjextContext.save()

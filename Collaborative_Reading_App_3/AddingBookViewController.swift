@@ -2,8 +2,8 @@
 //  AddingBookViewController.swift
 //  Collaborative_Reading_App_3
 //
-//  Created by Student on 2017-04-15.
-//  Copyright © 2017 Student. All rights reserved.
+//  Created by Saif Al-Din on 2017-04-15.
+//  Copyright © 2017 Saif Al-Din. All rights reserved.
 //
 
 import UIKit
