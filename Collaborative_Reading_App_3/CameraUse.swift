@@ -8,69 +8,58 @@
 
 import UIKit
 
-class CameraUse: UIViewController,
-    UIImagePickerControllerDelegate,
-    UINavigationControllerDelegate
-{
-    let picker = UIImagePickerController()
+class CameraUse: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     @IBOutlet weak var myImageView: UIImageView!
     
-   
-    @IBAction func photoFromLibrary(_ sender: Any) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        picker.modalPresentationStyle = .popover
-        present(picker, animated: true, completion: nil)
-       
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            myImageView.image = image
+        } else {
+            //Diplay error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
     }
     
    
     @IBAction func shootPhoto(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.allowsEditing = false
-            picker.sourceType = UIImagePickerControllerSourceType.camera
-            picker.cameraCaptureMode = .photo
-            picker.modalPresentationStyle = .fullScreen
-            present(picker,animated: true,completion: nil)
-        } else {
-            noCamera()
-        }
-
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        let actionSheet = UIAlertController(title: "Photo Shource", message: "Choose a source", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)}))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
     }
-    
-    func noCamera(){
-        let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(
-            title: "OK",
-            style:.default,
-            handler: nil)
-        alertVC.addAction(okAction)
-        present(
-            alertVC,
-            animated: true,
-            completion: nil)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        picker.delegate = self
-    }
-    
-    //MARK: - Delegates
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject])
-    {
-        var  chosenImage = UIImage()
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        myImageView.contentMode = .scaleAspectFit //3
-        myImageView.image = chosenImage //4
-        dismiss(animated:true, completion: nil) //5
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }
+
