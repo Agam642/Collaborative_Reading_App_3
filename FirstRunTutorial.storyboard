@@ -520,6 +520,9 @@
                                 <rect key="frame" x="204" y="584" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
+                                <connections>
+                                    <segue destination="d0v-mZ-HDn" kind="show" id="EvE-9o-bIO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL9-MD-BXg">
                                 <rect key="frame" x="146" y="189" width="45" height="30"/>
@@ -535,6 +538,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0m-Wn-bU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6437.6000000000004" y="-161.46926536731635"/>
+        </scene>
+        <!--Signature Pad-->
+        <scene sceneID="CB2-qu-aCn">
+            <objects>
+                <viewController id="d0v-mZ-HDn" customClass="SignaturePad" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cr5-51-go0"/>
+                        <viewControllerLayoutGuide type="bottom" id="kif-Mq-IRi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="961-nh-xNu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7j-hY-5cA">
+                                <rect key="frame" x="98" y="602" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="xlm-N5-wtA" kind="show" id="SXY-U4-ndk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9D-BD-02T">
+                                <rect key="frame" x="206" y="602" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-xb-oKS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hJj-xb-oKS" id="nFg-WF-9iw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-qO-jdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7554.3999999999996" y="-137.18140929535232"/>
         </scene>
         <!--Main-->
         <scene sceneID="15q-6V-FE3">
@@ -554,8 +597,9 @@
         <image name="purpleButton" width="150" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rqz-mY-LD2"/>
         <segue reference="E9e-OP-XwS"/>
         <segue reference="Nbp-jD-GWb"/>
+        <segue reference="SXY-U4-ndk"/>
+        <segue reference="rqz-mY-LD2"/>
     </inferredMetricsTieBreakers>
 </document>
