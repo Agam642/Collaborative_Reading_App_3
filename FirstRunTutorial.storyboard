@@ -613,9 +613,9 @@
         <image name="purpleButton" width="150" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E9e-OP-XwS"/>
+        <segue reference="Nuh-DD-DDn"/>
         <segue reference="Nbp-jD-GWb"/>
-        <segue reference="SXY-U4-ndk"/>
+        <segue reference="E9e-OP-XwS"/>
         <segue reference="rqz-mY-LD2"/>
     </inferredMetricsTieBreakers>
 </document>
