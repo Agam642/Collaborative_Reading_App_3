@@ -21,6 +21,13 @@ class SignaturePad: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func resetButton(_ sender: Any) {
+        self.imageView.image = nil
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         
@@ -43,7 +50,6 @@ class SignaturePad: UIViewController {
         context?.setStrokeColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor)
         
         
-        
         context?.strokePath()
         
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -57,21 +63,40 @@ class SignaturePad: UIViewController {
             drawLines(fromPoint: lastPoint, toPoint: currentPoint)
             
             lastPoint = currentPoint
+        }
     }
     
-   func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
             if !swiped {
                 drawLines(fromPoint: lastPoint, toPoint: lastPoint)
             }
         }
     
-    func didReceiveMemoryWarning() {
+        
+   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /* 
+/*      Core Data Attempt
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let task = SignatureInput(context: context) // Link Task & Context
+        task.signature = taskTextField.text!
+        
+        // Save the data to coredata
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        UIImage *sampleimage = [UIImage imageNamed:imageView.image];
+        
+        NSData *dataImage = UIImageJPEGRepresentation(sampleimage, 0.0);
+        Then finally save it
+        
+        [obj setValue:dataImage forKey:@"imageEntity"];
+        
+    */
+        
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -82,4 +107,4 @@ class SignaturePad: UIViewController {
     */
 
 }
-}
+
