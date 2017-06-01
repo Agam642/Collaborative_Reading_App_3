@@ -42,8 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F12BD231ED85C1C00414962 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
-		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
+		3F12BD231ED85C1C00414962 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = Collaborative_Reading_App_3/BookViewController.swift; sourceTree = "<group>"; };
+		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUpload.swift; path = Collaborative_Reading_App_3/CameraUpload.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F155F901E9D033400A6B555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Collaborative_Reading_App_3/ViewController.swift; sourceTree = "<group>"; };
@@ -57,13 +57,13 @@
 		3F6AA9181EC1EF0C00300C5A /* Tic Tac Toe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Tic Tac Toe.storyboard"; sourceTree = "<group>"; };
 		3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		3F880AD21ECDCEA700E81782 /* UserInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputVC.swift; sourceTree = "<group>"; };
-		3F90FD971ED7040300DD3758 /* AddBooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBooks.storyboard; sourceTree = "<group>"; };
-		3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
+		3F90FD971ED7040300DD3758 /* AddBooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddBooks.storyboard; path = Collaborative_Reading_App_3/AddBooks.storyboard; sourceTree = "<group>"; };
+		3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewCell.swift; path = Collaborative_Reading_App_3/BookViewCell.swift; sourceTree = "<group>"; };
 		3FA4A05F1EB0D166003184D9 /* AvatarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelectionViewController.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
-		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
-		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
-		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
+		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddingBookViewController.swift; path = Collaborative_Reading_App_3/AddingBookViewController.swift; sourceTree = "<group>"; };
+		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadToStartReadingViewController.swift; path = Collaborative_Reading_App_3/ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
+		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
 		B00E082E1ED43D12000C299A /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		B00E08301ED43E32000C299A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B00E08321ED43E5C000C299A /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		B0E797671ECD2E0400DFC99C /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		B0E8E5D91EBE770C006871DC /* ProfileCameraUpload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileCameraUpload.storyboard; sourceTree = "<group>"; };
 		B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCameraVC.swift; sourceTree = "<group>"; };
-		B0EF40921EC495D800F61ABD /* AddBooksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddBooksVC.swift; path = ../AddBooksVC.swift; sourceTree = "<group>"; };
-		B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookTableViewCell.swift; path = ../BookTableViewCell.swift; sourceTree = "<group>"; };
+		B0EF40921EC495D800F61ABD /* AddBooksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBooksVC.swift; sourceTree = "<group>"; };
+		B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,28 +108,19 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
-				3F6AA91C1EC1F58600300C5A /* Games */,
-				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
 				B0E797621ECD2D4D00DFC99C /* Timer */,
 				B00E082D1ED43CDE000C299A /* Side Menu */,
-				3FD340641EA7904100688BD3 /* NameInput.swift */,
+				3F733DBA1EE044BD009D86C6 /* Add Books */,
+				3F733DBC1EE0452F009D86C6 /* Prototypes */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
-				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155FA31E9D04E800A6B555 /* FirstRunTutorial.storyboard */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
 				3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */,
-				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
-				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
-				B0EF40921EC495D800F61ABD /* AddBooksVC.swift */,
-				B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */,
 				3F15A6DF1EC09E5E005158A9 /* Home.storyboard */,
-				3F90FD971ED7040300DD3758 /* AddBooks.storyboard */,
-				3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */,
-				3F12BD231ED85C1C00414962 /* BookViewController.swift */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -141,6 +132,7 @@
 				B0E8E5DB1EBE774D006871DC /* ProfileCameraVC.swift */,
 			);
 			name = ProfileCameraUpload;
+			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
 		};
 		3F6AA91C1EC1F58600300C5A /* Games */ = {
@@ -149,6 +141,7 @@
 				3F6AA91D1EC1F58E00300C5A /* Tic Tac Toe */,
 			);
 			name = Games;
+			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
 		};
 		3F6AA91D1EC1F58E00300C5A /* Tic Tac Toe */ = {
@@ -158,6 +151,41 @@
 				3F6AA91A1EC1F11500300C5A /* TicTacToeVC.swift */,
 			);
 			name = "Tic Tac Toe";
+			sourceTree = "<group>";
+		};
+		3F733DBA1EE044BD009D86C6 /* Add Books */ = {
+			isa = PBXGroup;
+			children = (
+				3F90FD971ED7040300DD3758 /* AddBooks.storyboard */,
+				3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */,
+				3F12BD231ED85C1C00414962 /* BookViewController.swift */,
+			);
+			name = "Add Books";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3F733DBB1EE044DB009D86C6 /* Add Books Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
+				B0EF40921EC495D800F61ABD /* AddBooksVC.swift */,
+				B0EF40941EC4967600F61ABD /* BookTableViewCell.swift */,
+			);
+			name = "Add Books Prototype";
+			sourceTree = "<group>";
+		};
+		3F733DBC1EE0452F009D86C6 /* Prototypes */ = {
+			isa = PBXGroup;
+			children = (
+				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
+				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
+				3FD340641EA7904100688BD3 /* NameInput.swift */,
+				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
+				3F6AA91C1EC1F58600300C5A /* Games */,
+				3F733DBB1EE044DB009D86C6 /* Add Books Prototype */,
+			);
+			name = Prototypes;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B00E082D1ED43CDE000C299A /* Side Menu */ = {

@@ -19,9 +19,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var managedObjextContext: NSManagedObjectContext!
     
     
-    var tableData: [String] = ["Evo X", "458", "GTR", "Evo X", "458", "GTR", "Evo X", "458", "GTR", "Evo X", "458", "GTR"]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

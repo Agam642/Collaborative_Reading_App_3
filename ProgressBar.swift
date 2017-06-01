@@ -3,7 +3,7 @@
 //  Collaborative_Reading_App_3
 //
 //  Created by Saif Al-Din Ali on 2017-05-17.
-//  Copyright © 2017 Student. All rights reserved.
+//  Copyright © 2017 Saif Al-Din Ali. All rights reserved.
 //
 
 import UIKit
@@ -66,8 +66,10 @@ class ProgressBar: UIView, CAAnimationDelegate {
     
     func loadBgProgressBar() {
         
-        let startAngle = CGFloat(-Double.pi / 2)
-        let endAngle = CGFloat(3 * Double.pi / 2)
+        //let startAngle = CGFloat(-Double.pi / 2)
+        let startAngle = CGFloat(0.0)
+        //let endAngle = CGFloat(3 * Double.pi / 2)
+        let endAngle = CGFloat(0.0)
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
         let gradientMaskLayer = gradientMaskBg()
         bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
