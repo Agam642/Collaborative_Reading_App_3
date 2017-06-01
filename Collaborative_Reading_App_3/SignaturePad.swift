@@ -20,7 +20,14 @@ class SignaturePad: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    // Reset button clears the image view
+    @IBAction func resetButton(_ sender: Any) {
+        self.imageView.image = nil
+    }
+    // Save button stores image in photo gallary
+    @IBAction func saveButton(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         
@@ -29,6 +36,7 @@ class SignaturePad: UIViewController {
         }
     }
     
+    // Draws lines on the screen as user moves thier finger
     func drawLines(fromPoint:CGPoint,toPoint:CGPoint) {
         UIGraphicsBeginImageContext(self.view.frame.size)
         imageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
@@ -43,12 +51,13 @@ class SignaturePad: UIViewController {
         context?.setStrokeColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor)
         
         
-        
         context?.strokePath()
         
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
+    
+    // Detects when user moves finger across screen
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         
@@ -57,21 +66,41 @@ class SignaturePad: UIViewController {
             drawLines(fromPoint: lastPoint, toPoint: currentPoint)
             
             lastPoint = currentPoint
+        }
     }
     
-   func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    // Detects when the user takes finger off screen
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
             if !swiped {
                 drawLines(fromPoint: lastPoint, toPoint: lastPoint)
             }
         }
     
-    func didReceiveMemoryWarning() {
+        
+   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /* 
+/*      Core Data Attempt
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let task = SignatureInput(context: context) // Link Task & Context
+        task.signature = taskTextField.text!
+        
+        // Save the data to coredata
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        UIImage *sampleimage = [UIImage imageNamed:imageView.image];
+        
+        NSData *dataImage = UIImageJPEGRepresentation(sampleimage, 0.0);
+        Then finally save it
+        
+        [obj setValue:dataImage forKey:@"imageEntity"];
+        
+    */
+        
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -82,4 +111,4 @@ class SignaturePad: UIViewController {
     */
 
 }
-}
+
