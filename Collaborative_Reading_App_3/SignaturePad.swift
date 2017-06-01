@@ -15,18 +15,36 @@ class SignaturePad: UIViewController {
 
     var lastPoint = CGPoint.zero
     var swiped = false
+    let alertController = UIAlertController(title: "Signature", message: "Please have your parent sign", preferredStyle: UIAlertControllerStyle.alert)
+    
+    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+    {
+        (result : UIAlertAction) -> Void in
+        print("You pressed OK")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
+
+    
     // Reset button clears the image view
     @IBAction func resetButton(_ sender: Any) {
         self.imageView.image = nil
     }
     // Save button stores image in photo gallary
     @IBAction func saveButton(_ sender: Any) {
+        if imageView.image == nil {
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+     
+        }
+        else {
         UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
