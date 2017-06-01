@@ -17,12 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // function that checks if app is already launched and returns a bool value
         func isAppAlreadyLaunchedOnce()->Bool {
+            // set defaults
             let defaults = UserDefaults.standard
             
+            // checks defaults for previus app launch
             if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
                 print("App already launched : \(isAppAlreadyLaunchedOnce)")
                 return true
+                
+            //else the app has launched for the first time
             }else{
                 defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
                 print("App launched first time")
@@ -30,16 +35,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // Attempt to check if there is data stored in core data
+        func entityIsEmpty(entity: String) -> Bool
+        {
+            // context is set to the object
+            let context = NSManagedObjectContext()
+            // gets the data
+            let request: NSFetchRequest<NSFetchRequestResult> = UserInfo.fetchRequest()
+            var results = [NSManagedObject]()
+            
+            do {
+                results = try context.fetch(request) as! [NSManagedObject]
+                return results.count == 0
+                
+            //returns true if empty
+            } catch let error as NSError {
+                // failure
+                print("Error: \(error.debugDescription)")
+                return true
+            }
+        }
+        
+        // if the app is already launched then the main storyboard will be loaded up
         if isAppAlreadyLaunchedOnce() == true {
             
+            //sets the screen
             self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            // sets storyboard to use
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // sets intial view controller
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "intial")
+            
+            // becomes rootview controller
             self.window?.rootViewController = initialViewController
+            
+            // makes the view controller visible
             self.window?.makeKeyAndVisible()
             
+        // else the app is launched for the first time then the tutorial is launched
         } else {
             
+            // repeated code using the tutorial storyboard and a view controller on the tutorial as the intial view controller
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
