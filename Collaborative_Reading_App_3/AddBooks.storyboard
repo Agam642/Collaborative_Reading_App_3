@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,8 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-DQ-HME">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-DQ-HME">
                                 <rect key="frame" x="0.0" y="-4" width="600" height="608"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KCC-G7-mmm">
                                     <size key="itemSize" width="79" height="84"/>
@@ -66,12 +66,6 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="yvY-DQ-HME" firstAttribute="leading" secondItem="cWy-JF-bJm" secondAttribute="leadingMargin" constant="-16" id="ebG-mF-9bV"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="yvY-DQ-HME" secondAttribute="bottom" constant="-4" id="jYd-U8-uJL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yvY-DQ-HME" secondAttribute="trailing" constant="-16" id="mC5-Bv-SDJ"/>
-                            <constraint firstItem="yvY-DQ-HME" firstAttribute="top" secondItem="cWy-JF-bJm" secondAttribute="topMargin" constant="-4" id="sbh-gY-OV5"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D8V-zT-Vkf">
                         <barButtonItem key="rightBarButtonItem" image="Plus Math-50" id="y6E-IU-LBc">
@@ -93,7 +87,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qrk-Xz-Dw9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fIU-7k-JX7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fIU-7k-JX7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

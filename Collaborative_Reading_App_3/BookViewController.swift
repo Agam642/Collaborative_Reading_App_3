@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class BookViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class BookViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -61,12 +61,49 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         cell.lblCell.text = bookItem.bookTitle
         
+        //let holdToDelete = UILongPressGestureRecognizer(target: self, action: "longPressDelete:")
+        //holdToDelete.minimumPressDuration = 1.00
+        //cell.addGestureRecognizer(holdToDelete)
+        
         
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell \(indexPath.row) selected")
+        let longPres = UILongPressGestureRecognizer(target: self, action: #selector(self.activateDeletionMode))
+        longPres.minimumPressDuration = 0.5
+        //seconds
+        longPres.delegate = self
+        self.collectionView?.addGestureRecognizer(longPres)
+    }
+    //Prototype for longpress delete
+    
+    func activateDeletionMode(_ gr: UILongPressGestureRecognizer) {
+        if gr.state == .began {
+            print("delete mode")
+            
+            func handleLongpressMethod(_ gestureRecognizer: UILongPressGestureRecognizer) {
+                if gestureRecognizer.state != .ended {
+                    return
+                }
+                let pt: CGPoint = gestureRecognizer.location(in: collectionView)
+                let indexPath: IndexPath? = collectionView?.indexPathForItem(at: pt)
+                if indexPath == nil {
+                    print("couldn't find index path")
+                }
+                else {
+                    // get the cell at indexPath (the one you long pressed)
+                    let cell: UICollectionViewCell? = collectionView?.cellForItem(at: indexPath!)
+                    books.remove(at: (indexPath?.row)!)
+                    collectionView.reloadData()
+                    // work  with the cell
+                }
+            }
+
+            
+        }
     }
     
     
@@ -74,6 +111,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func addBook(_ sender: Any) {
         
@@ -86,8 +124,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         
     }
-    
-    
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
