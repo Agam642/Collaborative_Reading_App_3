@@ -57,6 +57,8 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+
         //next 4 lines allow one cell to be highlighted when selected
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = .none
