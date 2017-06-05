@@ -162,6 +162,7 @@
 				3F90FD9B1ED711CE00DD3758 /* BookViewCell.swift */,
 				3F12BD231ED85C1C00414962 /* BookViewController.swift */,
 				B0F016BC1EE5725E001777C3 /* BookFile.swift */,
+				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 			);
 			name = "Add Books";
 			path = ..;
@@ -181,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
-				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3F15A6E11EC09E69005158A9 /* ProfileCameraUpload */,
 				3F6AA91C1EC1F58600300C5A /* Games */,

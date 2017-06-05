@@ -39,8 +39,7 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         }
     }
     
-        @IBAction func ChooseImage(_ sender: Any) {
-        
+    @IBAction func ChooseImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
@@ -59,5 +58,8 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
+        
     }
+        
+        
 }
