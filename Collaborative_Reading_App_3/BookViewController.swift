@@ -72,11 +72,11 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell \(indexPath.row) selected")
-        let longPres = UILongPressGestureRecognizer(target: self, action: #selector(self.activateDeletionMode))
-        longPres.minimumPressDuration = 0.5
+        //let longPres = UILongPressGestureRecognizer(target: self, action: #selector(self.activateDeletionMode))
+        //longPres.minimumPressDuration = 0.5
         //seconds
-        longPres.delegate = self
-        self.collectionView?.addGestureRecognizer(longPres)
+        //longPres.delegate = self
+        //self.collectionView?.addGestureRecognizer(longPres)
     }
     //Prototype for longpress delete
     
@@ -135,7 +135,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
-                self.createBookItem(with: image)
+                //self.createBookItem(with: image)
             })
         }
         
@@ -143,7 +143,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
-    
+   /*
     func createBookItem (with image:UIImage) {
         
         let bookItem = Add_Books_Library(context: managedObjextContext)
@@ -180,11 +180,8 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(inputAlert, animated: true, completion: nil)
-        
-        
-        
-        
     }
+ */
     
     
 }

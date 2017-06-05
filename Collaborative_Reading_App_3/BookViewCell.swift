@@ -12,4 +12,5 @@ class BookViewCell: UICollectionViewCell {
     
     @IBOutlet var imgCell: UIImageView!
     @IBOutlet var lblCell: UILabel!
+    
 }
