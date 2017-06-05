@@ -12,6 +12,8 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     @IBOutlet weak var myImageView: UIImageView!
     
+    var images = [Add_Books_Library]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,7 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
             myImageView.image = image
+            //myImageView.image = images.
         } else {
             //Diplay error message
         }
