@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F11D6C61EDFA1F800B863FA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11D6C51EDFA1F800B863FA /* CalendarViewController.swift */; };
 		3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217C1EAF78B1002D82BD /* FeedCell.swift */; };
 		3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217E1EAF7B07002D82BD /* HomeController.swift */; };
 		3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F11D6C51EDFA1F800B863FA /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3F13217C1EAF78B1002D82BD /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3F13217E1EAF7B07002D82BD /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
+				3F11D6C51EDFA1F800B863FA /* CalendarViewController.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
+				3F11D6C61EDFA1F800B863FA /* CalendarViewController.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,
