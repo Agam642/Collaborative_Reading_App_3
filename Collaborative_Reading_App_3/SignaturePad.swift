@@ -28,10 +28,12 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
 
+    
+    // Reset button clears the image view
     @IBAction func resetButton(_ sender: Any) {
         self.imageView.image = nil
     }
-    
+    // Save button stores image in photo gallary
     @IBAction func saveButton(_ sender: Any) {
         // adds the signature photo to the gallery
         UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
@@ -95,6 +97,7 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         }
     }
     
+    // Draws lines on the screen as user moves thier finger
     func drawLines(fromPoint:CGPoint,toPoint:CGPoint) {
         UIGraphicsBeginImageContext(self.view.frame.size)
         imageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
@@ -114,6 +117,8 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
+    
+    // Detects when user moves finger across screen
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         
@@ -125,6 +130,7 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         }
     }
     
+    // Detects when the user takes finger off screen
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
             if !swiped {
                 drawLines(fromPoint: lastPoint, toPoint: lastPoint)

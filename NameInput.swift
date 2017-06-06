@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NameInput: UIViewController {
 
@@ -39,6 +40,16 @@ class NameInput: UIViewController {
     @IBAction func goToNext(_ sender: UIButton) {
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let task = UserInfo(context: context) // Link Task & Context
+        task.name = nameInput.text!
+        
+        // Save the data to coredata
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        let _ = navigationController?.popViewController(animated: true)
+        
     }
     
     //func that allows passing data with the segue
