@@ -41,14 +41,14 @@ class NameInput: UIViewController {
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let task = UserInfo(context: context) // Link Task & Context
-        task.name = nameInput.text!
+        //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //let task = UserInfo(context: context) // Link Task & Context
+        //task.name = nameInput.text!
         
         // Save the data to coredata
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+       // (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-        let _ = navigationController?.popViewController(animated: true)
+       // let _ = navigationController?.popViewController(animated: true)
         
     }
     

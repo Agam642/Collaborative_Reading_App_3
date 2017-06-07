@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0CCAD51EE58E3000B14CC9 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CCAD41EE58E3000B14CC9 /* Sample.swift */; };
 		3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217C1EAF78B1002D82BD /* FeedCell.swift */; };
 		3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217E1EAF7B07002D82BD /* HomeController.swift */; };
 		3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0CCAD41EE58E3000B14CC9 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		3F13217C1EAF78B1002D82BD /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3F13217E1EAF7B07002D82BD /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */,
+				3F0CCAD41EE58E3000B14CC9 /* Sample.swift */,
 				3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */,
 				3F1F76691ECF206D00F86161 /* CameraUse.swift */,
 				3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */,
@@ -243,6 +246,7 @@
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
+				3F0CCAD51EE58E3000B14CC9 /* Sample.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,

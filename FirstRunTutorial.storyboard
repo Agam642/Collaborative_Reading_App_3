@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rme-wi-QoM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rme-wi-QoM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -139,7 +139,7 @@
                                 <rect key="frame" x="198" y="586" width="61" height="61"/>
                                 <state key="normal" image="button"/>
                                 <connections>
-                                    <segue destination="OzD-1b-aiw" kind="show" id="q1E-r7-neD"/>
+                                    <segue destination="vdT-ry-8kz" kind="show" id="jua-FS-jt5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your avatar (this can be changed later)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icz-qy-22b">
@@ -220,13 +220,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19D-fa-6Rk">
-                                <rect key="frame" x="247" y="255.5" width="47" height="26"/>
+                                <rect key="frame" x="247" y="256" width="47" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24z-RS-Nae">
-                                <rect key="frame" x="89.5" y="255.5" width="39.5" height="26"/>
+                                <rect key="frame" x="90" y="256" width="39.5" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -645,6 +645,41 @@
             </objects>
             <point key="canvasLocation" x="2547" y="266"/>
         </scene>
+        <!--Sample-->
+        <scene sceneID="0sk-N0-eis">
+            <objects>
+                <viewController id="vdT-ry-8kz" customClass="Sample" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VrN-eG-WLC"/>
+                        <viewControllerLayoutGuide type="bottom" id="mTH-7B-xqX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6YK-ND-1Ju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-6b-aAb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-7e-bIe">
+                                <rect key="frame" x="166" y="510" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageName" destination="NAd-7e-bIe" id="CgT-4V-aLu"/>
+                        <outlet property="avatarImage" destination="3zt-6b-aAb" id="9IH-NC-qEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0j7-rQ-Yzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="521.28935532233891"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Author Rectangle" width="254" height="110"/>
@@ -656,11 +691,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NBU-2a-TKI"/>
-        <segue reference="rqz-mY-LD2"/>
-        <segue reference="juA-5b-yKI"/>
+        <segue reference="PYP-Yc-EOB"/>
         <segue reference="Nuh-DD-DDn"/>
         <segue reference="Nbp-jD-GWb"/>
-        <segue reference="rqz-mY-LD2"/>
-        <segue reference="NBU-2a-TKI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         
         //displays message
         namelbl.text = "Hi " + passedData + ","
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,14 +59,23 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       
-
         //next 4 lines allow one cell to be highlighted when selected
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = .none
         cell!.layer.borderWidth = 2.0
         cell!.layer.borderColor = UIColor.white.cgColor
+        
+        
+        var imageName = images[indexPath.row]
 
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let task = UserInfo(context: context) // Link Task & Context
+        task.avatarClicked = imageName
+ 
+        // Save the data to coredata
+        do {
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            print("SAVED")
+        }
     }
-
-
 }
