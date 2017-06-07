@@ -150,6 +150,7 @@
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F901E9D033400A6B555 /* ViewController.swift */,
+				3F11D6C51EDFA1F800B863FA /* CalendarViewController.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,

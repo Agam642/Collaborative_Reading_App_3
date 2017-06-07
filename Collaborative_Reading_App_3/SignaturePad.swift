@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class SignaturePad: UIViewController {
+class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
 
     
     @IBOutlet weak var imageView: UIImageView!
@@ -16,19 +17,15 @@ class SignaturePad: UIViewController {
     var lastPoint = CGPoint.zero
     var swiped = false
     
-    let alertController = UIAlertController(title: "Signature", message: "Please have your parent sign", preferredStyle: UIAlertControllerStyle.alert)
-    
-    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-    {
-        (result : UIAlertAction) -> Void in
-        print("You pressed OK")
-    }
-
+    // creates a object context to hold the Core Data of the image
+    var managedObjectContext:NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
+        // initializes and allows the use of the object to be used throughout the view controller
+        managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
 
     
@@ -38,14 +35,60 @@ class SignaturePad: UIViewController {
     }
     // Save button stores image in photo gallary
     @IBAction func saveButton(_ sender: Any) {
-        if imageView.image == nil {
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        }
-        else {
+        // adds the signature photo to the gallery
         UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+        
+        // creates a variable to hold the image as core data
+        let imagePicker = UIImagePickerController()
+        // lets the image picker's source type to access the photo library
+        imagePicker.sourceType = .photoLibrary
+        
+        imagePicker.delegate = self
+        
+        // displays the image picker delegate pop up
+        self.present(imagePicker, animated: true, completion: nil)
+        
+        
+    }
+    // function that will check if the image picker worked or not
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // a pop up to ask permission to use the gallery will open up
+        // if the user declines the pop up for the permission to access the gallery
+        // it will dismiss the pop up
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // function occurs when the image picker did work
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // checks to see if an image was actually selected from the gallery
+        if let signature = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            picker.dismiss(animated: true, completion: {
+                // calls in the create image item function
+                self.createImageItem(with: signature)
+            })
         }
     }
+    
+    func createImageItem (with signature:UIImage) {
+        // creates a variable that will hold the core container of the entity SignaturePad
+        let imageItem = SignatureInput(context: managedObjectContext)
+        // adds the image selected to the image variable of the SignaturePad entity
+        imageItem.signature = NSData(data: UIImageJPEGRepresentation(signature, 0.3)!)
+        
+        // saves the core data stack
+        do {
+            try self.managedObjectContext.save()
+            print ("Saved")
+        }catch {
+            print ("Could Not Save Data")
+        }
+        
+    }
+    
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         

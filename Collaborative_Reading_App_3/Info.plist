@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>To Display and Use your Image Asset</string>
 	<key>NSCameraUsageDescription</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
