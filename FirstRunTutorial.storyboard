@@ -139,7 +139,7 @@
                                 <rect key="frame" x="198" y="586" width="61" height="61"/>
                                 <state key="normal" image="button"/>
                                 <connections>
-                                    <segue destination="vdT-ry-8kz" kind="show" id="jua-FS-jt5"/>
+                                    <segue destination="OzD-1b-aiw" kind="show" id="TLP-cu-yys"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your avatar (this can be changed later)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icz-qy-22b">
