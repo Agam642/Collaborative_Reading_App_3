@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F12BD241ED85C1C00414962 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12BD231ED85C1C00414962 /* BookViewController.swift */; };
 		3F131BBF1EB0CFF80015071A /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F131BBE1EB0CFF80015071A /* CameraUpload.swift */; };
+		3F145EB51EE82AC500DBD30C /* BookDecisionFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F145EB41EE82AC500DBD30C /* BookDecisionFinal.swift */; };
 		3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F8E1E9D033400A6B555 /* AppDelegate.swift */; };
 		3F155F911E9D033400A6B555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F901E9D033400A6B555 /* ViewController.swift */; };
 		3F155F941E9D033400A6B555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F921E9D033400A6B555 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		3F12BD231ED85C1C00414962 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = Collaborative_Reading_App_3/BookViewController.swift; sourceTree = "<group>"; };
 		3F131BBE1EB0CFF80015071A /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUpload.swift; path = Collaborative_Reading_App_3/CameraUpload.swift; sourceTree = "<group>"; };
+		3F145EB41EE82AC500DBD30C /* BookDecisionFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDecisionFinal.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F155F901E9D033400A6B555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Collaborative_Reading_App_3/ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				3F12BD231ED85C1C00414962 /* BookViewController.swift */,
 				B0F016BC1EE5725E001777C3 /* BookFile.swift */,
 				3F131BBE1EB0CFF80015071A /* CameraUpload.swift */,
+				3F145EB41EE82AC500DBD30C /* BookDecisionFinal.swift */,
 			);
 			name = "Add Books";
 			path = ..;
@@ -302,6 +305,7 @@
 				3FA4A0601EB0D166003184D9 /* AvatarSelectionViewController.swift in Sources */,
 				3F12BD241ED85C1C00414962 /* BookViewController.swift in Sources */,
 				B0F016BD1EE5725E001777C3 /* BookFile.swift in Sources */,
+				3F145EB51EE82AC500DBD30C /* BookDecisionFinal.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
 				3F880AD31ECDCEA700E81782 /* UserInputVC.swift in Sources */,
 				B0E797661ECD2D9C00DFC99C /* CountdownTimer.swift in Sources */,
