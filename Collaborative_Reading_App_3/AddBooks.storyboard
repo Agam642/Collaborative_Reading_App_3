@@ -276,7 +276,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
                                 <connections>
-                                    <segue destination="Aby-ZT-Hep" kind="show" id="Bvm-wb-mTP"/>
+                                    <segue destination="t43-kr-aQv" kind="show" id="qz6-ra-FoV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eke-uZ-8Ms">
@@ -395,7 +395,8 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mgV-j0-MpL"/>
+        <segue reference="qz6-ra-FoV"/>
         <segue reference="l0I-A8-NR4"/>
+        <segue reference="mgV-j0-MpL"/>
     </inferredMetricsTieBreakers>
 </document>

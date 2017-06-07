@@ -25,9 +25,13 @@ class BookDecisionFinal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //let bookItem = Add_Books_Library(context: managedObjextContext)
+        let bookItem = Add_Books_Library(context: managedObjextContext)
         // Do any additional setup after loading the view.
         //bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(bookCover.image!, 0.3)!)
+        //bookCover.image = UIImageJPEGRepresentation(<#T##image: UIImage##UIImage#>, 1)
+        bookTitle.text = bookItem.bookTitle
+        authorTitle.text = bookItem.author
+        pagesTitle.text = bookItem.numberOfPages
     }
 
     override func didReceiveMemoryWarning() {
