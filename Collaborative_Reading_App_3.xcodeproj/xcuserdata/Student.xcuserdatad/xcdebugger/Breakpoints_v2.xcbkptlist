@@ -152,29 +152,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Collaborative_Reading_App_3/Sample.swift"
-            timestampString = "518495628.094292"
+            timestampString = "518619131.929641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "Sample"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Collaborative_Reading_App_3/Sample.swift"
-            timestampString = "518496585.401637"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "Sample"
-            landmarkType = "3">
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

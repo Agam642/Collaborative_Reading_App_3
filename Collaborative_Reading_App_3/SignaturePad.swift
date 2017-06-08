@@ -17,6 +17,15 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
     var lastPoint = CGPoint.zero
     var swiped = false
     
+    let alertController = UIAlertController(title: "Signature", message: "Please have your parent sign", preferredStyle: UIAlertControllerStyle.alert)
+    
+    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+    {
+        (result : UIAlertAction) -> Void in
+        print("You pressed OK")
+    }
+
+    
     // creates a object context to hold the Core Data of the image
     var managedObjectContext:NSManagedObjectContext!
     
@@ -35,6 +44,11 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
     }
     // Save button stores image in photo gallary
     @IBAction func saveButton(_ sender: Any) {
+        if imageView.image == nil {
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
         // adds the signature photo to the gallery
         UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
         
@@ -47,7 +61,7 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         
         // displays the image picker delegate pop up
         self.present(imagePicker, animated: true, completion: nil)
-        
+        }
         
     }
     // function that will check if the image picker worked or not
