@@ -220,13 +220,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19D-fa-6Rk">
-                                <rect key="frame" x="247" y="256.5" width="47" height="26"/>
+                                <rect key="frame" x="247" y="256" width="47" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24z-RS-Nae">
-                                <rect key="frame" x="89.5" y="256.5" width="39.5" height="26"/>
+                                <rect key="frame" x="90" y="256" width="39.5" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -597,6 +597,9 @@
                                 <rect key="frame" x="206" y="602" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
+                                <connections>
+                                    <segue destination="trX-eU-iFp" kind="show" id="106-ct-tL9"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-xb-oKS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -628,6 +631,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-qO-jdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7554.3999999999996" y="-137.18140929535232"/>
+        </scene>
+        <!--Main Screen-->
+        <scene sceneID="TOa-xb-g3Y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Main Screen" id="trX-eU-iFp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhy-YS-dbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8234" y="-42"/>
         </scene>
         <!--Main-->
         <scene sceneID="15q-6V-FE3">
@@ -682,9 +693,9 @@
         <image name="purpleButton" width="150" height="53"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NBU-2a-TKI"/>
         <segue reference="PYP-Yc-EOB"/>
-        <segue reference="Nuh-DD-DDn"/>
+        <segue reference="NBU-2a-TKI"/>
+        <segue reference="SXY-U4-ndk"/>
         <segue reference="Nbp-jD-GWb"/>
     </inferredMetricsTieBreakers>
 </document>
