@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -14,10 +15,13 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     var images = [Add_Books_Library]()
     
+    var managedObjextContext: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+     managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,6 +30,13 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let bookItem = Add_Books_Library(context: managedObjextContext)
+        
+        if let bookImage = UIImage(data: bookItem.bookCover! as Data) {
+            self.myImageView.image = bookImage
+        }
+
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
@@ -40,7 +51,8 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             picker.dismiss(animated: true, completion: nil)
         }
-    }
+        
+}
     
     @IBAction func ChooseImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
