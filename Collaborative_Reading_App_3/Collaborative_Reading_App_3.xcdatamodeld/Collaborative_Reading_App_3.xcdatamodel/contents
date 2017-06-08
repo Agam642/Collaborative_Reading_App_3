@@ -10,10 +10,11 @@
     </entity>
     <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
         <attribute name="avatarClicked" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="BookInfo" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="SignatureInput" positionX="-54" positionY="18" width="128" height="60"/>
-        <element name="UserInfo" positionX="133" positionY="-18" width="128" height="58"/>
+        <element name="UserInfo" positionX="133" positionY="-18" width="128" height="75"/>
     </elements>
 </model>

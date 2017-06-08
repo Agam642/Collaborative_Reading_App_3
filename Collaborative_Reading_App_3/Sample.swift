@@ -15,6 +15,7 @@ class Sample: UIViewController {
 
     @IBOutlet weak var ImageName: UILabel!
     
+    // array to store the avatars
     var objects: [UserInfo] = []
     
     
