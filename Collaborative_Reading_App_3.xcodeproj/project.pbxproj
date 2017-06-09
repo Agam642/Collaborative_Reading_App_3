@@ -23,6 +23,7 @@
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F76691ECF206D00F86161 /* CameraUse.swift */; };
 		3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */; };
+		3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -52,6 +53,7 @@
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUse.swift; sourceTree = "<group>"; };
 		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */,
+				3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */,
+				3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */,
 				3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */,
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */,
