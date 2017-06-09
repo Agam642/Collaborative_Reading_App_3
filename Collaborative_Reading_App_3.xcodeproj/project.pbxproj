@@ -22,6 +22,7 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F76691ECF206D00F86161 /* CameraUse.swift */; };
+		3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -50,6 +51,7 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUse.swift; sourceTree = "<group>"; };
+		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F75E91F1EEAD0B200A3BF8E /* Timer */,
 				3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */,
 				3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */,
 				3F1F76691ECF206D00F86161 /* CameraUse.swift */,
@@ -156,6 +159,14 @@
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
 			);
 			path = Collaborative_Reading_App_3;
+			sourceTree = "<group>";
+		};
+		3F75E91F1EEAD0B200A3BF8E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */,
+			);
+			name = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				3FE4B1BB1ECD0F22007BC28B /* FirstRunTutorial.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
+				3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
