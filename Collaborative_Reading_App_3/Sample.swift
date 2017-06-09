@@ -15,15 +15,6 @@ class Sample: UIViewController {
 
     @IBOutlet weak var ImageName: UILabel!
     
-    // array to store the avatars
-    var objects: [UserInfo] = []
-    
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    
-    
-    
     /*
     func getData() {
         do {
@@ -63,37 +54,31 @@ class Sample: UIViewController {
     }
     
     
+    // array to store the avatars
+    var objects: [UserInfo] = []
     
-    /*override func viewWillAppear(_ animated: Bool) {
-        //1
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
         
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
         
-        //2
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
-        
-        //3
         do {
             objects = try context.fetch(UserInfo.fetchRequest())
             print("Fetched")
-        } catch let error as NSError {
+        } catch {
             print("Could not fetch")
-        }
-        let avatars = objects
-        
-        if let myAvatar = avatars.avatarClicked {
-            ImageName.text = myAvatar
         }
         
     }
 
- */
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
