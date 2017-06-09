@@ -1,35 +1,61 @@
+
 //
 //  BookDecisionFinal.swift
 //  Collaborative_Reading_App_3
 //
-//  Created by Student on 2017-06-09.
+//  Created by Student on 2017-06-07.
 //  Copyright © 2017 Student. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
 class BookDecisionFinal: UIViewController {
-
+    
+    @IBOutlet weak var bookCover: UIImageView!
+    
+    @IBOutlet weak var bookTitle: UITextField!
+    
+    @IBOutlet weak var authorTitle: UITextField!
+    
+    @IBOutlet weak var pagesTitle: UITextField!
+    
+    var images = [Add_Books_Library]()
+    var managedObjextContext: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let bookItem = Add_Books_Library(context: managedObjextContext)
         // Do any additional setup after loading the view.
+        //bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(bookCover.image!, 0.3)!)
+        //bookCover.image = UIImageJPEGRepresentation(<#T##image: UIImage##UIImage#>, 1)
+        bookTitle.text = bookItem.bookTitle
+        authorTitle.text = bookItem.author
+        pagesTitle.text = bookItem.numberOfPages
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            bookCover.image = image
+            //myImageView.image = images.
+        } else {
+            //Diplay error message
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
     }
-    */
-
+    
 }
+
