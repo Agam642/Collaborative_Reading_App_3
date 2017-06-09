@@ -29,6 +29,7 @@
 		3F75E9291EEAD3C800A3BF8E /* UserInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9281EEAD3C800A3BF8E /* UserInputVC.swift */; };
 		3F75E92B1EEAD42D00A3BF8E /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E92A1EEAD42D00A3BF8E /* CustomColor.swift */; };
 		3F75E92E1EEAD51A00A3BF8E /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E92D1EEAD51A00A3BF8E /* Menu.storyboard */; };
+		3F75E9301EEAD56900A3BF8E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E92F1EEAD56900A3BF8E /* MenuViewController.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -64,6 +65,7 @@
 		3F75E9281EEAD3C800A3BF8E /* UserInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputVC.swift; sourceTree = "<group>"; };
 		3F75E92A1EEAD42D00A3BF8E /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		3F75E92D1EEAD51A00A3BF8E /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		3F75E92F1EEAD56900A3BF8E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3F75E92D1EEAD51A00A3BF8E /* Menu.storyboard */,
+				3F75E92F1EEAD56900A3BF8E /* MenuViewController.swift */,
 			);
 			name = "Side Menu";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */,
 				3F75E9251EEAD1BF00A3BF8E /* CountdownTimer.swift in Sources */,
 				3F13218E1EAF838A002D82BD /* Book.swift in Sources */,
+				3F75E9301EEAD56900A3BF8E /* MenuViewController.swift in Sources */,
 				3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */,
 				3F1321851EAF7B77002D82BD /* SettingCell.swift in Sources */,
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
