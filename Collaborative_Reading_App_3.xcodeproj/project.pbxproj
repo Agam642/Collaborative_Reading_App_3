@@ -33,6 +33,7 @@
 		3F75E9321EEAD5C000A3BF8E /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9311EEAD5C000A3BF8E /* SideBarTableViewController.swift */; };
 		3F75E9341EEAD6AB00A3BF8E /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9331EEAD6AB00A3BF8E /* SideBar.swift */; };
 		3F75E9381EEAD74400A3BF8E /* AddBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */; };
+		3F75E93A1EEAD7B400A3BF8E /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -72,6 +73,7 @@
 		3F75E9311EEAD5C000A3BF8E /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		3F75E9331EEAD6AB00A3BF8E /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBooks.storyboard; sourceTree = "<group>"; };
+		3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */,
+				3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */,
 			);
 			name = "Add Books";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				3F1321851EAF7B77002D82BD /* SettingCell.swift in Sources */,
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
 				3F75E9271EEAD2D000A3BF8E /* TimerViewController.swift in Sources */,
+				3F75E93A1EEAD7B400A3BF8E /* BookViewCell.swift in Sources */,
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
 				3F155F911E9D033400A6B555 /* ViewController.swift in Sources */,
