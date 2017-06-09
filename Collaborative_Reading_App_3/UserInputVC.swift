@@ -57,7 +57,7 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == nextNum {
-            let destination = segue.destination as! ViewController
+            let destination = segue.destination as! TimerViewController
             if (secondsResult != nil) && (minutesResult != nil) && (hoursResult != nil) {
                 destination.selectedSecs = secondsResult
                 destination.selectedMins = minutesResult
