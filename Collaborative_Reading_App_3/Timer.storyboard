@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-759.20000000000005" y="212.74362818590706"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="mJt-Wx-3MV">
             <objects>
-                <viewController id="bY4-ty-wk8" customClass="ViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bY4-ty-wk8" customClass="TimerViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8bD-Bs-TDp"/>
                         <viewControllerLayoutGuide type="bottom" id="2uP-ll-ptg"/>
