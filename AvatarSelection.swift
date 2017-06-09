@@ -65,7 +65,6 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         cell!.layer.borderWidth = 2.0
         cell!.layer.borderColor = UIColor.white.cgColor
         
-        
         var imageName = images[indexPath.row]
 
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -77,5 +76,12 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
             print("SAVED")
         }
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = .none
+        cell!.layer.borderWidth = 0
+      
     }
 }
