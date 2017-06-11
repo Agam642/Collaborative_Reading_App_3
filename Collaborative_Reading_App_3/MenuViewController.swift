@@ -38,21 +38,21 @@ class MenuViewController: UIViewController, SideBarDelegate {
         
         //Storybaord 2
         let controller2 = storyboard?.instantiateViewController(withIdentifier: "Name")
-        self.addChildViewController(controller!)
+        self.addChildViewController(controller2!)
         //view.addSubview((controller?.view)!)
-        controller?.didMove(toParentViewController: self)
+        controller2?.didMove(toParentViewController: self)
         
         //Storybaord 3
         let controller3 = storyboard?.instantiateViewController(withIdentifier: "StartReading")
-        self.addChildViewController(controller!)
+        self.addChildViewController(controller3!)
         //view.addSubview((controller?.view)!)
-        controller?.didMove(toParentViewController: self)
+        controller3?.didMove(toParentViewController: self)
         
         //Storybaord 4
         let controller4 = storyboard?.instantiateViewController(withIdentifier: "Timer")
-        self.addChildViewController(controller!)
+        self.addChildViewController(controller4!)
         //view.addSubview((controller?.view)!)
-        controller?.didMove(toParentViewController: self)
+        controller4?.didMove(toParentViewController: self)
         
         
         

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ihM-xI-FWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ihM-xI-FWb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,17 +31,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Pa-Mz-BRH">
-                                    <size key="itemSize" width="214" height="218"/>
+                                    <size key="itemSize" width="167" height="186"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Wmw-Xk-V4z" customClass="BookViewCell" customModule="Collaborative_Reading_App_3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="218"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="186"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="214" height="218"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-Oh-GvU">
@@ -52,15 +52,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzE-Fz-Pza">
-                                                    <rect key="frame" x="0.0" y="8" width="174" height="179"/>
+                                                    <rect key="frame" x="0.0" y="8" width="147" height="158"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <size key="customSize" width="214" height="218"/>
+                                        <size key="customSize" width="167" height="186"/>
                                         <connections>
                                             <outlet property="imgCell" destination="lzE-Fz-Pza" id="89q-SC-hmT"/>
                                             <outlet property="lblCell" destination="FFs-Oh-GvU" id="ddh-3B-zh2"/>
+                                            <segue destination="tTv-b6-T1M" kind="show" id="MRk-qo-n3A"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -76,9 +77,6 @@
                         <barButtonItem key="rightBarButtonItem" image="Plus Math-50" id="TRl-JM-h8m">
                             <connections>
                                 <action selector="addBook:" destination="uSz-QF-Tqy" id="VpC-ho-5JL"/>
-                                <segue destination="2Ji-iC-mvU" kind="show" id="t8b-e0-1BM">
-                                    <nil key="action"/>
-                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,7 +93,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ihM-xI-FWb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CyT-Ij-Jfz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CyT-Ij-Jfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -200,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr9-Y3-DhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3109.5999999999999" y="201.94902548725639"/>
+            <point key="canvasLocation" x="3132" y="-699"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XSJ-d1-2hz">
@@ -251,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2D-0I-N1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4096.8000000000002" y="201.94902548725639"/>
+            <point key="canvasLocation" x="4119" y="-699"/>
         </scene>
         <!--Camera Upload-->
         <scene sceneID="cr5-Ev-MTz">
@@ -306,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MsD-Sv-TAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5068" y="201.94902548725639"/>
+            <point key="canvasLocation" x="5090" y="-699"/>
         </scene>
         <!--Book Decision Final-->
         <scene sceneID="3Ch-rO-2aG">
@@ -388,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiT-oh-8RA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5922" y="202"/>
+            <point key="canvasLocation" x="3073" y="202"/>
         </scene>
     </scenes>
     <resources>
@@ -399,7 +397,6 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lEM-aq-u9h"/>
         <segue reference="fSm-xP-Erx"/>
         <segue reference="dnp-1j-0nJ"/>
     </inferredMetricsTieBreakers>

@@ -120,8 +120,26 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         imagePicker.delegate = self
         
-        self.present(imagePicker, animated: true, completion: nil)
+        //self.present(imagePicker, animated: true, completion: nil)
         
+        
+        let actionSheet = UIAlertController(title: "Photo Shource", message: "Choose a source", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)}))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(actionSheet, animated: true, completion: nil)
+        
+
         
     }
     
@@ -149,7 +167,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let bookItem = Add_Books_Library(context: managedObjextContext)
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
-        /*
+        
          let inputAlert = UIAlertController(title: "New Book", message: "Enter the Book.", preferredStyle: .alert)
          inputAlert.addTextField { (textfield:UITextField) in
          textfield.placeholder = "Book"
@@ -180,10 +198,8 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
          inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
          
          self.present(inputAlert, animated: true, completion: nil)
-         */
+         
     }
-    
-    
     
 }
 

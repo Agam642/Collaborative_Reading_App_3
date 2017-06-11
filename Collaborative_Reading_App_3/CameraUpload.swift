@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var myImageView: UIImageView!
     
     var images = [Add_Books_Library]()
+    var managedObjextContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +27,28 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         // Dispose of any resources that can be recreated.
     }
     
+    func loadData(){
+        
+        let bookRequest:NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        
+        do {
+            images = try managedObjextContext.fetch(bookRequest)
+        }catch {
+            print("Could not load data from database \(error.localizedDescription)")
+        }
+        
+        
+    }
+    
+
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
             myImageView.image = image
             //myImageView.image = images.
+            
         } else {
             //Diplay error message
         }
@@ -61,6 +79,47 @@ class CameraUpload: UIViewController, UINavigationControllerDelegate, UIImagePic
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+            
+            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                picker.dismiss(animated: true, completion: {
+                    createBookItem(with: image)
+                })
+            }
+            
+            
+        }
+        
+        
+        
+        func createBookItem (with image:UIImage) {
+            
+            let bookItem = Add_Books_Library(context: self.managedObjextContext)
+            bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+            
+            
+            
+            
+            let inputAlert = UIAlertController(title: "New Book", message: "Save cover of the Book.", preferredStyle: .alert)
+            
+            inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
+                
+                do {
+                    try self.managedObjextContext.save()
+                    self.loadData()
+                }catch {
+                    print("Could not save data \(error.localizedDescription)")
+                }
+                
+            }))
+            
+            inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(inputAlert, animated: true, completion: nil)
+            
+        }
+
         
     }
     
