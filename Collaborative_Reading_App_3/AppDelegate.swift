@@ -63,10 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
             // sets storyboard to use
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
             
             // sets intial view controller
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "intial")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainScreen")
             
             // becomes rootview controller
             self.window?.rootViewController = initialViewController
