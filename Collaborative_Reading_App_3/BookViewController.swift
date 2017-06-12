@@ -139,7 +139,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.present(actionSheet, animated: true, completion: nil)
         
-
+        
         
     }
     
@@ -168,37 +168,44 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
-         let inputAlert = UIAlertController(title: "New Book", message: "Enter the Book.", preferredStyle: .alert)
-         inputAlert.addTextField { (textfield:UITextField) in
-         textfield.placeholder = "Book"
-         }
-         inputAlert.addTextField { (textfield:UITextField) in
-         textfield.placeholder = "Author"
-         }
-         
-         inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
-         
-         let bookTextfield = inputAlert.textFields?.first
-         
-         if bookTextfield?.text != ""  {
-         bookItem.bookTitle = bookTextfield?.text
-         
-         do {
-         try self.managedObjextContext.save()
-         self.loadData()
-         }catch {
-         print("Could not save data \(error.localizedDescription)")
-         }
-         
-         }
-         
-         
-         }))
-         
-         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-         
-         self.present(inputAlert, animated: true, completion: nil)
-         
+        let inputAlert = UIAlertController(title: "New Book", message: "Enter the Book.", preferredStyle: .alert)
+        inputAlert.addTextField { (textfield:UITextField) in
+            textfield.placeholder = "Book"
+        }
+        inputAlert.addTextField { (textfield:UITextField) in
+            textfield.placeholder = "Author"
+        }
+        inputAlert.addTextField { (textfield:UITextField) in
+            textfield.placeholder = "Number of Pages"
+        }
+        
+        inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
+            
+            let bookTextfield = inputAlert.textFields?[0]
+            let authorTextfield = inputAlert.textFields?[1]
+            let pagesTextfield = inputAlert.textFields?[2]
+            
+            if bookTextfield?.text != ""  {
+                bookItem.bookTitle = bookTextfield?.text
+                bookItem.author = authorTextfield?.text
+                bookItem.numberOfPages = pagesTextfield?.text
+                
+                do {
+                    try self.managedObjextContext.save()
+                    self.loadData()
+                }catch {
+                    print("Could not save data \(error.localizedDescription)")
+                }
+                
+            }
+            
+            
+        }))
+        
+        inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(inputAlert, animated: true, completion: nil)
+        
     }
     
 }

@@ -14,25 +14,29 @@ class BookDecisionFinal: UIViewController {
     
     @IBOutlet weak var bookCover: UIImageView!
     
-    @IBOutlet weak var bookTitle: UITextField!
+    @IBOutlet weak var bookTitleField: UILabel!
     
-    @IBOutlet weak var authorTitle: UITextField!
+    @IBOutlet weak var bookAuthorField: UILabel!
     
-    @IBOutlet weak var pagesTitle: UITextField!
     
-    var images = [Add_Books_Library]()
+    @IBOutlet weak var bookPagesField: UILabel!
+    
+        var images = [Add_Books_Library]()
     var managedObjextContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         let bookItem = Add_Books_Library(context: managedObjextContext)
+        
         // Do any additional setup after loading the view.
         //bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(bookCover.image!, 0.3)!)
-        //bookCover.image = UIImageJPEGRepresentation(<#T##image: UIImage##UIImage#>, 1)
-        bookTitle.text = bookItem.bookTitle
-        authorTitle.text = bookItem.author
-        pagesTitle.text = bookItem.numberOfPages
+        //bookCover.image = UIImageJPEGRepresentation(f, 1)
+        bookTitleField?.text = bookItem.bookTitle
+        bookAuthorField?.text = bookItem.author
+        bookPagesField?.text = bookItem.numberOfPages
     }
     
     override func didReceiveMemoryWarning() {
