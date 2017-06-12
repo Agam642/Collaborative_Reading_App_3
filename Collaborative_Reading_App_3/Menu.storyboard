@@ -641,7 +641,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="JMN-lb-LCZ" kind="show" id="7iU-Hd-UtS"/>
-                        <segue destination="zrK-8L-KFP" kind="show" id="NAB-Qk-Bwy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW0-P3-2bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
