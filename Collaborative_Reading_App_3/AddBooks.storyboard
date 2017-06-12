@@ -61,7 +61,7 @@
                                         <connections>
                                             <outlet property="imgCell" destination="lzE-Fz-Pza" id="89q-SC-hmT"/>
                                             <outlet property="lblCell" destination="FFs-Oh-GvU" id="ddh-3B-zh2"/>
-                                            <segue destination="tTv-b6-T1M" kind="show" id="MRk-qo-n3A"/>
+                                            <segue destination="tTv-b6-T1M" kind="show" id="Lcv-qb-Vo4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -93,7 +93,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ihM-xI-FWb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CyT-Ij-Jfz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CyT-Ij-Jfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -439,13 +439,13 @@
     <resources>
         <image name="Author Rectangle" width="254" height="110"/>
         <image name="Camera" width="224" height="157"/>
-        <image name="Plus Math-50" width="16" height="16"/>
+        <image name="Plus Math-50" width="50" height="50"/>
         <image name="backButton" width="61" height="61"/>
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MRk-qo-n3A"/>
-        <segue reference="dnp-1j-0nJ"/>
         <segue reference="fSm-xP-Erx"/>
+        <segue reference="Lcv-qb-Vo4"/>
+        <segue reference="dnp-1j-0nJ"/>
     </inferredMetricsTieBreakers>
 </document>
