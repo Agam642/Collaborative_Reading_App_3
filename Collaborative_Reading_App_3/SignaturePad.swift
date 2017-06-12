@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
-class SignaturePad: UIViewController {
-
+class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
+    
     
     @IBOutlet weak var imageView: UIImageView!
-
+    
     var lastPoint = CGPoint.zero
     var swiped = false
     
@@ -23,14 +24,19 @@ class SignaturePad: UIViewController {
         (result : UIAlertAction) -> Void in
         print("You pressed OK")
     }
-
+    
+    
+    // creates a object context to hold the Core Data of the image
+    var managedObjectContext:NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
+        // initializes and allows the use of the object to be used throughout the view controller
+        managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
-
+    
     
     // Reset button clears the image view
     @IBAction func resetButton(_ sender: Any) {
@@ -43,9 +49,60 @@ class SignaturePad: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else {
-        UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+            // adds the signature photo to the gallery
+            UIImageWriteToSavedPhotosAlbum(imageView.image!, nil, nil, nil)
+            
+            // creates a variable to hold the image as core data
+            let imagePicker = UIImagePickerController()
+            // lets the image picker's source type to access the photo library
+            imagePicker.sourceType = .photoLibrary
+            
+            imagePicker.delegate = self
+            
+            // displays the image picker delegate pop up
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        
+    }
+    // function that will check if the image picker worked or not
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // a pop up to ask permission to use the gallery will open up
+        // if the user declines the pop up for the permission to access the gallery
+        // it will dismiss the pop up
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // function occurs when the image picker did work
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // checks to see if an image was actually selected from the gallery
+        if let signature = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            picker.dismiss(animated: true, completion: {
+                // calls in the create image item function
+                self.createImageItem(with: signature)
+            })
         }
     }
+    
+    func createImageItem (with signature:UIImage) {
+        // creates a variable that will hold the core container of the entity SignaturePad
+        let imageItem = SignatureInput(context: managedObjectContext)
+        // adds the image selected to the image variable of the SignaturePad entity
+        imageItem.signature = NSData(data: UIImageJPEGRepresentation(signature, 0.3)!)
+        
+        // saves the core data stack
+        do {
+            try self.managedObjectContext.save()
+            print ("Saved")
+        }catch {
+            print ("Could Not Save Data")
+        }
+        
+    }
+    
+    
+    
+    // function detects when user has touched the screen and sets a point at that location
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         
@@ -88,45 +145,45 @@ class SignaturePad: UIViewController {
     }
     
     // Detects when the user takes finger off screen
-  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            if !swiped {
-                drawLines(fromPoint: lastPoint, toPoint: lastPoint)
-            }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !swiped {
+            drawLines(fromPoint: lastPoint, toPoint: lastPoint)
         }
+    }
     
-        
-   override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-/*      Core Data Attempt
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let task = SignatureInput(context: context) // Link Task & Context
-        task.signature = taskTextField.text!
-        
-        // Save the data to coredata
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
-        UIImage *sampleimage = [UIImage imageNamed:imageView.image];
-        
-        NSData *dataImage = UIImageJPEGRepresentation(sampleimage, 0.0);
-        Then finally save it
-        
-        [obj setValue:dataImage forKey:@"imageEntity"];
-        
-    */
-        
+    /*      Core Data Attempt
+     
+     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+     let task = SignatureInput(context: context) // Link Task & Context
+     task.signature = taskTextField.text!
+     
+     // Save the data to coredata
+     (UIApplication.shared.delegate as! AppDelegate).saveContext()
+     
+     UIImage *sampleimage = [UIImage imageNamed:imageView.image];
+     
+     NSData *dataImage = UIImageJPEGRepresentation(sampleimage, 0.0);
+     Then finally save it
+     
+     [obj setValue:dataImage forKey:@"imageEntity"];
+     
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
