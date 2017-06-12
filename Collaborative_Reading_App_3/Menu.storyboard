@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d9g-SL-AAG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +18,7 @@
         <scene sceneID="Jxj-Py-KvQ">
             <objects>
                 <navigationController id="jDe-nm-WjU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7n-3E-k7W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="B7n-3E-k7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -29,33 +29,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a3-V1-yU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="-892"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="t7Q-Dx-ZPZ">
-            <objects>
-                <viewController storyboardIdentifier="Home" id="5xm-fE-4r9" customClass="MenuViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zXs-Ug-rRs"/>
-                        <viewControllerLayoutGuide type="bottom" id="JtZ-k3-Yj4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gon-3v-M5b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="zrK-8L-KFP" kind="show" id="2fO-ra-8eI">
-                            <nil key="action"/>
-                        </segue>
-                        <segue destination="JMN-lb-LCZ" kind="show" id="9ou-hS-c0H">
-                            <nil key="action"/>
-                        </segue>
-                        <segue destination="fXy-6P-qOh" kind="custom" id="mK0-Kc-9R1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jgu-uf-bT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1010" y="-188"/>
         </scene>
         <!--Username View Input-->
         <scene sceneID="P5c-pa-Z30">
@@ -104,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJh-Yr-xlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="-188"/>
+            <point key="canvasLocation" x="-95" y="-188"/>
         </scene>
         <!--Timer-->
         <scene sceneID="vU7-I2-u3b">
@@ -479,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0X-9a-Zdo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="695"/>
+            <point key="canvasLocation" x="-708" y="1093"/>
         </scene>
         <!--Adding Books-->
         <scene sceneID="ccf-TB-8Vn">
@@ -555,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csb-lU-TPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="695"/>
+            <point key="canvasLocation" x="482" y="1093"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="knx-b6-quq">
@@ -599,10 +572,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfH-ej-sYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1010" y="695"/>
+            <point key="canvasLocation" x="-1730" y="1093"/>
+        </scene>
+        <!--Main Screen-->
+        <scene sceneID="RSU-rB-Pdb">
+            <objects>
+                <viewController storyboardIdentifier="Main Screen" id="d9g-SL-AAG" userLabel="Main Screen" customClass="MenuViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZpE-UN-fWh"/>
+                        <viewControllerLayoutGuide type="bottom" id="t20-Q6-s9b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lgq-uV-ayK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GT-wX5">
+                                <rect key="frame" x="39" y="476" width="297" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Start Reading Now Button"/>
+                                <connections>
+                                    <segue destination="JMN-lb-LCZ" kind="show" id="X6a-NM-6PO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar Blank Circle" translatesAutoresizingMaskIntoConstraints="NO" id="RnU-bh-Pca">
+                                <rect key="frame" x="67" y="60" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="JMN-lb-LCZ" kind="show" id="7iU-Hd-UtS"/>
+                        <segue destination="zrK-8L-KFP" kind="show" id="NAB-Qk-Bwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wW0-P3-2bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1678" y="-213"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Avatar Blank Circle" width="142" height="142"/>
         <image name="Bear" width="125" height="125"/>
         <image name="Cow" width="125" height="125"/>
         <image name="Dolphin" width="125" height="125"/>
@@ -615,11 +625,12 @@
         <image name="Penguin" width="125" height="125"/>
         <image name="Pig" width="125" height="125"/>
         <image name="SHEEP" width="125" height="125"/>
+        <image name="Start Reading Now Button" width="297" height="86"/>
         <image name="Wolf" width="125" height="125"/>
         <image name="backButton" width="61" height="61"/>
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mK0-Kc-9R1"/>
+        <segue reference="X6a-NM-6PO"/>
     </inferredMetricsTieBreakers>
 </document>
