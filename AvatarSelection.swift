@@ -64,6 +64,14 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         cell!.layer.borderColor = UIColor.white.cgColor
 
     }
+    
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = .none
+        cell!.layer.borderWidth = 0
+    }
+    
+    
 
 
 }
