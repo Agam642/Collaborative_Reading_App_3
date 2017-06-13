@@ -17,6 +17,9 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     //outlet for label with name
     @IBOutlet weak var namelbl: UILabel!
     
+    let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
+
     //array to store the images
     var images = ["Bear", "Cow", "Elephant", "Flamingo", "Fox", "Hippo", "Jellyfish", "SHEEP", "Parrot", "Penguin", "Wolf", "Panda"]
     
@@ -62,8 +65,32 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         cell?.layer.borderColor = .none
         cell!.layer.borderWidth = 2.0
         cell!.layer.borderColor = UIColor.white.cgColor
+        
+        let imageName = images[indexPath.row]
+        
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjectContext)
+        
+        let contact = UserInfo(entity: entityDescription!,
+                               insertInto: managedObjectContext)
+        
+        contact.avatarName = imageName
+        
+        do {
+            try managedObjectContext.save()
+            print("Saved Avatar")
+            
+        } catch {
+            print("ERROR")
+        }
 
     }
-
+    
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = .none
+        cell!.layer.borderWidth = 0
+    }
 
 }
