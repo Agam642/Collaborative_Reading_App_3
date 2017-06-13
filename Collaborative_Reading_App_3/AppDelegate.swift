@@ -59,6 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // if the app is already launched then the main storyboard will be loaded up
         if isAppAlreadyLaunchedOnce() == true {
             
+            // repeated code using the tutorial storyboard and a view controller on the tutorial as the intial view controller
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+                    // else the app is launched for the first time then the tutorial is launched
+        } else {
+            
             //sets the screen
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
@@ -73,17 +82,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // makes the view controller visible
             self.window?.makeKeyAndVisible()
-            
-        // else the app is launched for the first time then the tutorial is launched
-        } else {
-            
-            // repeated code using the tutorial storyboard and a view controller on the tutorial as the intial view controller
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            
         }
         return true
     }

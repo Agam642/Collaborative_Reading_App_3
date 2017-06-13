@@ -13,7 +13,12 @@ class MenuViewController: UIViewController, SideBarDelegate {
     
     @IBOutlet weak var hellolbl: UILabel!
     
+    @IBOutlet weak var avatarImage: UIImageView!
+    
     let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
+    
+    let managedObjectContext2 = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
     
     var sideBar:SideBar = SideBar()
@@ -41,6 +46,9 @@ class MenuViewController: UIViewController, SideBarDelegate {
                 let match = results[results.count-1] as! NSManagedObject
                 
                 hellolbl.text = match.value(forKey: "name") as? String
+                
+                print(hellolbl.text)
+                
             } else {
                 print("Error in Name")
             }
@@ -49,20 +57,23 @@ class MenuViewController: UIViewController, SideBarDelegate {
             print("error")
         }
         
+        
         let entityDescription2 =
             NSEntityDescription.entity(forEntityName: "UserInfo",
-                                       in: managedObjectContext)
+                                       in: managedObjectContext2)
         
         let request2: NSFetchRequest<UserInfo> = UserInfo.fetchRequest()
-        request.entity = entityDescription2
+        request2.entity = entityDescription2
         
         do {
-            var results2 = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            var results2 = try managedObjectContext2.fetch(request2 as!NSFetchRequest<NSFetchRequestResult>)
             
             if results2.count > 0 {
-                let match = results2[results2.count-1] as! NSManagedObject
+                let match2 = results2[results2.count-1] as! NSManagedObject
                 
-                hellolbl.text = match.value(forKey: "name") as? String
+                let imageName = match2.value(forKey: "avatarName") as? String
+                
+                avatarImage.image = UIImage(named: imageName!)
             } else {
                 print("Error in Name")
             }
