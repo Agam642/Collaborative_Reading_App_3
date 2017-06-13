@@ -14,6 +14,9 @@ class NameInput: UIViewController {
     //outlet for the text field
     @IBOutlet weak var nameInput: UITextField!
     
+    let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +44,7 @@ class NameInput: UIViewController {
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        /*let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let task = UserInfo(context: context) // Link Task & Context
         task.name = nameInput.text!
         
@@ -49,7 +52,23 @@ class NameInput: UIViewController {
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         let _ = navigationController?.popViewController(animated: true)
+        */
         
+        let entityDescription = NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjectContext)
+        
+        let contact = UserInfo(entity: entityDescription!,
+                               insertInto: managedObjectContext)
+        
+        contact.name = nameInput.text!
+        
+        do {
+            try managedObjectContext.save()
+            print("Saved Name")
+            
+        } catch {
+            print("Error")
+        }
     }
     
     //func that allows passing data with the segue

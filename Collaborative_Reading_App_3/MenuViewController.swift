@@ -7,17 +7,70 @@
 //
 
 import UIKit
+import CoreData
 
 class MenuViewController: UIViewController, SideBarDelegate {
     
-    var sideBar:SideBar = SideBar()
+    @IBOutlet weak var hellolbl: UILabel!
     
+    let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
+    
+    var sideBar:SideBar = SideBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageView.image = UIImage(named: "image2")
         sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Name", "Start Reading", "Timer"])
         sideBar.delegate = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjectContext)
+        
+        let request: NSFetchRequest<UserInfo> = UserInfo.fetchRequest()
+        request.entity = entityDescription
+        
+        do {
+            var results = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results.count > 0 {
+                let match = results[results.count-1] as! NSManagedObject
+                
+                hellolbl.text = match.value(forKey: "name") as? String
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+        
+        let entityDescription2 =
+            NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjectContext)
+        
+        let request2: NSFetchRequest<UserInfo> = UserInfo.fetchRequest()
+        request.entity = entityDescription2
+        
+        do {
+            var results2 = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results2.count > 0 {
+                let match = results2[results2.count-1] as! NSManagedObject
+                
+                hellolbl.text = match.value(forKey: "name") as? String
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+
         
     }
     
