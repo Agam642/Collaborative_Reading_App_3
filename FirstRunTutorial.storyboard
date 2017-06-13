@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -631,10 +631,10 @@
             </objects>
             <point key="canvasLocation" x="7554.3999999999996" y="-137.18140929535232"/>
         </scene>
-        <!--Main-->
+        <!--MainScreen-->
         <scene sceneID="15q-6V-FE3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="1h0-7H-z5A" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="MainScreen" id="1h0-7H-z5A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14z-y9-t7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2547" y="266"/>
@@ -718,7 +718,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0VA-Ic-CJN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qYh-qh-DoJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qYh-qh-DoJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
