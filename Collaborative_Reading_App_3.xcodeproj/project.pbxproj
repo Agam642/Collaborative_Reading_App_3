@@ -22,6 +22,8 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F76691ECF206D00F86161 /* CameraUse.swift */; };
+		3F6526721EF00C5B00C007A8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6526711EF00C5B00C007A8 /* CalendarViewController.swift */; };
+		3F6526741EF00C7E00C007A8 /* AchievementPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6526731EF00C7E00C007A8 /* AchievementPopUpViewController.swift */; };
 		3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */; };
 		3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */; };
 		3F75E9251EEAD1BF00A3BF8E /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9241EEAD1BF00A3BF8E /* CountdownTimer.swift */; };
@@ -67,6 +69,8 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUse.swift; sourceTree = "<group>"; };
+		3F6526711EF00C5B00C007A8 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = ../../Collaborative_Reading_App_3Agamyjot/Collaborative_Reading_App_3/CalendarViewController.swift; sourceTree = "<group>"; };
+		3F6526731EF00C7E00C007A8 /* AchievementPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AchievementPopUpViewController.swift; path = ../../Collaborative_Reading_App_3Agamyjot/Collaborative_Reading_App_3/AchievementPopUpViewController.swift; sourceTree = "<group>"; };
 		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3F75E9241EEAD1BF00A3BF8E /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
+				3F6526731EF00C7E00C007A8 /* AchievementPopUpViewController.swift */,
+				3F6526711EF00C5B00C007A8 /* CalendarViewController.swift */,
 				3F155F981E9D033400A6B555 /* Assets.xcassets */,
 				3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */,
 				3F155F9D1E9D033400A6B555 /* Info.plist */,
@@ -318,6 +324,7 @@
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
 				3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */,
 				3F75E9251EEAD1BF00A3BF8E /* CountdownTimer.swift in Sources */,
+				3F6526741EF00C7E00C007A8 /* AchievementPopUpViewController.swift in Sources */,
 				3F13218E1EAF838A002D82BD /* Book.swift in Sources */,
 				3F75E9301EEAD56900A3BF8E /* MenuViewController.swift in Sources */,
 				3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */,
@@ -328,6 +335,7 @@
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
+				3F6526721EF00C5B00C007A8 /* CalendarViewController.swift in Sources */,
 				3F75E93C1EEAD80C00A3BF8E /* BookViewController.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,
 				3F75E9291EEAD3C800A3BF8E /* UserInputVC.swift in Sources */,
