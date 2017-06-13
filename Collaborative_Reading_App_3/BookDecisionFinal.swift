@@ -21,12 +21,29 @@ class BookDecisionFinal: UIViewController {
     
     @IBOutlet weak var bookPagesField: UILabel!
     
-        var images = [Add_Books_Library]()
+    var images = [Add_Books_Library]()
     var managedObjextContext: NSManagedObjectContext!
+    
+    func loadData(){
+        
+        let bookRequest:NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        
+        do {
+            images = try managedObjextContext.fetch(bookRequest)
+           //self.collectionView!.reloadData()
+            
+        }catch {
+            print("Could not load data from database \(error.localizedDescription)")
+        }
+        
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
         managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let bookItem = Add_Books_Library(context: managedObjextContext)
@@ -37,6 +54,7 @@ class BookDecisionFinal: UIViewController {
         bookTitleField?.text = bookItem.bookTitle
         bookAuthorField?.text = bookItem.author
         bookPagesField?.text = bookItem.numberOfPages
+        print(bookItem.bookTitle)
     }
     
     override func didReceiveMemoryWarning() {
