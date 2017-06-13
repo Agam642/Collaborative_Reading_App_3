@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BookInfo" representedClassName="BookInfo" syncable="YES" codeGenerationType="class">
         <attribute name="bookauthorname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="bookname" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,7 +14,7 @@
     </entity>
     <elements>
         <element name="BookInfo" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="UserInfo" positionX="-54" positionY="18" width="128" height="75"/>
         <element name="SignatureInput" positionX="-54" positionY="18" width="128" height="60"/>
+        <element name="UserInfo" positionX="133" positionY="-18" width="128" height="75"/>
     </elements>
 </model>
