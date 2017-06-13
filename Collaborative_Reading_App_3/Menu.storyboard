@@ -577,7 +577,7 @@
         <!--Main Screen-->
         <scene sceneID="RSU-rB-Pdb">
             <objects>
-                <viewController storyboardIdentifier="Main Screen" id="d9g-SL-AAG" userLabel="Main Screen" customClass="MenuViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" id="d9g-SL-AAG" userLabel="Main Screen" customClass="MenuViewController" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZpE-UN-fWh"/>
                         <viewControllerLayoutGuide type="bottom" id="t20-Q6-s9b"/>
