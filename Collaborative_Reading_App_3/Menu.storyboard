@@ -622,14 +622,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-sL-gRf">
-                                <rect key="frame" x="164" y="481" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="pLf-Vr-EwZ" kind="show" id="1M3-Dd-HEd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GT-wX5">
                                 <rect key="frame" x="39" y="519" width="297" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -643,9 +635,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJs-48-JNc">
-                                <rect key="frame" x="138" y="262" width="98" height="30"/>
+                                <rect key="frame" x="128" y="257" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="15"/>
                                 <state key="normal" title="Change Profile">
                                     <color key="titleColor" red="0.32324091090000001" green="0.0" blue="0.69807942710000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -675,14 +667,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvc-DE-Rba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1058" y="-189"/>
-        </scene>
-        <!--FirstRunTutorial-->
-        <scene sceneID="9uP-aZ-sRa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="pLf-Vr-EwZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="39I-Hv-eCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1087" y="15"/>
         </scene>
     </scenes>
     <resources>
