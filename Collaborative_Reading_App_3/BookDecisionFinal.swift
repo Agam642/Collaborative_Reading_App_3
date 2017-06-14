@@ -12,7 +12,7 @@ import CoreData
 
 class BookDecisionFinal: UIViewController {
     
-    /*
+    
     @IBOutlet weak var bookCover: UIImageView!
     
     @IBOutlet weak var bookTitleField: UILabel!
@@ -47,10 +47,10 @@ class BookDecisionFinal: UIViewController {
         
     }
     
-    /*
+    
     override func viewWillAppear(_ animated: Bool) {
         let entityDescription =
-            NSEntityDescription.entity(forEntityName: "UserInfo",
+            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
                                        in: managedObjextContext)
         
         let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
@@ -74,7 +74,7 @@ class BookDecisionFinal: UIViewController {
             print("error")
         }
     }
- */
+ 
 
     
     override func didReceiveMemoryWarning() {
@@ -98,6 +98,6 @@ class BookDecisionFinal: UIViewController {
             picker.dismiss(animated: true, completion: nil)
         }
     }
- */   
+    
 }
 
