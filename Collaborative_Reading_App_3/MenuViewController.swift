@@ -26,7 +26,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageView.image = UIImage(named: "image2")
-        sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Name", "Start Reading", "Timer"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Library", "Achievements", "Calendar", "Credits"])
         sideBar.delegate = self
         
     }
