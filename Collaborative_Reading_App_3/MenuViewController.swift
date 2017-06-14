@@ -95,13 +95,13 @@ class MenuViewController: UIViewController, SideBarDelegate {
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
         
         //Storyboard 1
-        let controller = storyboard?.instantiateViewController(withIdentifier: "Home")
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MainScreen")
         self.addChildViewController(controller!)
         //view.addSubview((controller?.view)!)
         controller?.didMove(toParentViewController: self)
         
         //Storybaord 2
-        let controller2 = storyboard?.instantiateViewController(withIdentifier: "Name")
+        let controller2 = storyboard?.instantiateViewController(withIdentifier: "Books")
         self.addChildViewController(controller2!)
         //view.addSubview((controller?.view)!)
         controller2?.didMove(toParentViewController: self)
