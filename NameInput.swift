@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NameInput: UIViewController {
+class NameInput: UIViewController, UITextFieldDelegate {
 
     //outlet for the text field
     @IBOutlet weak var nameInput: UITextField!
@@ -27,8 +27,9 @@ class NameInput: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
     
-
+    
     /*
     // MARK: - Navigation
 

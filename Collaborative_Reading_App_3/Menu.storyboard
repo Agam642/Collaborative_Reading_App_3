@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d9g-SL-AAG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d9g-SL-AAG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +18,7 @@
         <scene sceneID="Jxj-Py-KvQ">
             <objects>
                 <navigationController id="jDe-nm-WjU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="B7n-3E-k7W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7n-3E-k7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -85,7 +85,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Timer" storyboardName="Timer" referencedIdentifier="Timer" id="zrK-8L-KFP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R92-9d-ESE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-707" y="-715"/>
+            <point key="canvasLocation" x="-1010" y="-686"/>
         </scene>
         <!--Avatar Selection View Controller-->
         <scene sceneID="dod-T7-bdA">
@@ -653,7 +653,6 @@
                         <outlet property="avatarImage" destination="RnU-bh-Pca" id="IEy-Ey-6KY"/>
                         <outlet property="hellolbl" destination="ciT-Ov-IH1" id="9ck-dP-rRd"/>
                         <segue destination="JMN-lb-LCZ" kind="show" id="7iU-Hd-UtS"/>
-                        <segue destination="zrK-8L-KFP" kind="show" id="NAB-Qk-Bwy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW0-P3-2bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
