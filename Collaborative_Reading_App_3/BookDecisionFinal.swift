@@ -12,6 +12,7 @@ import CoreData
 
 class BookDecisionFinal: UIViewController {
     
+    /*
     @IBOutlet weak var bookCover: UIImageView!
     
     @IBOutlet weak var bookTitleField: UILabel!
@@ -43,19 +44,38 @@ class BookDecisionFinal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadData()
-        managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let bookItem = Add_Books_Library(context: managedObjextContext)
-        
-        // Do any additional setup after loading the view.
-        //bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(bookCover.image!, 0.3)!)
-        //bookCover.image = UIImageJPEGRepresentation(f, 1)
-        bookTitleField?.text = bookItem.bookTitle
-        bookAuthorField?.text = bookItem.author
-        bookPagesField?.text = bookItem.numberOfPages
-        print(bookItem.bookTitle)
     }
+    
+    /*
+    override func viewWillAppear(_ animated: Bool) {
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjextContext)
+        
+        let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        request.entity = entityDescription
+        
+        do {
+            var results = try managedObjextContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results.count > 0 {
+                let match = results[results.count-1] as! NSManagedObject
+                
+                bookTitleField.text = match.value(forKey: "bookTitle") as? String
+                
+                print(bookTitleField.text)
+                
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+    }
+ */
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -78,6 +98,6 @@ class BookDecisionFinal: UIViewController {
             picker.dismiss(animated: true, completion: nil)
         }
     }
-    
+ */   
 }
 

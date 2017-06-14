@@ -61,7 +61,6 @@
                                         <connections>
                                             <outlet property="imgCell" destination="lzE-Fz-Pza" id="89q-SC-hmT"/>
                                             <outlet property="lblCell" destination="FFs-Oh-GvU" id="ddh-3B-zh2"/>
-                                            <segue destination="tTv-b6-T1M" kind="show" id="Lcv-qb-Vo4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -91,9 +90,9 @@
         <!--Navigation Controller-->
         <scene sceneID="0zr-3t-ob5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ihM-xI-FWb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="first" automaticallyAdjustsScrollViewInsets="NO" id="ihM-xI-FWb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CyT-Ij-Jfz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CyT-Ij-Jfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -119,11 +118,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Author Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="yDN-nC-T2U">
-                                <rect key="frame" x="46" y="85" width="285" height="147"/>
+                                <rect key="frame" x="46" y="68" width="285" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Author Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="uIO-hN-uaK">
-                                <rect key="frame" x="46" y="260" width="285" height="149"/>
+                                <rect key="frame" x="46" y="243" width="285" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of pages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEd-kL-Y6p">
@@ -134,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Author Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="UEJ-3O-BSx">
-                                <rect key="frame" x="53" y="441" width="285" height="149"/>
+                                <rect key="frame" x="53" y="414" width="285" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNz-8b-xek">
@@ -172,20 +171,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fze-Bl-AY7">
-                                <rect key="frame" x="104" y="598" width="61" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="backButton"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="201-3p-x8Z">
-                                <rect key="frame" x="227" y="598" width="61" height="61"/>
+                                <rect key="frame" x="227" y="586" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
                                 <connections>
+                                    <action selector="saveBook:" destination="2Ji-iC-mvU" eventType="touchUpInside" id="1Uf-l0-ozK"/>
                                     <segue destination="D17-DJ-ywn" kind="show" id="JJa-PH-tnR">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fze-Bl-AY7">
+                                <rect key="frame" x="104" y="586" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backButton"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr9-Y3-DhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3132" y="-699"/>
+            <point key="canvasLocation" x="2207" y="-553"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XSJ-d1-2hz">
@@ -444,8 +444,7 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fSm-xP-Erx"/>
-        <segue reference="Lcv-qb-Vo4"/>
+        <segue reference="JJa-PH-tnR"/>
         <segue reference="dnp-1j-0nJ"/>
     </inferredMetricsTieBreakers>
 </document>
