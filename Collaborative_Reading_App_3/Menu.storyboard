@@ -590,14 +590,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkM-zi-vC4">
-                                <rect key="frame" x="116" y="303" width="143" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Change Avatar"/>
-                                <connections>
-                                    <segue destination="Z8J-xz-Knp" kind="show" id="UHI-bV-4LA"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-Ov-IH1">
                                 <rect key="frame" x="190" y="32" width="126" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -650,6 +642,17 @@
                                 <rect key="frame" x="92" y="87" width="190" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJs-48-JNc">
+                                <rect key="frame" x="138" y="262" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="14"/>
+                                <state key="normal" title="Change Profile">
+                                    <color key="titleColor" red="0.32324091090000001" green="0.0" blue="0.69807942710000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Z8J-xz-Knp" kind="show" id="ZEe-Ma-NNM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -679,14 +682,13 @@
                 <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="pLf-Vr-EwZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39I-Hv-eCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="13"/>
+            <point key="canvasLocation" x="-1087" y="15"/>
         </scene>
     </scenes>
     <resources>
         <image name="Author Rectangle" width="254" height="110"/>
         <image name="Avatar Blank Circle" width="142" height="142"/>
         <image name="Bear" width="125" height="125"/>
-        <image name="Change Avatar" width="89" height="14"/>
         <image name="Cow" width="125" height="125"/>
         <image name="Dolphin" width="125" height="125"/>
         <image name="Elephant" width="125" height="125"/>
@@ -705,6 +707,6 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7iU-Hd-UtS"/>
+        <segue reference="X6a-NM-6PO"/>
     </inferredMetricsTieBreakers>
 </document>

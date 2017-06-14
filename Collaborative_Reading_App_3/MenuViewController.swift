@@ -43,7 +43,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
             var results = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
             
             if results.count > 0 {
-                let match = results[results.count-1] as! NSManagedObject
+                let match = results[results.count-2] as! NSManagedObject
                 
                 hellolbl.text = match.value(forKey: "name") as? String
                 
