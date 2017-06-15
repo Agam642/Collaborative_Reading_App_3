@@ -61,8 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // repeated code using the tutorial storyboard and a view controller on the tutorial as the intial view controller
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "AddBooks", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "first")
+            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainScreen")
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
                     // else the app is launched for the first time then the tutorial is launched

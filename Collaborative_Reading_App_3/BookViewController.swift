@@ -77,6 +77,9 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //seconds
         //longPres.delegate = self
         //self.collectionView?.addGestureRecognizer(longPres)
+        
+        //performs a segue from name view controller to the avater selection
+        self.performSegue(withIdentifier: "goToNextStoryBoard", sender: self)
     }
     //Prototype for longpress delete
     
@@ -199,6 +202,16 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 
             }
             
+            //func that allows passing data with the segue
+            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+                let destination = segue.destination as! BookDecisionFinal
+                //sets the variable passedData (an empty string from avaterselction swift file) as the text inputted
+                destination.passedData = (bookTextfield?.text)!
+                destination.passedAuthor = (authorTextfield?.text)!
+                destination.passedPages = (pagesTextfield?.text)!
+            }
+
             
         }))
         
@@ -206,11 +219,15 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.present(inputAlert, animated: true, completion: nil)
         
+        
     }
- 
-    
-    
-}
+
+        
+    }
+
+
+
+
 
 
 
