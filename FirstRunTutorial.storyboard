@@ -63,6 +63,7 @@
                     <navigationItem key="navigationItem" id="oP9-bH-8LL"/>
                     <connections>
                         <outlet property="nameInput" destination="cJf-N2-lAz" id="EIL-gW-WD3"/>
+                        <outlet property="nextButton" destination="mz9-Pf-9PJ" id="aWf-yV-Kdh"/>
                         <segue destination="E83-Uk-But" kind="show" identifier="goToNext" id="RU6-fx-poI"/>
                     </connections>
                 </viewController>

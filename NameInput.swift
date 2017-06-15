@@ -13,13 +13,18 @@ class NameInput: UIViewController, UITextFieldDelegate {
 
     //outlet for the text field
     @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameInput.delegate = self
+        
+        if nameInput.text!.isEmpty {
+        nextButton.isEnabled = false
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +32,6 @@ class NameInput: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
     
     
     /*
@@ -39,9 +43,22 @@ class NameInput: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if nameInput.text!.isEmpty {
+            nextButton.isEnabled = true
+        
+    } else {
+            nextButton.isEnabled = false
+    }
+}
+    
     
     //action for the button
     @IBAction func goToNext(_ sender: UIButton) {
+        if nameInput.text != nil {
+            nextButton.isEnabled = true
+        }
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
