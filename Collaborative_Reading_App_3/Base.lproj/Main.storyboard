@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cYw-SP-gga">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cYw-SP-gga">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -147,7 +147,7 @@
         <!--View Controller-->
         <scene sceneID="i1Y-VI-K3c">
             <objects>
-                <viewController storyboardIdentifier="intial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cYw-SP-gga" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cYw-SP-gga" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bKF-ZG-V2n"/>
                         <viewControllerLayoutGuide type="bottom" id="fu0-tQ-JOI"/>
@@ -156,17 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Arrow To Set Up Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-c0-ei9">
-                                <rect key="frame" x="49" y="123" width="277" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="LqF-6H-jMC"/>
-                                    <constraint firstAttribute="width" constant="277" id="odf-pf-FSC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-gE-fIv">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-gE-fIv">
                                 <rect key="frame" x="155" y="383" width="64" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="64K-xU-ROo"/>
@@ -179,9 +169,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6S4-c0-ei9" firstAttribute="top" secondItem="bKF-ZG-V2n" secondAttribute="bottom" constant="103" id="DEx-n2-XOe"/>
-                            <constraint firstItem="6S4-c0-ei9" firstAttribute="centerX" secondItem="6EE-oh-MJp" secondAttribute="centerX" id="Wra-7r-Cfl"/>
-                            <constraint firstItem="6S4-c0-ei9" firstAttribute="centerX" secondItem="Hol-gE-fIv" secondAttribute="centerX" id="mtV-Xn-EVe"/>
                             <constraint firstItem="fu0-tQ-JOI" firstAttribute="top" secondItem="Hol-gE-fIv" secondAttribute="bottom" constant="223" id="ucF-Ud-7dn"/>
                         </constraints>
                     </view>
@@ -294,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="1604" y="861"/>
         </scene>
-        <!--Menu-->
+        <!--AddBooks-->
         <scene sceneID="CXc-2J-rrt">
             <objects>
-                <viewControllerPlaceholder storyboardName="Menu" id="TsM-qi-b54" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddBooks" id="TsM-qi-b54" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asl-ta-Eaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-807" y="573"/>
