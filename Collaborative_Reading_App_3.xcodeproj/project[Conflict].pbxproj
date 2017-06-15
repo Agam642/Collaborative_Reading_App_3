@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0C65911EEF505100BF870F /* AvatarSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0C65901EEF505100BF870F /* AvatarSelection.storyboard */; };
 		3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217C1EAF78B1002D82BD /* FeedCell.swift */; };
 		3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13217E1EAF7B07002D82BD /* HomeController.swift */; };
 		3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */; };
@@ -46,11 +45,9 @@
 		3FE4B1BB1ECD0F22007BC28B /* FirstRunTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */; };
 		3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */; };
 		3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */; };
-		B06ACBA31EEDB54500FDB2EF /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06ACBA21EEDB54500FDB2EF /* BookData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F0C65901EEF505100BF870F /* AvatarSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AvatarSelection.storyboard; path = ../AvatarSelection.storyboard; sourceTree = "<group>"; };
 		3F13217C1EAF78B1002D82BD /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		3F13217E1EAF7B07002D82BD /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3F1321821EAF7B55002D82BD /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
@@ -66,7 +63,7 @@
 		3F155F981E9D033400A6B555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUse.swift; path = Collaborative_Reading_App_3/CameraUse.swift; sourceTree = "<group>"; };
+		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUse.swift; sourceTree = "<group>"; };
 		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3F75E9241EEAD1BF00A3BF8E /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -84,14 +81,13 @@
 		3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDecisionFinal.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
-		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignaturePad.swift; path = Collaborative_Reading_App_3/SignaturePad.swift; sourceTree = "<group>"; };
+		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
 		3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadToStartReadingViewController.swift; sourceTree = "<group>"; };
-		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
-		3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstRunTutorial.storyboard; sourceTree = "<group>"; };
-		3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelection.swift; sourceTree = "<group>"; };
-		B06ACBA21EEDB54500FDB2EF /* BookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
+		3FD340641EA7904100688BD3 /* NameInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameInput.swift; path = ../NameInput.swift; sourceTree = "<group>"; };
+		3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FirstRunTutorial.storyboard; path = ../FirstRunTutorial.storyboard; sourceTree = "<group>"; };
+		3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
+		3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarSelection.swift; path = ../AvatarSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */,
+				3F155F8C1E9D033400A6B555 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,7 +162,6 @@
 				3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */,
 			);
 			name = Products;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
@@ -174,9 +170,13 @@
 				3F75E91F1EEAD0B200A3BF8E /* Timer */,
 				3F75E92C1EEAD50A00A3BF8E /* Side Menu */,
 				3F75E9361EEAD72400A3BF8E /* Add Books */,
+				3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */,
+				3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */,
+				3F1F76691ECF206D00F86161 /* CameraUse.swift */,
+				3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */,
+				3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */,
+				3FD340641EA7904100688BD3 /* NameInput.swift */,
 				3F06FFA71EB8B92100B334B9 /* Youtube Menu */,
-				3F7753CA1EF16109000BBBDD /* FirstRun */,
-				3F0C65901EEF505100BF870F /* AvatarSelection.storyboard */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
@@ -186,7 +186,6 @@
 				3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */,
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
-				3F155F8C1E9D033400A6B555 /* Products */,
 			);
 			path = Collaborative_Reading_App_3;
 			sourceTree = "<group>";
@@ -224,23 +223,8 @@
 				3F75E93D1EEAD87200A3BF8E /* BookFile.swift */,
 				3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */,
 				3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */,
-				B06ACBA21EEDB54500FDB2EF /* BookData.swift */,
 			);
 			name = "Add Books";
-			sourceTree = "<group>";
-		};
-		3F7753CA1EF16109000BBBDD /* FirstRun */ = {
-			isa = PBXGroup;
-			children = (
-				3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */,
-				3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */,
-				3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */,
-				3FD340641EA7904100688BD3 /* NameInput.swift */,
-				3FE4B1BC1ECD0FC8007BC28B /* CustomCell.swift */,
-				3F1F76691ECF206D00F86161 /* CameraUse.swift */,
-			);
-			name = FirstRun;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +291,6 @@
 				3F75E9381EEAD74400A3BF8E /* AddBooks.storyboard in Resources */,
 				3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */,
 				3FE4B1BB1ECD0F22007BC28B /* FirstRunTutorial.storyboard in Resources */,
-				3F0C65911EEF505100BF870F /* AvatarSelection.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */,
@@ -344,7 +327,6 @@
 				3F13218B1EAF7BD9002D82BD /* Extensions.swift in Sources */,
 				3F75E9321EEAD5C000A3BF8E /* SideBarTableViewController.swift in Sources */,
 				3F75E9341EEAD6AB00A3BF8E /* SideBar.swift in Sources */,
-				B06ACBA31EEDB54500FDB2EF /* BookData.swift in Sources */,
 				3F75E9401EEAD88A00A3BF8E /* CameraUpload.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,

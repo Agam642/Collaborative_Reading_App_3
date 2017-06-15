@@ -36,24 +36,26 @@ class BookFile: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createBookItem (with image:UIImage) {
+    @IBAction func saveBook(_ sender: Any) {
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library", in: managedObjextContext)
         
-        let bookItem = Add_Books_Library(context: managedObjextContext)
+        let contact = Add_Books_Library(entity: entityDescription!,
+                                        insertInto: managedObjextContext)
         
-        if bookTtitleLabel?.text != "" && authorLabel?.text != "" && pageCountLabel?.text != "" {
-            bookItem.author = authorLabel?.text
-            bookItem.bookTitle = bookTtitleLabel?.text
-            bookItem.numberOfPages = pageCountLabel?.text
+        contact.bookTitle = bookTtitleLabel.text!
+        contact.author = authorLabel.text!
+        contact.numberOfPages = pageCountLabel.text!
+        
+        do {
+            try managedObjextContext.save()
+            print("Saved Name")
             
-            do {
-                try self.managedObjextContext.save()
-            }catch {
-                print("Could not save data \(error.localizedDescription)")
-            }
-            
-            
-            
+        } catch {
+            print("Error")
         }
-        
     }
+    
+    
+    
+    
 }

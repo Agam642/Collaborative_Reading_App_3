@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d9g-SL-AAG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d9g-SL-AAG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,7 +18,7 @@
         <scene sceneID="Jxj-Py-KvQ">
             <objects>
                 <navigationController id="jDe-nm-WjU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B7n-3E-k7W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="B7n-3E-k7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -622,14 +622,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-sL-gRf">
-                                <rect key="frame" x="164" y="481" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="pLf-Vr-EwZ" kind="show" id="1M3-Dd-HEd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GT-wX5">
                                 <rect key="frame" x="39" y="519" width="297" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -643,11 +635,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkM-zi-vC4">
-                                <rect key="frame" x="116" y="258" width="143" height="22"/>
+                                <rect key="frame" x="116" y="270" width="143" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Change Avatar"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Change Profile">
+                                    <color key="titleColor" red="0.32324091090000001" green="0.0" blue="0.69807942710000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="Z8J-xz-Knp" kind="show" id="UHI-bV-4LA"/>
+                                    <segue destination="Z8J-xz-Knp" kind="show" id="ZEe-Ma-NNM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -664,28 +659,27 @@
             </objects>
             <point key="canvasLocation" x="-1679.2" y="-213.64317841079463"/>
         </scene>
+        <!--AddBooks-->
+        <scene sceneID="Lfl-8F-2QV">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Books" storyboardName="AddBooks" id="LjF-ef-EpJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVm-KS-Vvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1149" y="-351"/>
+        </scene>
         <!--AvatarSelection-->
         <scene sceneID="6L8-EG-j07">
             <objects>
-                <viewControllerPlaceholder storyboardName="AvatarSelection" id="Z8J-xz-Knp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Avatar" storyboardName="AvatarSelection" id="Z8J-xz-Knp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvc-DE-Rba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1058" y="-189"/>
-        </scene>
-        <!--FirstRunTutorial-->
-        <scene sceneID="9uP-aZ-sRa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FirstRunTutorial" id="pLf-Vr-EwZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="39I-Hv-eCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1132" y="13"/>
         </scene>
     </scenes>
     <resources>
         <image name="Author Rectangle" width="254" height="110"/>
         <image name="Avatar Blank Circle" width="142" height="142"/>
         <image name="Bear" width="125" height="125"/>
-        <image name="Change Avatar" width="89" height="14"/>
         <image name="Cow" width="125" height="125"/>
         <image name="Dolphin" width="125" height="125"/>
         <image name="Elephant" width="125" height="125"/>
@@ -704,6 +698,6 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7iU-Hd-UtS"/>
+        <segue reference="X6a-NM-6PO"/>
     </inferredMetricsTieBreakers>
 </document>
