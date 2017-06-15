@@ -26,7 +26,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //imageView.image = UIImage(named: "image2")
-        sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Name", "Start Reading", "Timer"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Library", "Achievements", "Calendar", "Credits"])
         sideBar.delegate = self
         
     }
@@ -43,7 +43,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
             var results = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
             
             if results.count > 0 {
-                let match = results[results.count-1] as! NSManagedObject
+                let match = results[results.count-2] as! NSManagedObject
                 
                 hellolbl.text = match.value(forKey: "name") as? String
                 
@@ -95,13 +95,13 @@ class MenuViewController: UIViewController, SideBarDelegate {
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
         
         //Storyboard 1
-        let controller = storyboard?.instantiateViewController(withIdentifier: "Home")
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MainScreen")
         self.addChildViewController(controller!)
         //view.addSubview((controller?.view)!)
         controller?.didMove(toParentViewController: self)
         
         //Storybaord 2
-        let controller2 = storyboard?.instantiateViewController(withIdentifier: "Name")
+        let controller2 = storyboard?.instantiateViewController(withIdentifier: "Books")
         self.addChildViewController(controller2!)
         //view.addSubview((controller?.view)!)
         controller2?.didMove(toParentViewController: self)

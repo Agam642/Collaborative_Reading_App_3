@@ -12,28 +12,70 @@ import CoreData
 
 class BookDecisionFinal: UIViewController {
     
+    
     @IBOutlet weak var bookCover: UIImageView!
     
-    @IBOutlet weak var bookTitle: UITextField!
+    @IBOutlet weak var bookTitleField: UILabel!
     
-    @IBOutlet weak var authorTitle: UITextField!
+    @IBOutlet weak var bookAuthorField: UILabel!
     
-    @IBOutlet weak var pagesTitle: UITextField!
+    
+    @IBOutlet weak var bookPagesField: UILabel!
     
     var images = [Add_Books_Library]()
     var managedObjextContext: NSManagedObjectContext!
     
+    func loadData(){
+        
+        let bookRequest:NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        
+        do {
+            images = try managedObjextContext.fetch(bookRequest)
+           //self.collectionView!.reloadData()
+            
+        }catch {
+            print("Could not load data from database \(error.localizedDescription)")
+        }
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bookItem = Add_Books_Library(context: managedObjextContext)
-        // Do any additional setup after loading the view.
-        //bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(bookCover.image!, 0.3)!)
-        //bookCover.image = UIImageJPEGRepresentation(<#T##image: UIImage##UIImage#>, 1)
-        bookTitle.text = bookItem.bookTitle
-        authorTitle.text = bookItem.author
-        pagesTitle.text = bookItem.numberOfPages
+        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
+                                       in: managedObjextContext)
+        
+        let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        request.entity = entityDescription
+        
+        do {
+            var results = try managedObjextContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results.count > 0 {
+                let match = results[results.count-1] as! NSManagedObject
+                
+                bookTitleField.text = match.value(forKey: "bookTitle") as? String
+                
+                print(bookTitleField.text)
+                
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+    }
+ 
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
