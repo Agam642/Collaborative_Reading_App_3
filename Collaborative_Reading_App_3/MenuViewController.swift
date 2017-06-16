@@ -118,6 +118,11 @@ class MenuViewController: UIViewController, SideBarDelegate {
         //view.addSubview((controller?.view)!)
         controller4?.didMove(toParentViewController: self)
         
+        //Storybaord 5
+        let controller5 = storyboard?.instantiateViewController(withIdentifier: "Calendar")
+        self.addChildViewController(controller5!)
+        //view.addSubview((controller?.view)!)
+        controller5?.didMove(toParentViewController: self)
         
         
         
@@ -129,8 +134,10 @@ class MenuViewController: UIViewController, SideBarDelegate {
             view.addSubview((controller3?.view)!)
         } else if index == 3 {
             view.addSubview((controller4?.view)!)
+        } else if index == 4 {
+            view.addSubview((controller5?.view)!)
         }
     }
-    
+
 }
 

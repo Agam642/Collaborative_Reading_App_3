@@ -22,6 +22,11 @@
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F76691ECF206D00F86161 /* CameraUse.swift */; };
+		3F6526771EF2B83100C007A8 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6526761EF2B83100C007A8 /* Calendar.storyboard */; };
+		3F6526791EF2B84D00C007A8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6526781EF2B84D00C007A8 /* CalendarViewController.swift */; };
+		3F65267C1EF2B87700C007A8 /* Achievement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F65267B1EF2B87700C007A8 /* Achievement.storyboard */; };
+		3F65267E1EF2B88700C007A8 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65267D1EF2B88700C007A8 /* AchievementViewController.swift */; };
+		3F6526841EF3343100C007A8 /* CalendarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6526831EF3343100C007A8 /* CalendarCollectionCell.swift */; };
 		3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */; };
 		3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */; };
 		3F75E9251EEAD1BF00A3BF8E /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9241EEAD1BF00A3BF8E /* CountdownTimer.swift */; };
@@ -66,7 +71,12 @@
 		3F155F981E9D033400A6B555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUse.swift; sourceTree = "<group>"; };
+		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUse.swift; path = Collaborative_Reading_App_3/CameraUse.swift; sourceTree = "<group>"; };
+		3F6526761EF2B83100C007A8 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		3F6526781EF2B84D00C007A8 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3F65267B1EF2B87700C007A8 /* Achievement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Achievement.storyboard; sourceTree = "<group>"; };
+		3F65267D1EF2B88700C007A8 /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		3F6526831EF3343100C007A8 /* CalendarCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionCell.swift; sourceTree = "<group>"; };
 		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3F75E9241EEAD1BF00A3BF8E /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
@@ -171,6 +181,8 @@
 		3F155F8D1E9D033400A6B555 /* Collaborative_Reading_App_3 */ = {
 			isa = PBXGroup;
 			children = (
+				3F65267A1EF2B86100C007A8 /* Achievement */,
+				3F6526751EF2B80700C007A8 /* Calendar */,
 				3F75E91F1EEAD0B200A3BF8E /* Timer */,
 				3F75E92C1EEAD50A00A3BF8E /* Side Menu */,
 				3F75E9361EEAD72400A3BF8E /* Add Books */,
@@ -189,6 +201,25 @@
 				3F155F8C1E9D033400A6B555 /* Products */,
 			);
 			path = Collaborative_Reading_App_3;
+			sourceTree = "<group>";
+		};
+		3F6526751EF2B80700C007A8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3F6526761EF2B83100C007A8 /* Calendar.storyboard */,
+				3F6526781EF2B84D00C007A8 /* CalendarViewController.swift */,
+				3F6526831EF3343100C007A8 /* CalendarCollectionCell.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		3F65267A1EF2B86100C007A8 /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				3F65267B1EF2B87700C007A8 /* Achievement.storyboard */,
+				3F65267D1EF2B88700C007A8 /* AchievementViewController.swift */,
+			);
+			name = Achievement;
 			sourceTree = "<group>";
 		};
 		3F75E91F1EEAD0B200A3BF8E /* Timer */ = {
@@ -309,8 +340,10 @@
 				3FE4B1BB1ECD0F22007BC28B /* FirstRunTutorial.storyboard in Resources */,
 				3F0C65911EEF505100BF870F /* AvatarSelection.storyboard in Resources */,
 				3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */,
+				3F65267C1EF2B87700C007A8 /* Achievement.storyboard in Resources */,
 				3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */,
 				3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */,
+				3F6526771EF2B83100C007A8 /* Calendar.storyboard in Resources */,
 				3F155F941E9D033400A6B555 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,11 +366,13 @@
 				3F1321831EAF7B55002D82BD /* SettingsLauncher.swift in Sources */,
 				3F1321851EAF7B77002D82BD /* SettingCell.swift in Sources */,
 				3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */,
+				3F65267E1EF2B88700C007A8 /* AchievementViewController.swift in Sources */,
 				3F75E9271EEAD2D000A3BF8E /* TimerViewController.swift in Sources */,
 				3F75E93A1EEAD7B400A3BF8E /* BookViewCell.swift in Sources */,
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
+				3F6526791EF2B84D00C007A8 /* CalendarViewController.swift in Sources */,
 				3F75E93C1EEAD80C00A3BF8E /* BookViewController.swift in Sources */,
 				3F13217F1EAF7B07002D82BD /* HomeController.swift in Sources */,
 				3F75E9291EEAD3C800A3BF8E /* UserInputVC.swift in Sources */,
@@ -351,6 +386,7 @@
 				3F75E92B1EEAD42D00A3BF8E /* CustomColor.swift in Sources */,
 				3F75E9421EEAD89900A3BF8E /* BookDecisionFinal.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
+				3F6526841EF3343100C007A8 /* CalendarCollectionCell.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
 				3F75E93E1EEAD87200A3BF8E /* BookFile.swift in Sources */,
 			);
