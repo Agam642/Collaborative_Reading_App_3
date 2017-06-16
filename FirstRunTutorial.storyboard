@@ -74,7 +74,7 @@
         <!--Avatar Selection-->
         <scene sceneID="Fn3-3u-ZGl">
             <objects>
-                <viewController id="E83-Uk-But" customClass="AvatarSelection" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AvatarCollection" id="E83-Uk-But" customClass="AvatarSelection" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AmJ-7Y-UUw"/>
                         <viewControllerLayoutGuide type="bottom" id="0Js-FM-ERw"/>
@@ -170,6 +170,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NextButton" destination="dkg-7n-xyH" id="vty-pX-mAM"/>
                         <outlet property="collectionView" destination="3Jz-Pv-WWm" id="8LA-Nk-ta9"/>
                         <outlet property="namelbl" destination="UUS-Ua-B82" id="STl-Xr-UPC"/>
                     </connections>
@@ -221,13 +222,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19D-fa-6Rk">
-                                <rect key="frame" x="247" y="256.5" width="47" height="26"/>
+                                <rect key="frame" x="247" y="256" width="47" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24z-RS-Nae">
-                                <rect key="frame" x="89.5" y="256.5" width="39.5" height="26"/>
+                                <rect key="frame" x="90" y="256" width="39.5" height="26"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -825,7 +826,7 @@
         <image name="Author Rectangle" width="254" height="110"/>
         <image name="Camera" width="224" height="157"/>
         <image name="Clock icon" width="128" height="128"/>
-        <image name="Plus Math-50" width="16" height="16"/>
+        <image name="Plus Math-50" width="50" height="50"/>
         <image name="backButton" width="61" height="61"/>
         <image name="button" width="61" height="61"/>
         <image name="purpleButton" width="150" height="53"/>

@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Attempt to check if there is data stored in core data
-        func entityIsEmpty(entity: String) -> Bool
+        /*func entityIsEmpty(entity: String) -> Bool
         {
             // context is set to the object
             let context = NSManagedObjectContext()
@@ -55,14 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return true
             }
         }
+        */
         
         // if the app is already launched then the main storyboard will be loaded up
         if isAppAlreadyLaunchedOnce() == true {
             
             // repeated code using the tutorial storyboard and a view controller on the tutorial as the intial view controller
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "AddBooks", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "first")
+            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
                     // else the app is launched for the first time then the tutorial is launched
@@ -72,10 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
             // sets storyboard to use
-            let storyboard = UIStoryboard(name: "FirstRunTutorial", bundle: nil)
+            let storyboard = UIStoryboard(name: "Menu", bundle: nil)
             
             // sets intial view controller
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NameInput")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainScreen")
             
             // becomes rootview controller
             self.window?.rootViewController = initialViewController

@@ -17,6 +17,8 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     //outlet for label with name
     @IBOutlet weak var namelbl: UILabel!
     
+    @IBOutlet weak var NextButton: UIButton!
+    
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
 
@@ -29,6 +31,8 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NextButton.isEnabled = false
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -84,6 +88,8 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         } catch {
             print("ERROR")
         }
+        
+        NextButton.isEnabled = true
 
     }
     

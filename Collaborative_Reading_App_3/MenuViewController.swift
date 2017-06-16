@@ -15,6 +15,12 @@ class MenuViewController: UIViewController, SideBarDelegate {
     
     @IBOutlet weak var avatarImage: UIImageView!
     
+    @IBOutlet weak var MenuButton: UIButton!
+    
+    var delegate:SideBarDelegate?
+    var animator:UIDynamicAnimator!
+    var isSideBarOpen:Bool = false
+    
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
     
@@ -29,8 +35,17 @@ class MenuViewController: UIViewController, SideBarDelegate {
         sideBar = SideBar(sourceView: self.view, menuItems: ["Home", "Library", "Achievements", "Calendar", "Credits"])
         sideBar.delegate = self
         
+       /* let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+        */
     }
-    
+    /*func doubleTapped() {
+        print("WOW GOOD JOB")
+        SideBar().showSideBar(true)
+        delegate?.sideBarWillOpen?()
+    }
+    */
     override func viewWillAppear(_ animated: Bool) {
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserInfo",
@@ -91,6 +106,12 @@ class MenuViewController: UIViewController, SideBarDelegate {
     }
     
     
+    @IBAction func MenuButtonTouch(_ sender: UIButton) {
+  //      SideBar().showSideBar(true)
+    //    delegate?.sideBarWillOpen?()
+    }
+    
+    
     
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
         
@@ -119,6 +140,11 @@ class MenuViewController: UIViewController, SideBarDelegate {
         controller4?.didMove(toParentViewController: self)
         
         
+        //Storybaord 5
+        let controller5 = storyboard?.instantiateViewController(withIdentifier: "Timer")
+        self.addChildViewController(controller4!)
+        //view.addSubview((controller?.view)!)
+        controller4?.didMove(toParentViewController: self)
         
         
         if index == 0 {
@@ -129,6 +155,8 @@ class MenuViewController: UIViewController, SideBarDelegate {
             view.addSubview((controller3?.view)!)
         } else if index == 3 {
             view.addSubview((controller4?.view)!)
+        } else if index == 4 {
+            view.addSubview((controller5?.view)!)
         }
     }
     

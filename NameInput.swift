@@ -56,9 +56,7 @@ class NameInput: UIViewController, UITextFieldDelegate {
     
     //action for the button
     @IBAction func goToNext(_ sender: UIButton) {
-        if nameInput.text != nil {
-            nextButton.isEnabled = true
-        }
+        
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
