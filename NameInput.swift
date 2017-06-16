@@ -22,10 +22,12 @@ class NameInput: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameInput.delegate = self
         
-        if nameInput.text!.isEmpty {
-        nextButton.isEnabled = false
-        }
+      //  nextButton.isEnabled = false
+        
         // Do any additional setup after loading the view.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,20 +47,27 @@ class NameInput: UIViewController, UITextFieldDelegate {
     */
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if nameInput.text!.isEmpty {
-            nextButton.isEnabled = true
-        
-    } else {
-            nextButton.isEnabled = false
-    }
-}
+           // nextButton.isEnabled = true
     
+}
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
     
     //action for the button
     @IBAction func goToNext(_ sender: UIButton) {
-        if nameInput.text != nil {
-            nextButton.isEnabled = true
-        }
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
