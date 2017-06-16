@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class AvatarSelection2: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     //outlet for collection view
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,9 +19,10 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     
     @IBOutlet weak var NextButton: UIButton!
     
+    
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
-
+    
     //array to store the images
     var images = ["Bear", "Cow", "Elephant", "Flamingo", "Fox", "Hippo", "Jellyfish", "SHEEP", "Parrot", "Penguin", "Wolf", "Panda"]
     
@@ -30,7 +31,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         NextButton.isEnabled = false
         
         collectionView.delegate = self
@@ -39,7 +40,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         //displays message
         namelbl.text = "Hi " + passedData + ","
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -90,7 +91,7 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         }
         
         NextButton.isEnabled = true
-
+        
     }
     
     public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -98,5 +99,5 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         cell?.layer.borderColor = .none
         cell!.layer.borderWidth = 0
     }
-
+    
 }

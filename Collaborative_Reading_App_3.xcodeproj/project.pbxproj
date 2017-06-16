@@ -38,6 +38,9 @@
 		3F75E93E1EEAD87200A3BF8E /* BookFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E93D1EEAD87200A3BF8E /* BookFile.swift */; };
 		3F75E9401EEAD88A00A3BF8E /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */; };
 		3F75E9421EEAD89900A3BF8E /* BookDecisionFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */; };
+		3F8C5DBE1EF357DE008BF0BA /* NameInput2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C5DBD1EF357DE008BF0BA /* NameInput2.swift */; };
+		3F8C5DC11EF3584E008BF0BA /* AvatarSelection2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C5DC01EF3584E008BF0BA /* AvatarSelection2.swift */; };
+		3F8C5DC31EF3586D008BF0BA /* CustomCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C5DC21EF3586D008BF0BA /* CustomCell2.swift */; };
 		3FB2AF031E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */; };
 		3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */; };
 		3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */; };
@@ -83,6 +86,9 @@
 		3F75E93D1EEAD87200A3BF8E /* BookFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFile.swift; sourceTree = "<group>"; };
 		3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDecisionFinal.swift; sourceTree = "<group>"; };
+		3F8C5DBD1EF357DE008BF0BA /* NameInput2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInput2.swift; sourceTree = "<group>"; };
+		3F8C5DC01EF3584E008BF0BA /* AvatarSelection2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelection2.swift; sourceTree = "<group>"; };
+		3F8C5DC21EF3586D008BF0BA /* CustomCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell2.swift; sourceTree = "<group>"; };
 		3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
 		3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignaturePad.swift; path = Collaborative_Reading_App_3/SignaturePad.swift; sourceTree = "<group>"; };
 		3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingBookViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +182,7 @@
 				3F75E9361EEAD72400A3BF8E /* Add Books */,
 				3F06FFA71EB8B92100B334B9 /* Youtube Menu */,
 				3F7753CA1EF16109000BBBDD /* FirstRun */,
-				3F0C65901EEF505100BF870F /* AvatarSelection.storyboard */,
+				3F8C5DBF1EF3581C008BF0BA /* AvatarSelection(seperate) */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
 				3F155F921E9D033400A6B555 /* Main.storyboard */,
@@ -241,6 +247,17 @@
 			);
 			name = FirstRun;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		3F8C5DBF1EF3581C008BF0BA /* AvatarSelection(seperate) */ = {
+			isa = PBXGroup;
+			children = (
+				3F0C65901EEF505100BF870F /* AvatarSelection.storyboard */,
+				3F8C5DBD1EF357DE008BF0BA /* NameInput2.swift */,
+				3F8C5DC01EF3584E008BF0BA /* AvatarSelection2.swift */,
+				3F8C5DC21EF3586D008BF0BA /* CustomCell2.swift */,
+			);
+			name = "AvatarSelection(seperate)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBCF1C91ED85FD500415B2F /* SignaturePad.swift in Sources */,
+				3F8C5DC31EF3586D008BF0BA /* CustomCell2.swift in Sources */,
 				3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */,
 				3F13217D1EAF78B1002D82BD /* FeedCell.swift in Sources */,
 				3FD340631EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift in Sources */,
@@ -336,6 +354,8 @@
 				3F75E9271EEAD2D000A3BF8E /* TimerViewController.swift in Sources */,
 				3F75E93A1EEAD7B400A3BF8E /* BookViewCell.swift in Sources */,
 				3FE4B1BD1ECD0FC8007BC28B /* CustomCell.swift in Sources */,
+				3F8C5DBE1EF357DE008BF0BA /* NameInput2.swift in Sources */,
+				3F8C5DC11EF3584E008BF0BA /* AvatarSelection2.swift in Sources */,
 				3FE4B1BF1ECD0FE9007BC28B /* AvatarSelection.swift in Sources */,
 				3F1321871EAF7B9E002D82BD /* MenuBar.swift in Sources */,
 				3F75E93C1EEAD80C00A3BF8E /* BookViewController.swift in Sources */,

@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Avatar Selection-->
+        <!--Avatar Selection2-->
         <scene sceneID="qr4-mS-WBF">
             <objects>
-                <viewController id="k6t-ni-lk4" customClass="AvatarSelection" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AvatarCollection2" id="k6t-ni-lk4" customClass="AvatarSelection2" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zl0-FT-PhJ"/>
                         <viewControllerLayoutGuide type="bottom" id="OXw-qk-fJA"/>
@@ -115,6 +115,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NextButton" destination="ZKo-EB-ivr" id="XC3-16-SxD"/>
                         <outlet property="collectionView" destination="qg6-MN-aXP" id="hvu-ad-o51"/>
                         <outlet property="namelbl" destination="q7S-ac-HEB" id="nef-8a-chY"/>
                     </connections>
@@ -134,7 +135,7 @@
         <!--Username View Input-->
         <scene sceneID="RfN-8P-KHr">
             <objects>
-                <viewController storyboardIdentifier="NameInput" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h5Q-ML-Dz7" userLabel="Username View Input" customClass="NameInput" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameInput2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h5Q-ML-Dz7" userLabel="Username View Input" customClass="NameInput2" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WUB-Me-GGn"/>
                         <viewControllerLayoutGuide type="bottom" id="LhT-nU-AY0"/>
@@ -178,6 +179,7 @@
                     <navigationItem key="navigationItem" id="A6q-kJ-dgq"/>
                     <connections>
                         <outlet property="nameInput" destination="awE-2b-Iws" id="TEu-Kf-d2c"/>
+                        <outlet property="nextButton" destination="SYu-A0-r0G" id="MhB-QH-SHg"/>
                         <segue destination="k6t-ni-lk4" kind="show" identifier="goToNext" id="QYh-WY-6Yp"/>
                     </connections>
                 </viewController>

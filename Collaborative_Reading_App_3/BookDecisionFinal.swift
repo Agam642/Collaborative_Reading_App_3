@@ -25,6 +25,10 @@ class BookDecisionFinal: UIViewController {
     var images = [Add_Books_Library]()
     var managedObjextContext: NSManagedObjectContext!
     
+    var passedData = ""
+    var passedAuthor = ""
+    var passedPages = ""
+    
     func loadData(){
         
         let bookRequest:NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
@@ -44,10 +48,13 @@ class BookDecisionFinal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bookTitleField.text = passedData
+        bookAuthorField.text = passedAuthor
+        bookPagesField.text = passedPages
         
     }
     
-    
+    /*
     override func viewWillAppear(_ animated: Bool) {
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "Add_Books_Library",
@@ -98,6 +105,7 @@ class BookDecisionFinal: UIViewController {
             picker.dismiss(animated: true, completion: nil)
         }
     }
+ */
     
 }
 

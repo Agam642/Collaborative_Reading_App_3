@@ -46,9 +46,18 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let hideGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SideBar.handleSwipe(_:)))
         hideGestureRecognizer.direction = UISwipeGestureRecognizerDirection.left
         originView.addGestureRecognizer(hideGestureRecognizer)
-        
+       
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        originView.addGestureRecognizer(tap)
     }
     
+    func doubleTapped() {
+        print("WOW GOOD JOB")
+        showSideBar(true)
+        delegate?.sideBarWillOpen?()
+    }
+
     
     func setupSideBar(){
         
@@ -66,7 +75,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarTableViewController.delegate = self
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
         sideBarTableViewController.tableView.clipsToBounds = false
-        sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLineEtched
         sideBarTableViewController.tableView.backgroundColor = UIColor.clear
         sideBarTableViewController.tableView.scrollsToTop  = false
         sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
@@ -76,7 +85,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
         
     }
-    
     
     func handleSwipe(_ recognizer:UISwipeGestureRecognizer){
         if recognizer.direction == UISwipeGestureRecognizerDirection.left{
@@ -89,7 +97,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         }
         
     }
-    
+
     
     func showSideBar(_ shouldOpen:Bool){
         animator.removeAllBehaviors()
@@ -119,32 +127,8 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
-    
     func sideBarControlDidSelectRow(_ indexPath: IndexPath) {
         delegate?.sideBarDidSelectButtonAtIndex(indexPath.row)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
