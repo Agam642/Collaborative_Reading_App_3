@@ -189,9 +189,9 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let pagesTextfield = inputAlert.textFields?[2]
             
             if bookTextfield?.text != ""  {
-                bookItem.bookTitle = bookTextfield?.text
-                bookItem.author = authorTextfield?.text
-                bookItem.numberOfPages = pagesTextfield?.text
+                bookItem.bookTitle = bookTextfield?.text!
+                bookItem.author = authorTextfield?.text!
+                bookItem.numberOfPages = pagesTextfield?.text!
                 
                 do {
                     try self.managedObjextContext.save()
