@@ -107,8 +107,8 @@ class MenuViewController: UIViewController, SideBarDelegate {
     
     
     @IBAction func MenuButtonTouch(_ sender: UIButton) {
-  //      SideBar().showSideBar(true)
-    //    delegate?.sideBarWillOpen?()
+        SideBar().showSideBar(true)
+        delegate?.sideBarWillOpen?()
     }
     
     
