@@ -11,6 +11,7 @@ import UIKit
 class CalendarViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // create 3 variables to hold year , month and days and are given values in the view did load
     // each of the variables are modifiable to be used navigating to different months and years
@@ -56,6 +57,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         // Dispose of any resources that can be recreated.
     }
     
+    // function will calculate the number of cells needed to create the calculator by getting the number of days in the month and the day of the week of the starting day of the month
     func getNumberOfDaysAndDayOfWeek() -> (Array<String>)
     {
         // set the variables date and calendar to the current values of the year and month
@@ -171,6 +173,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         
         print(year, month, day)
         
+        numberOfCells = getNumberOfDaysAndDayOfWeek()
+        
+        self.collectionView!.reloadData()
+        
     }
     
     @IBAction func prevMonth(_ sender: Any) {
@@ -188,6 +194,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         
         print(year, month, day)
+        
+        numberOfCells = getNumberOfDaysAndDayOfWeek()
+        
+        self.collectionView!.reloadData()
         
     }
     
