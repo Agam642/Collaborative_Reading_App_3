@@ -29,30 +29,46 @@ class BookDecisionFinal: UIViewController {
     var passedAuthor = ""
     var passedPages = ""
     
-    func loadData(){
-        
-        let bookRequest:NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
-        
-        do {
-            images = try managedObjextContext.fetch(bookRequest)
-           //self.collectionView!.reloadData()
-            
-        }catch {
-            print("Could not load data from database \(error.localizedDescription)")
-        }
-        
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bookTitleField.text = passedData
-        bookAuthorField.text = passedAuthor
-        bookPagesField.text = passedPages
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserInfo",
+                                       in: managedObjextContext)
+        
+        let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        request.entity = entityDescription
+        
+        do {
+            var results = try managedObjextContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results.count > 0 {
+                let match = results[results.count-2] as! NSManagedObject
+                
+                bookTitleField.text = match.value(forKey: "bookTitle") as? String
+                print(bookTitleField.text)
+                
+                
+                bookAuthorField.text = match.value(forKey: "author") as? String
+                print(bookAuthorField.text)
+                
+                
+                bookPagesField.text = match.value(forKey: "numberOfPages") as? String
+                print(bookPagesField.text)
+                
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+
     
     /*
     override func viewWillAppear(_ animated: Bool) {
@@ -108,4 +124,4 @@ class BookDecisionFinal: UIViewController {
  */
     
 }
-
+}

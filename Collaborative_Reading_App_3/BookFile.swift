@@ -37,16 +37,16 @@ class BookFile: UIViewController {
     }
     
     @IBAction func saveBook(_ sender: Any) {
-        //performs a segue from name view controller to the avater selection
-        performSegue(withIdentifier: "goToNext", sender: self)
         
         let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library",
                                                            in: managedObjextContext)
         
-        let contact = (entity: entityDescription!,
+        let contact = Add_Books_Library(entity: entityDescription!,
                                insertInto: managedObjextContext)
         
-        contact.name = nameInput.text!
+        contact.bookTitle = bookTtitleLabel.text!
+        contact.author = authorLabel.text!
+        contact.numberOfPages = pageCountLabel.text!
         
         do {
             try managedObjextContext.save()
