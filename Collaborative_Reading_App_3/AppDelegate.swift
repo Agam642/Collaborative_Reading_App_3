@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Attempt to check if there is data stored in core data
-        /*func entityIsEmpty(entity: String) -> Bool
+        func entityIsEmpty(entity: String) -> Bool
         {
             // context is set to the object
             let context = NSManagedObjectContext()
@@ -46,16 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             do {
                 results = try context.fetch(request) as! [NSManagedObject]
+                print("App is already launched")
                 return results.count == 0
                 
             //returns true if empty
             } catch let error as NSError {
                 // failure
                 print("Error: \(error.debugDescription)")
+                print("App is launched for the first time")
                 return true
             }
         }
-        */
+ 
         
         // if the app is already launched then the main storyboard will be loaded up
         if isAppAlreadyLaunchedOnce() == true {

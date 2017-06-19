@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Myriad Pro Regular.ttf">
-            <string>MyriadPro-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Welcome Screen-->
         <scene sceneID="mSg-6X-yYO">
@@ -26,40 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reading Frenzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uz-gw-Zcj">
-                                <rect key="frame" x="64" y="244" width="246" height="95"/>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil-and-book-clipart-stack_of_school_books_with_a_bookmark_0515-0908-1721-0854_SMU" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-Sa-USD">
-                                <rect key="frame" x="49" y="54" width="277" height="152"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="Q9W-6T-Ppb"/>
-                                    <constraint firstAttribute="width" constant="277" id="djL-5v-tKk"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlackLogo" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-Sa-USD">
+                                <rect key="frame" x="0.0" y="38" width="375" height="419"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Reading is dreaming with open eyes&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdE-uy-elS">
-                                <rect key="frame" x="49" y="347" width="275" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="j65-R9-vXr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reading Frenzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uz-gw-Zcj">
+                                <rect key="frame" x="40" y="407" width="295" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="iGg-Sa-USD" firstAttribute="leading" secondItem="EdE-uy-elS" secondAttribute="leading" id="5r7-7i-tVJ"/>
-                            <constraint firstItem="2fp-5N-gj1" firstAttribute="top" secondItem="EdE-uy-elS" secondAttribute="bottom" constant="267" id="6R5-xT-IME"/>
-                            <constraint firstItem="EdE-uy-elS" firstAttribute="top" secondItem="7uz-gw-Zcj" secondAttribute="bottom" constant="8" symbolic="YES" id="9dC-Yu-jXR"/>
-                            <constraint firstItem="EdE-uy-elS" firstAttribute="centerX" secondItem="7uz-gw-Zcj" secondAttribute="centerX" id="AEe-m4-Xch"/>
-                            <constraint firstItem="7uz-gw-Zcj" firstAttribute="top" secondItem="iGg-Sa-USD" secondAttribute="bottom" constant="38" id="gJh-lg-teI"/>
-                            <constraint firstItem="iGg-Sa-USD" firstAttribute="top" secondItem="uAO-om-e32" secondAttribute="bottom" constant="34" id="jrB-nz-cPJ"/>
-                            <constraint firstItem="iGg-Sa-USD" firstAttribute="centerX" secondItem="7uz-gw-Zcj" secondAttribute="centerX" id="vP3-mI-mfP"/>
-                            <constraint firstItem="iGg-Sa-USD" firstAttribute="centerX" secondItem="zdJ-by-hPW" secondAttribute="centerX" id="ziS-hQ-599"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKf-XV-EKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil-and-book-clipart-stack_of_school_books_with_a_bookmark_0515-0908-1721-0854_SMU" width="16" height="16"/>
+        <image name="BlackLogo" width="181" height="239"/>
     </resources>
 </document>
