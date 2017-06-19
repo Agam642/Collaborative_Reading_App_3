@@ -76,12 +76,12 @@
                         <barButtonItem key="rightBarButtonItem" image="Plus Math-50" id="TRl-JM-h8m">
                             <connections>
                                 <action selector="addBook:" destination="uSz-QF-Tqy" id="VpC-ho-5JL"/>
+                                <segue destination="2Ji-iC-mvU" kind="show" id="kHb-Ys-qJz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="IP8-gm-6VU" id="O1Y-Zz-zQo"/>
-                        <segue destination="tTv-b6-T1M" kind="show" identifier="goToNextStoryBoard" id="ffW-6k-IlA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q45-Q2-CVk" sceneMemberID="firstResponder"/>
@@ -187,6 +187,9 @@
                                 <rect key="frame" x="104" y="586" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="uSz-QF-Tqy" kind="show" id="tQY-ug-J0h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -199,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr9-Y3-DhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207" y="-553"/>
+            <point key="canvasLocation" x="2993" y="202"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XSJ-d1-2hz">
@@ -250,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2D-0I-N1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4119" y="-699"/>
+            <point key="canvasLocation" x="3793" y="206"/>
         </scene>
         <!--Camera Upload-->
         <scene sceneID="cr5-Ev-MTz">
@@ -277,9 +280,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
                                 <connections>
-                                    <segue destination="uSz-QF-Tqy" kind="show" id="LMf-VR-JlE">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="tTv-b6-T1M" kind="show" id="XW8-qT-fJm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-Vx-gsh">
@@ -305,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MsD-Sv-TAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5090" y="-699"/>
+            <point key="canvasLocation" x="4607" y="233"/>
         </scene>
         <!--Book Decision Final-->
         <scene sceneID="3Ch-rO-2aG">
@@ -324,13 +325,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="button"/>
                                 <connections>
-                                    <segue destination="SlN-Vn-lnY" kind="show" id="mLU-wI-7mn"/>
+                                    <segue destination="SlN-Vn-lnY" kind="show" id="dLH-Ae-yUv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-q2-D71">
                                 <rect key="frame" x="115" y="550" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="xwC-am-Rt6" kind="show" id="ObY-jx-1uC"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-OS-AGw">
                                 <rect key="frame" x="38" y="28" width="298" height="270"/>
@@ -390,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiT-oh-8RA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3072.8000000000002" y="201.94902548725639"/>
+            <point key="canvasLocation" x="5310" y="233"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pxR-cK-NFY">
@@ -426,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZD4-5e-dCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3867" y="206"/>
+            <point key="canvasLocation" x="6058" y="233"/>
         </scene>
         <!--Timer-->
         <scene sceneID="hUU-q0-OXv">
@@ -434,7 +438,7 @@
                 <viewControllerPlaceholder storyboardName="Timer" id="eLE-OI-qLv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqs-1F-h9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4513" y="389"/>
+            <point key="canvasLocation" x="6817" y="363"/>
         </scene>
     </scenes>
     <resources>
@@ -445,8 +449,10 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ffW-6k-IlA"/>
-        <segue reference="dnp-1j-0nJ"/>
+        <segue reference="tQY-ug-J0h"/>
+        <segue reference="kHb-Ys-qJz"/>
         <segue reference="JJa-PH-tnR"/>
+        <segue reference="X2b-JR-nFd"/>
+        <segue reference="ObY-jx-1uC"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -156,14 +156,14 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
-                self.createBookItem(with: image)
+                //self.createBookItem(with: image)
             })
         }
         
         
     }
     
-    
+    /*
     
     func createBookItem (with image:UIImage) {
         
@@ -221,6 +221,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         
     }
+ */
 
         
     }
