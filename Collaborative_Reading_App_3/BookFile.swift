@@ -37,14 +37,16 @@ class BookFile: UIViewController {
     }
     
     @IBAction func saveBook(_ sender: Any) {
-        let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library", in: managedObjextContext)
+        //performs a segue from name view controller to the avater selection
+        performSegue(withIdentifier: "goToNext", sender: self)
         
-        let contact = Add_Books_Library(entity: entityDescription!,
-                                        insertInto: managedObjextContext)
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library",
+                                                           in: managedObjextContext)
         
-        contact.bookTitle = bookTtitleLabel.text!
-        contact.author = authorLabel.text!
-        contact.numberOfPages = pageCountLabel.text!
+        let contact = (entity: entityDescription!,
+                               insertInto: managedObjextContext)
+        
+        contact.name = nameInput.text!
         
         do {
             try managedObjextContext.save()
@@ -54,7 +56,6 @@ class BookFile: UIViewController {
             print("Error")
         }
     }
-    
     
     
     
