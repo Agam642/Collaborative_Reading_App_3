@@ -157,7 +157,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             picker.dismiss(animated: true, completion: {
-                //self.createBookItem(with: image)
+                self.createBookItem(with: image)
             })
         }
         
@@ -172,7 +172,12 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func createBookItem (with image:UIImage) {
         
-        let bookItem = Add_Books_Library(context: managedObjextContext)
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library", in: self.managedObjextContext)
+        
+        
+        let bookItem = Add_Books_Library(entity: entityDescription!,
+                                        insertInto: self.managedObjextContext)
+        
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
@@ -193,32 +198,30 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let authorTextfield = inputAlert.textFields?[1]
             let pagesTextfield = inputAlert.textFields?[2]
             
-            if bookTextfield?.text != ""  {
-                bookItem.bookTitle = bookTextfield?.text!
-                bookItem.author = authorTextfield?.text!
-                bookItem.numberOfPages = pagesTextfield?.text!
-                
-                do {
-                    try self.managedObjextContext.save()
-                    self.loadData()
-                }catch {
-                    print("Could not save data \(error.localizedDescription)")
-                }
-                
-            }
+            bookItem.bookTitle = bookTextfield?.text!
+            bookItem.author = authorTextfield?.text!
+            bookItem.numberOfPages = pagesTextfield?.text!
             
-            //func that allows passing data with the segue
-            func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            do {
+                try self.managedObjextContext.save()
+                print("Saved Name")
                 
-                let destination = segue.destination as! BookDecisionFinal
-                //sets the variable passedData (an empty string from avaterselction swift file) as the text inputted
-                destination.passedData = (bookTextfield?.text)!
-                destination.passedAuthor = (authorTextfield?.text)!
-                destination.passedPages = (pagesTextfield?.text)!
+            } catch {
+                print("Error")
             }
-
             
         }))
+        /*
+         //func that allows passing data with the segue
+         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         
+         let destination = segue.destination as! BookDecisionFinal
+         //sets the variable passedData (an empty string from avaterselction swift file) as the text inputted
+         destination.passedData = (bookTextfield?.text)!
+         destination.passedAuthor = (authorTextfield?.text)!
+         destination.passedPages = (pagesTextfield?.text)!
+         }
+         */
         
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         

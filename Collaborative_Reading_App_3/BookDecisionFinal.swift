@@ -23,7 +23,9 @@ class BookDecisionFinal: UIViewController {
     @IBOutlet weak var bookPagesField: UILabel!
     
     var images = [Add_Books_Library]()
-    var managedObjextContext: NSManagedObjectContext!
+    
+    let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
     
     var passedData = ""
     var passedAuthor = ""
@@ -38,17 +40,17 @@ class BookDecisionFinal: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let entityDescription =
-            NSEntityDescription.entity(forEntityName: "UserInfo",
-                                       in: managedObjextContext)
+            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
+                                       in: managedObjectContext)
         
         let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
         request.entity = entityDescription
         
         do {
-            var results = try managedObjextContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
+            var results = try managedObjectContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
             
             if results.count > 0 {
-                let match = results[results.count-2] as! NSManagedObject
+                let match = results[results.count-1] as! NSManagedObject
                 
                 bookTitleField.text = match.value(forKey: "bookTitle") as? String
                 print(bookTitleField.text)
