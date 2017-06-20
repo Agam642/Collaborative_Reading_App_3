@@ -14,25 +14,20 @@ class BookDecisionFinal: UIViewController {
     
     
     @IBOutlet weak var bookCover: UIImageView!
-    
     @IBOutlet weak var bookTitleField: UILabel!
-    
     @IBOutlet weak var bookAuthorField: UILabel!
-    
-    
     @IBOutlet weak var bookPagesField: UILabel!
+    
     
     var images = [Add_Books_Library]()
     
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
     
-    var passedData = ""
-    var passedAuthor = ""
-    var passedPages = ""
+    let managedObjectContext2 = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
     
-    
-    override func viewDidLoad() {
+      override func viewDidLoad() {
         super.viewDidLoad()
         
         
@@ -70,6 +65,34 @@ class BookDecisionFinal: UIViewController {
         } catch {
             print("error")
         }
+        
+        //Used for the book cover
+        
+        let entityDescription2 =
+            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
+                                       in: managedObjectContext2)
+        
+        let request2: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        request2.entity = entityDescription2
+        
+        do {
+            var results2 = try managedObjectContext2.fetch(request2 as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results2.count > 0 {
+                let match2 = results2[results2.count-1] as! NSManagedObject
+                
+                let iimage = match2.value(forKey: "bookCover") as? NSData
+                
+                bookCover.image = UIImage(data: iimage! as Data)
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
+        }
+        
+
 
     
     /*
