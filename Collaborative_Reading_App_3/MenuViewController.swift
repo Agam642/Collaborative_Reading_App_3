@@ -121,7 +121,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
         controller2?.didMove(toParentViewController: self)
         
         //Storybaord 3
-        let controller3 = storyboard?.instantiateViewController(withIdentifier: "StartReading")
+        let controller3 = storyboard?.instantiateViewController(withIdentifier: "Timer")
         self.addChildViewController(controller3!)
         //view.addSubview((controller?.view)!)
         controller3?.didMove(toParentViewController: self)
@@ -135,7 +135,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
         
         //Storybaord 5
         let controller5 = storyboard?.instantiateViewController(withIdentifier: "Timer")
-        self.addChildViewController(controller4!)
+        self.addChildViewController(controller5!)
         //view.addSubview((controller?.view)!)
         controller4?.didMove(toParentViewController: self)
         

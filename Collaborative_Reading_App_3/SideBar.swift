@@ -57,7 +57,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         showSideBar(true)
         delegate?.sideBarWillOpen?()
     }
-
     
     func setupSideBar(){
         
@@ -100,6 +99,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
 
     
     func showSideBar(_ shouldOpen:Bool){
+        //removes all behaviours
         animator.removeAllBehaviors()
         isSideBarOpen = shouldOpen
         

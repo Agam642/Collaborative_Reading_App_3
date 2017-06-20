@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class UserInputVC: UIViewController, UITextFieldDelegate {
     
@@ -18,6 +19,11 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var secondsField: UITextField!
     
+    @IBOutlet weak var nextbutton: UIButton!
+    
+    let managedObjectContext = (UIApplication.shared.delegate
+        as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,19 +31,31 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
         self.hoursField.delegate = self
         self.minutesField.delegate = self
         self.secondsField.delegate = self
+        
+        if hoursField.text!.isEmpty || minutesField.text!.isEmpty || secondsField.text!.isEmpty {
+            nextbutton.isEnabled = false
+        }
     }
     
-    var hoursResult : Int!
-    var minutesResult : Int!
-    var secondsResult : Int!
+    var hoursResult : Int16!
+    var minutesResult : Int16!
+    var secondsResult : Int16!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if hoursField.text!.isEmpty || minutesField.text!.isEmpty || secondsField.text!.isEmpty {
+            nextbutton.isEnabled = true
+        } else {
+            nextbutton.isEnabled = false
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         let allowedCharacters = CharacterSet.decimalDigits
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
@@ -46,11 +64,31 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
     //The button to press to pass data from one view controller to the next
     @IBAction func NextButton(_ sender: Any) {
         
-        hoursResult = Int(hoursField.text!)
-        minutesResult = Int(minutesField.text!)
-        secondsResult = Int(secondsField.text!)
+        hoursResult = Int16(hoursField.text!)
+        minutesResult = Int16(minutesField.text!)
+        secondsResult = Int16(secondsField.text!)
         
         self.performSegue(withIdentifier: nextNum, sender: nil)
+        
+        let entityDescription = NSEntityDescription.entity(forEntityName: "TimerInfo",
+                                                           in: managedObjectContext)
+        
+        let contact = TimerInfo(entity: entityDescription!,
+                               insertInto: managedObjectContext)
+        
+        contact.hours = hoursResult
+        contact.minutes = minutesResult
+        contact.seconds = secondsResult
+        
+        do {
+            try managedObjectContext.save()
+            print("Saved Time")
+            print(contact.hours, contact.minutes, contact.seconds)
+            
+        } catch {
+            print("Error")
+        }
+
     }
     
     //Passes the User Input to View Controller
@@ -65,7 +103,5 @@ class UserInputVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-    
-    
+
 }
