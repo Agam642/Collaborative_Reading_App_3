@@ -14,6 +14,8 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var nextButton: UIButton!
+    
     var lastPoint = CGPoint.zero
     var swiped = false
     
@@ -35,12 +37,15 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         
         // initializes and allows the use of the object to be used throughout the view controller
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+            nextButton.isEnabled = false
     }
     
     
     // Reset button clears the image view
     @IBAction func resetButton(_ sender: Any) {
         self.imageView.image = nil
+        nextButton.isEnabled = false
     }
     // Save button stores image in photo gallary
     @IBAction func saveButton(_ sender: Any) {
@@ -109,6 +114,7 @@ class SignaturePad: UIViewController , UIImagePickerControllerDelegate , UINavig
         if let touch = touches.first {
             lastPoint = touch.location(in: self.view)
         }
+        nextButton.isEnabled = true
     }
     
     // Draws lines on the screen as user moves thier finger

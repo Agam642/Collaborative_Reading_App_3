@@ -15,7 +15,6 @@ class MenuViewController: UIViewController, SideBarDelegate {
     
     @IBOutlet weak var avatarImage: UIImageView!
     
-
     
     var delegate:SideBarDelegate?
     var animator:UIDynamicAnimator!
@@ -104,6 +103,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
