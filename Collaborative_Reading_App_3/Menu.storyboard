@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -115,9 +116,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GT-wX5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GT-wX5">
                                 <rect key="frame" x="39" y="519" width="297" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Start Reading Now Button"/>
                                 <connections>
                                     <segue destination="LjF-ef-EpJ" kind="show" id="LNZ-6H-Rbl"/>
@@ -140,6 +140,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="v9Y-GT-wX5" secondAttribute="trailing" constant="23" id="9LW-hD-pqn"/>
+                            <constraint firstItem="v9Y-GT-wX5" firstAttribute="leading" secondItem="lgq-uV-ayK" secondAttribute="leadingMargin" constant="23" id="eJC-ut-iX6"/>
+                            <constraint firstItem="t20-Q6-s9b" firstAttribute="top" secondItem="v9Y-GT-wX5" secondAttribute="bottom" constant="62" id="o6Y-gX-kzt"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>

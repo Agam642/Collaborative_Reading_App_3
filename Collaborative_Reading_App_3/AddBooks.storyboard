@@ -456,10 +456,9 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X2b-JR-nFd"/>
+        <segue reference="fSm-xP-Erx"/>
         <segue reference="ObY-jx-1uC"/>
-        <segue reference="kHb-Ys-qJz"/>
-        <segue reference="dnp-1j-0nJ"/>
-        <segue reference="JJa-PH-tnR"/>
+        <segue reference="FIT-7o-Jsp"/>
+        <segue reference="tQY-ug-J0h"/>
     </inferredMetricsTieBreakers>
 </document>
