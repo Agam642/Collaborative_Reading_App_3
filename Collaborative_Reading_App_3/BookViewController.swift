@@ -163,14 +163,14 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    /*
+    
     
     func createBookItem (with image:UIImage) {
         
         let bookItem = Add_Books_Library(context: managedObjextContext)
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
-        
+        /*
         let inputAlert = UIAlertController(title: "New Book", message: "Enter the Book.", preferredStyle: .alert)
         inputAlert.addTextField { (textfield:UITextField) in
             textfield.placeholder = "Book"
@@ -214,16 +214,13 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
             
         }))
+ 
         
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(inputAlert, animated: true, completion: nil)
         
-        
-    }
- */
-
-        
+      */  
     }
 
 
@@ -233,6 +230,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
 
 
-
+}
 
 

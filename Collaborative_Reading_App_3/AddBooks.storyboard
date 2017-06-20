@@ -76,7 +76,6 @@
                         <barButtonItem key="rightBarButtonItem" image="Plus Math-50" id="TRl-JM-h8m">
                             <connections>
                                 <action selector="addBook:" destination="uSz-QF-Tqy" id="VpC-ho-5JL"/>
-                                <segue destination="2Ji-iC-mvU" kind="show" id="kHb-Ys-qJz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -93,7 +92,7 @@
             <objects>
                 <navigationController storyboardIdentifier="first" automaticallyAdjustsScrollViewInsets="NO" id="ihM-xI-FWb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CyT-Ij-Jfz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CyT-Ij-Jfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -449,10 +448,9 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tQY-ug-J0h"/>
-        <segue reference="kHb-Ys-qJz"/>
         <segue reference="JJa-PH-tnR"/>
-        <segue reference="X2b-JR-nFd"/>
+        <segue reference="dnp-1j-0nJ"/>
         <segue reference="ObY-jx-1uC"/>
+        <segue reference="X2b-JR-nFd"/>
     </inferredMetricsTieBreakers>
 </document>
