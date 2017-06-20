@@ -180,7 +180,6 @@
 				3F75E91F1EEAD0B200A3BF8E /* Timer */,
 				3F75E92C1EEAD50A00A3BF8E /* Side Menu */,
 				3F75E9361EEAD72400A3BF8E /* Add Books */,
-				3F06FFA71EB8B92100B334B9 /* Youtube Menu */,
 				3F7753CA1EF16109000BBBDD /* FirstRun */,
 				3F8C5DBF1EF3581C008BF0BA /* AvatarSelection(seperate) */,
 				3F155F8E1E9D033400A6B555 /* AppDelegate.swift */,
@@ -264,6 +263,7 @@
 				3FD340601EA2D1DE00688BD3 /* AddingBookViewController.swift */,
 				3FD340621EA3C8EB00688BD3 /* ReadToStartReadingViewController.swift */,
 				3FB2AF021E9FAB4B00B4BC0C /* Myriad Pro Regular.ttf */,
+				3F06FFA71EB8B92100B334B9 /* Youtube Menu */,
 			);
 			name = "Not used";
 			sourceTree = "<group>";

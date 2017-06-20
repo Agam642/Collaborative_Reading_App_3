@@ -119,13 +119,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Collaborative_Reading_App_3/MenuViewController.swift"
-            timestampString = "519273870.48141"
+            filePath = "Collaborative_Reading_App_3/UserInputVC.swift"
+            timestampString = "519606022.238371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "MenuButtonTouch(_:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "NextButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

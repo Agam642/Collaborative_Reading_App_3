@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ihM-xI-FWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ihM-xI-FWb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -73,6 +73,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="d8R-Oq-be8">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ytv-EN-FEE"/>
                         <barButtonItem key="rightBarButtonItem" image="Plus Math-50" id="TRl-JM-h8m">
                             <connections>
                                 <action selector="addBook:" destination="uSz-QF-Tqy" id="VpC-ho-5JL"/>
@@ -81,12 +82,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="BackButton" destination="ytv-EN-FEE" id="REl-8S-zrs"/>
                         <outlet property="collectionView" destination="IP8-gm-6VU" id="O1Y-Zz-zQo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q45-Q2-CVk" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2207.1999999999998" y="201.94902548725639"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="iXf-OT-O61">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Menu" storyboardName="Menu" id="1y8-VP-P9O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qn-pF-bW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2207" y="634"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0zr-3t-ob5">
@@ -449,10 +459,10 @@
         <image name="button" width="61" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tQY-ug-J0h"/>
-        <segue reference="kHb-Ys-qJz"/>
-        <segue reference="JJa-PH-tnR"/>
         <segue reference="X2b-JR-nFd"/>
         <segue reference="ObY-jx-1uC"/>
+        <segue reference="kHb-Ys-qJz"/>
+        <segue reference="dnp-1j-0nJ"/>
+        <segue reference="JJa-PH-tnR"/>
     </inferredMetricsTieBreakers>
 </document>

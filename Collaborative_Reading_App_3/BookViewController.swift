@@ -11,8 +11,9 @@ import CoreData
 
 class BookViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var BackButton: UIBarButtonItem!
     
     var books = [Add_Books_Library]()
     
@@ -163,6 +164,10 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
+    
+}
+
+    
     /*
     
     func createBookItem (with image:UIImage) {
@@ -224,7 +229,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
  */
 
         
-    }
+    
 
 
 
