@@ -16,12 +16,14 @@
 		3F1321891EAF7BBC002D82BD /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1321881EAF7BBC002D82BD /* BookCell.swift */; };
 		3F13218B1EAF7BD9002D82BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13218A1EAF7BD9002D82BD /* Extensions.swift */; };
 		3F13218E1EAF838A002D82BD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13218D1EAF838A002D82BD /* Book.swift */; };
+		3F142F1E1EF953DF00FC6C6B /* TurorialFinalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F142F1D1EF953DF00FC6C6B /* TurorialFinalScreen.swift */; };
 		3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F8E1E9D033400A6B555 /* AppDelegate.swift */; };
 		3F155F941E9D033400A6B555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F921E9D033400A6B555 /* Main.storyboard */; };
 		3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F155F951E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld */; };
 		3F155F991E9D033400A6B555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F981E9D033400A6B555 /* Assets.xcassets */; };
 		3F155F9C1E9D033400A6B555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F155F9A1E9D033400A6B555 /* LaunchScreen.storyboard */; };
 		3F1F766A1ECF206D00F86161 /* CameraUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1F76691ECF206D00F86161 /* CameraUse.swift */; };
+		3F58E68A1EF7FF0E0052DB47 /* TutorialEndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58E6891EF7FF0E0052DB47 /* TutorialEndScreen.swift */; };
 		3F75E9211EEAD0C000A3BF8E /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */; };
 		3F75E9231EEAD13100A3BF8E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */; };
 		3F75E9271EEAD2D000A3BF8E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9261EEAD2D000A3BF8E /* TimerViewController.swift */; };
@@ -62,6 +64,7 @@
 		3F1321881EAF7BBC002D82BD /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		3F13218A1EAF7BD9002D82BD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3F13218D1EAF838A002D82BD /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		3F142F1D1EF953DF00FC6C6B /* TurorialFinalScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurorialFinalScreen.swift; sourceTree = "<group>"; };
 		3F155F8B1E9D033400A6B555 /* Collaborative_Reading_App_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collaborative_Reading_App_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F155F8E1E9D033400A6B555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F155F931E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		3F155F9B1E9D033400A6B555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F155F9D1E9D033400A6B555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1F76691ECF206D00F86161 /* CameraUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraUse.swift; path = Collaborative_Reading_App_3/CameraUse.swift; sourceTree = "<group>"; };
+		3F58E6891EF7FF0E0052DB47 /* TutorialEndScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialEndScreen.swift; sourceTree = "<group>"; };
 		3F75E9201EEAD0C000A3BF8E /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		3F75E9221EEAD13100A3BF8E /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3F75E9261EEAD2D000A3BF8E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				3FE4B1BA1ECD0F22007BC28B /* FirstRunTutorial.storyboard */,
+				3F58E6891EF7FF0E0052DB47 /* TutorialEndScreen.swift */,
+				3F142F1D1EF953DF00FC6C6B /* TurorialFinalScreen.swift */,
 				3FBCF1C81ED85FD500415B2F /* SignaturePad.swift */,
 				3FE4B1BE1ECD0FE9007BC28B /* AvatarSelection.swift */,
 				3FD340641EA7904100688BD3 /* NameInput.swift */,
@@ -372,8 +378,10 @@
 				3F13218B1EAF7BD9002D82BD /* Extensions.swift in Sources */,
 				3F75E9321EEAD5C000A3BF8E /* SideBarTableViewController.swift in Sources */,
 				3F75E9341EEAD6AB00A3BF8E /* SideBar.swift in Sources */,
+				3F58E68A1EF7FF0E0052DB47 /* TutorialEndScreen.swift in Sources */,
 				B06ACBA31EEDB54500FDB2EF /* BookData.swift in Sources */,
 				3F75E9401EEAD88A00A3BF8E /* CameraUpload.swift in Sources */,
+				3F142F1E1EF953DF00FC6C6B /* TurorialFinalScreen.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
 				3F75E92B1EEAD42D00A3BF8E /* CustomColor.swift in Sources */,
