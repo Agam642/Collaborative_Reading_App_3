@@ -15,7 +15,6 @@ class MenuViewController: UIViewController, SideBarDelegate {
     
     @IBOutlet weak var avatarImage: UIImageView!
     
-    @IBOutlet weak var MenuButton: UIButton!
     
     var delegate:SideBarDelegate?
     var animator:UIDynamicAnimator!
@@ -103,12 +102,6 @@ class MenuViewController: UIViewController, SideBarDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func MenuButtonTouch(_ sender: UIButton) {
-  //      SideBar().showSideBar(true)
-    //    delegate?.sideBarWillOpen?()
     }
     
     
