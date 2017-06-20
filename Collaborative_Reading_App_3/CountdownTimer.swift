@@ -8,6 +8,8 @@
 
 import UIKit
 
+//use popover
+
 protocol CountdownTimerDelegate {
     func countdownTimerDone()
     func countdownTime(time: (hours: String, minutes:String, seconds:String))
@@ -17,9 +19,9 @@ class CountdownTimer {
     
     var delegate: CountdownTimerDelegate?
     
-    fileprivate var timer = Timer()
-    fileprivate var seconds = 0.0
-    fileprivate var duration = 0.0
+    var timer = Timer()
+    var seconds = 0.0
+    var duration = 0.0
     
     
     func setTimer(hours:Int, minutes:Int, seconds:Int) {
@@ -40,7 +42,7 @@ class CountdownTimer {
     }
     
     func pause() {
-        timer.invalidate
+        timer.invalidate()
     }
     
     func stop() {
@@ -50,11 +52,11 @@ class CountdownTimer {
     }
     
     
-    fileprivate func runTimer() {
+    func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
-    @objc fileprivate func updateTimer(){
+    @objc   func updateTimer(){
         if duration < 0.0 {
             timer.invalidate()
             timerDone()
@@ -65,7 +67,7 @@ class CountdownTimer {
         }
     }
     
-    fileprivate func timeString(time:TimeInterval) -> (hours: String, minutes:String, seconds:String) {
+    func timeString(time:TimeInterval) -> (hours: String, minutes:String, seconds:String) {
         
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
@@ -75,18 +77,10 @@ class CountdownTimer {
         
     }
     
-    fileprivate func timerDone() {
+    func timerDone() {
         timer.invalidate()
         duration = seconds
         delegate?.countdownTimerDone()
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
