@@ -167,7 +167,12 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func createBookItem (with image:UIImage) {
         
-        let bookItem = Add_Books_Library(context: managedObjextContext)
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library", in: self.managedObjextContext)
+        
+        
+        let bookItem = Add_Books_Library(entity: entityDescription!,
+                                        insertInto: self.managedObjextContext)
+        
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
@@ -188,15 +193,9 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let authorTextfield = inputAlert.textFields?[1]
             let pagesTextfield = inputAlert.textFields?[2]
             
-            let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library",
-                                                               in: self.managedObjextContext)
-            
-            let contact = Add_Books_Library(entity: entityDescription!,
-                                            insertInto: self.managedObjextContext)
-            
-            contact.bookTitle = bookTextfield?.text!
-            contact.author = authorTextfield?.text!
-            contact.numberOfPages = pagesTextfield?.text!
+            bookItem.bookTitle = bookTextfield?.text!
+            bookItem.author = authorTextfield?.text!
+            bookItem.numberOfPages = pagesTextfield?.text!
             
             do {
                 try self.managedObjextContext.save()
@@ -218,10 +217,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
          destination.passedPages = (pagesTextfield?.text)!
          }
          */
-        
-        
-        
-        
         
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
