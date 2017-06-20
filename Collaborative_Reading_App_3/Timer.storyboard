@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CNf-kH-rVY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CNf-kH-rVY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,6 +71,7 @@
                     <connections>
                         <outlet property="hoursField" destination="Q1y-Sm-xbw" id="ItM-1Y-W1L"/>
                         <outlet property="minutesField" destination="rWI-EU-wfK" id="VpW-fy-GUc"/>
+                        <outlet property="nextbutton" destination="Dzt-S6-N3d" id="u5c-GL-ksf"/>
                         <outlet property="secondsField" destination="xu6-I0-Jv3" id="A0D-BY-2ck"/>
                         <segue destination="bY4-ty-wk8" kind="show" identifier="numNext" id="NaL-tJ-psS">
                             <nil key="action"/>

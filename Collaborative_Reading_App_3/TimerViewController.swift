@@ -22,9 +22,9 @@ class TimerViewController: UIViewController, CountdownTimerDelegate {
     var countdownTimerDidStart = false
     
     // Variables usd for the timer
-    var selectedSecs : Int = 0
-    var selectedMins : Int = 30
-    var selectedHours : Int = 0
+    var selectedSecs : Int16 = 0
+    var selectedMins : Int16 = 30
+    var selectedHours : Int16 = 0
     
     
     //let selectedHours : Int = selectedMins % 60
@@ -43,9 +43,9 @@ class TimerViewController: UIViewController, CountdownTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countdownTimer.setTimer(hours: selectedHours, minutes: selectedMins, seconds: selectedSecs)
+        countdownTimer.setTimer(hours: Int(selectedHours), minutes: Int(selectedMins), seconds: Int(selectedSecs))
         countdownTimer.delegate = self
-        progressBar.setProgressBar(hours: selectedHours, minutes: selectedMins, seconds: selectedSecs)
+        progressBar.setProgressBar(hours: Int(selectedHours), minutes: Int(selectedMins), seconds: Int(selectedSecs))
         stopBtn.isEnabled = false
         stopBtn.alpha = 0.5
         seconds.text = String(selectedSecs)
