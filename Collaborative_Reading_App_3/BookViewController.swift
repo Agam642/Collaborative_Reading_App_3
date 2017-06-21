@@ -164,8 +164,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    
-}
 
     
     func createBookItem (with image:UIImage) {
