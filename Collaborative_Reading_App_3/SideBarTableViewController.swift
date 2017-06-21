@@ -34,7 +34,7 @@ class SideBarTableViewController: UITableViewController {
         return tableData.count
     }
     
-    
+    //Displays the side bar as a tableview 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "Cell")

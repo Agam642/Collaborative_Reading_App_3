@@ -66,11 +66,11 @@ class ProgressBar: UIView, CAAnimationDelegate {
     
     func loadBgProgressBar() {
         
-        //let startAngle = CGFloat(-Double.pi / 2)
+        //Stes the position of the progress bar
         let startAngle = CGFloat(0.0)
-        //let endAngle = CGFloat(3 * Double.pi / 2)
         let endAngle = CGFloat(0.0)
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
+        //Stes the properties of the progress bar
         let gradientMaskLayer = gradientMaskBg()
         bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
         bgProgressLayer.backgroundColor = UIColor.clear.cgColor
@@ -84,11 +84,11 @@ class ProgressBar: UIView, CAAnimationDelegate {
         layer.addSublayer(gradientMaskLayer)
     }
     
-    
     func gradientMaskBg() -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.locations = [0.0, 1.0]
+        //Adds the colours
         let colorTop: AnyObject = CustomColor.flipside.cgColor
         let colorBottom: AnyObject = CustomColor.flipside.cgColor
         let arrayOfColors: [AnyObject] = [colorTop, colorBottom]
@@ -97,7 +97,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         return gradientLayer
     }
     
-    
+    //Sets the duration of the animation
     func setProgressBar(hours:Int, minutes:Int, seconds:Int) {
         let hoursToSeconds = hours * 3600
         let minutesToSeconds = minutes * 60
@@ -121,11 +121,12 @@ class ProgressBar: UIView, CAAnimationDelegate {
         stopAnimation()
     }
     
-    
+    //Starts the animation
     func startAnimation() {
         
         resetAnimation()
         
+        //Sets the properties of the animation
         fgProgressLayer.strokeEnd = 0.0
         animation.keyPath = "strokeEnd"
         animation.fromValue = CGFloat(0.0)
@@ -140,7 +141,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         
     }
     
-    
+    //Resets the properites of the animation
     func resetAnimation() {
         fgProgressLayer.speed = 1.0
         fgProgressLayer.timeOffset = 0.0
@@ -149,7 +150,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         animationDidStart = false
     }
     
-    
+    //Stops the animation
     func stopAnimation() {
         fgProgressLayer.speed = 1.0
         fgProgressLayer.timeOffset = 0.0
@@ -159,7 +160,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         animationDidStart = false
     }
     
-    
+    //Pauses the animation
     func pauseAnimation(){
         let pausedTime = fgProgressLayer.convertTime(CACurrentMediaTime(), from: nil)
         fgProgressLayer.speed = 0.0
@@ -167,7 +168,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         
     }
     
-    
+    //Resumes the animation
     func resumeAnimation(){
         let pausedTime = fgProgressLayer.timeOffset
         fgProgressLayer.speed = 1.0

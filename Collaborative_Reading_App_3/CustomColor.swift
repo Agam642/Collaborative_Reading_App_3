@@ -10,6 +10,7 @@ import UIKit
 
 struct CustomColor {
     
+    //Sets the customrgb values of the colours used
     static let flipside = UIColor(red:0.09, green:0.10, blue:0.11, alpha:1.0)
     static let aquaBlue = UIColor(red:0.00, green:0.50, blue:1.00, alpha:1.0)
     static let snow = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)

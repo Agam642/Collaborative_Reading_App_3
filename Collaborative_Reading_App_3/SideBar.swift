@@ -85,6 +85,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
     
+    //Recognizes when the user swipes left
     func handleSwipe(_ recognizer:UISwipeGestureRecognizer){
         if recognizer.direction == UISwipeGestureRecognizerDirection.left{
             showSideBar(false)
@@ -97,7 +98,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         
     }
 
-    
+    //Plays the animation with all its propreties
     func showSideBar(_ shouldOpen:Bool){
         //removes all behaviours
         animator.removeAllBehaviors()
@@ -108,6 +109,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let boundaryX:CGFloat = (shouldOpen) ? barWidth : -barWidth - 1
         
         
+        //Used to create the bouncy animation effect
         let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])
         gravityBehavior.gravityDirection = CGVector(dx: gravityX, dy: 0)
         animator.addBehavior(gravityBehavior)
