@@ -482,15 +482,6 @@
                                     <segue destination="eLE-OI-qLv" kind="show" id="IuM-ms-0Y4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhN-Hg-Mlr">
-                                <rect key="frame" x="24" y="145" width="327" height="286"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="286" id="fmU-Di-hlx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="54"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -527,5 +518,6 @@
         <segue reference="wZb-Bd-Wrj"/>
         <segue reference="QEI-hq-uCl"/>
         <segue reference="fSm-xP-Erx"/>
+        <segue reference="tQY-ug-J0h"/>
     </inferredMetricsTieBreakers>
 </document>
