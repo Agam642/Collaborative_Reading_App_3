@@ -9,6 +9,6 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
-    
+    //outlet for cell
     @IBOutlet weak var myImage: UIImageView!
 }

@@ -23,6 +23,7 @@ class CameraUse: UIViewController, UINavigationControllerDelegate, UIImagePicker
         // Dispose of any resources that can be recreated.
     }
     
+    //this function opens lets you select an image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -39,7 +40,7 @@ class CameraUse: UIViewController, UINavigationControllerDelegate, UIImagePicker
         }
     }
     
-   
+   //This func opens the camera and allows you to take a photo
     @IBAction func shootPhoto(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
