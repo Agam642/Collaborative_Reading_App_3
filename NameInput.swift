@@ -13,8 +13,10 @@ class NameInput: UIViewController, UITextFieldDelegate {
 
     //outlet for the text field
     @IBOutlet weak var nameInput: UITextField!
+    //outlet for next button
     @IBOutlet weak var nextButton: UIButton!
     
+    //used for core data
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
     
@@ -51,6 +53,7 @@ class NameInput: UIViewController, UITextFieldDelegate {
     
 }
     func keyboardWillShow(notification: NSNotification) {
+        //for setting up the keyboard and showing it
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
                 self.view.frame.origin.y -= keyboardSize.height
@@ -59,6 +62,7 @@ class NameInput: UIViewController, UITextFieldDelegate {
     }
     
     func keyboardWillHide(notification: NSNotification) {
+        //for hiding the keyboard
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
                 self.view.frame.origin.y += keyboardSize.height
@@ -71,6 +75,8 @@ class NameInput: UIViewController, UITextFieldDelegate {
         //performs a segue from name view controller to the avater selection
         performSegue(withIdentifier: "goToNext", sender: self)
         
+        
+        //CORE DATA
         let entityDescription = NSEntityDescription.entity(forEntityName: "UserInfo",
                                        in: managedObjectContext)
         

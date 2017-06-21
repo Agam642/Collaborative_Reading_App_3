@@ -17,8 +17,10 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     //outlet for label with name
     @IBOutlet weak var namelbl: UILabel!
     
+    //Outlet for the nextbutton
     @IBOutlet weak var NextButton: UIButton!
     
+    //used for core data
     let managedObjectContext = (UIApplication.shared.delegate
         as! AppDelegate).persistentContainer.viewContext
 
@@ -30,9 +32,10 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //so nextbutton is disabled at start
         NextButton.isEnabled = false
         
+        //to show collectionview
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -70,8 +73,10 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         cell!.layer.borderWidth = 2.0
         cell!.layer.borderColor = UIColor.white.cgColor
         
+        //sets imagName as the image that is clicked
         let imageName = images[indexPath.row]
         
+        //CORE DATA storing
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserInfo",
                                        in: managedObjectContext)
@@ -82,18 +87,20 @@ class AvatarSelection: UIViewController, UICollectionViewDelegate, UICollectionV
         contact.avatarName = imageName
         
         do {
+            //trys to save
             try managedObjectContext.save()
             print("Saved Avatar")
             
         } catch {
             print("ERROR")
         }
-        
+        //to enable button when avatar is selected
         NextButton.isEnabled = true
 
     }
     
     public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        //to highlight cell that is selected
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = .none
         cell!.layer.borderWidth = 0

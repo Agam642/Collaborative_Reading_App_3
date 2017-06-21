@@ -13,7 +13,7 @@
         <!--Signature Pad-->
         <scene sceneID="p5t-YI-Jjw">
             <objects>
-                <viewController id="ByZ-TS-bHh" customClass="SignaturePad" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first" id="ByZ-TS-bHh" customClass="SignaturePad" customModule="Collaborative_Reading_App_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pE6-qI-4SZ"/>
                         <viewControllerLayoutGuide type="bottom" id="BAv-bq-oLO"/>

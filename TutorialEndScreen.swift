@@ -17,24 +17,28 @@ class TutorialEndScreen: UIViewController {
         // Do any additional setup after loading the view.
         menuImage.alpha = 0.5
     
+        //making the swipe gesture recognizer
         let showGestureRecognizer:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(SideBar.handleSwipe(_:)))
         showGestureRecognizer.direction = UISwipeGestureRecognizerDirection.right
         view.addGestureRecognizer(showGestureRecognizer)
         
+        //for recognizing double tap
         let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         tap.numberOfTapsRequired = 2
         view.addGestureRecognizer(tap)
     }
 
-    
+    //func to use swipe gesture
     func handleSwipe(_ recognizer:UISwipeGestureRecognizer){
        print("SWIPED")
+        //segues to the next viewcontroller
         self.performSegue(withIdentifier: "swipeSegue", sender: self)
     }
 
-    
+    //func to handle double tapped
     func doubleTapped() {
         print("WOW GOOD JOB")
+        //segues to the next viewcontroller
         self.performSegue(withIdentifier: "swipeSegue", sender: self)
     }
     
