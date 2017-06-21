@@ -46,7 +46,8 @@ class BookDecisionFinal: UIViewController {
             
             if results.count > 0 {
                 let match = results[results.count-1] as! NSManagedObject
-                
+               
+                //Fetches the lebel values as the core data strings
                 bookTitleField.text = match.value(forKey: "bookTitle") as? String
                 print(bookTitleField.text)
                 
@@ -72,6 +73,7 @@ class BookDecisionFinal: UIViewController {
             NSEntityDescription.entity(forEntityName: "Add_Books_Library",
                                        in: managedObjectContext2)
         
+        //Fetches the book data from Core Data
         let request2: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
         request2.entity = entityDescription2
         
@@ -91,62 +93,6 @@ class BookDecisionFinal: UIViewController {
         } catch {
             print("error")
         }
-        
-
-
     
-    /*
-    override func viewWillAppear(_ animated: Bool) {
-        let entityDescription =
-            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
-                                       in: managedObjextContext)
-        
-        let request: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
-        request.entity = entityDescription
-        
-        do {
-            var results = try managedObjextContext.fetch(request as!NSFetchRequest<NSFetchRequestResult>)
-            
-            if results.count > 0 {
-                let match = results[results.count-1] as! NSManagedObject
-                
-                bookTitleField.text = match.value(forKey: "bookTitle") as? String
-                
-                print(bookTitleField.text)
-                
-            } else {
-                print("Error in Name")
-            }
-            
-        } catch {
-            print("error")
-        }
     }
- 
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        {
-            bookCover.image = image
-            //myImageView.image = images.
-        } else {
-            //Diplay error message
-        }
-        
-        self.dismiss(animated: true, completion: nil)
-        
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true, completion: nil)
-        }
-    }
- */
-    
-}
 }

@@ -37,8 +37,6 @@
 		3F75E9381EEAD74400A3BF8E /* AddBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */; };
 		3F75E93A1EEAD7B400A3BF8E /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */; };
 		3F75E93C1EEAD80C00A3BF8E /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E93B1EEAD80C00A3BF8E /* BookViewController.swift */; };
-		3F75E93E1EEAD87200A3BF8E /* BookFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E93D1EEAD87200A3BF8E /* BookFile.swift */; };
-		3F75E9401EEAD88A00A3BF8E /* CameraUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */; };
 		3F75E9421EEAD89900A3BF8E /* BookDecisionFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */; };
 		3F8C5DBE1EF357DE008BF0BA /* NameInput2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C5DBD1EF357DE008BF0BA /* NameInput2.swift */; };
 		3F8C5DC11EF3584E008BF0BA /* AvatarSelection2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C5DC01EF3584E008BF0BA /* AvatarSelection2.swift */; };
@@ -88,8 +86,6 @@
 		3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBooks.storyboard; sourceTree = "<group>"; };
 		3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
 		3F75E93B1EEAD80C00A3BF8E /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
-		3F75E93D1EEAD87200A3BF8E /* BookFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFile.swift; sourceTree = "<group>"; };
-		3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUpload.swift; sourceTree = "<group>"; };
 		3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDecisionFinal.swift; sourceTree = "<group>"; };
 		3F8C5DBD1EF357DE008BF0BA /* NameInput2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameInput2.swift; sourceTree = "<group>"; };
 		3F8C5DC01EF3584E008BF0BA /* AvatarSelection2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarSelection2.swift; sourceTree = "<group>"; };
@@ -230,8 +226,6 @@
 				3F75E9371EEAD74400A3BF8E /* AddBooks.storyboard */,
 				3F75E9391EEAD7B400A3BF8E /* BookViewCell.swift */,
 				3F75E93B1EEAD80C00A3BF8E /* BookViewController.swift */,
-				3F75E93D1EEAD87200A3BF8E /* BookFile.swift */,
-				3F75E93F1EEAD88A00A3BF8E /* CameraUpload.swift */,
 				3F75E9411EEAD89900A3BF8E /* BookDecisionFinal.swift */,
 				B06ACBA21EEDB54500FDB2EF /* BookData.swift */,
 			);
@@ -384,7 +378,6 @@
 				3F75E9341EEAD6AB00A3BF8E /* SideBar.swift in Sources */,
 				3F58E68A1EF7FF0E0052DB47 /* TutorialEndScreen.swift in Sources */,
 				B06ACBA31EEDB54500FDB2EF /* BookData.swift in Sources */,
-				3F75E9401EEAD88A00A3BF8E /* CameraUpload.swift in Sources */,
 				3F142F1E1EF953DF00FC6C6B /* TurorialFinalScreen.swift in Sources */,
 				3F155F8F1E9D033400A6B555 /* AppDelegate.swift in Sources */,
 				3FD340651EA7904100688BD3 /* NameInput.swift in Sources */,
@@ -392,7 +385,6 @@
 				3F75E9421EEAD89900A3BF8E /* BookDecisionFinal.swift in Sources */,
 				3FD340611EA2D1DE00688BD3 /* AddingBookViewController.swift in Sources */,
 				3F155F971E9D033400A6B555 /* Collaborative_Reading_App_3.xcdatamodeld in Sources */,
-				3F75E93E1EEAD87200A3BF8E /* BookFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
