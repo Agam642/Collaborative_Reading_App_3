@@ -24,7 +24,7 @@ class NameInput: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameInput.delegate = self
         
-      //  nextButton.isEnabled = false
+      nextButton.isEnabled = false
         
         // Do any additional setup after loading the view.
         
@@ -49,7 +49,7 @@ class NameInput: UIViewController, UITextFieldDelegate {
     */
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-           // nextButton.isEnabled = true
+           nextButton.isEnabled = true
     
 }
     func keyboardWillShow(notification: NSNotification) {

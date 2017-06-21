@@ -50,6 +50,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
             NSEntityDescription.entity(forEntityName: "UserInfo",
                                        in: managedObjectContext)
         
+        //Saves and displays the name to the user
         let request: NSFetchRequest<UserInfo> = UserInfo.fetchRequest()
         request.entity = entityDescription
         
@@ -71,7 +72,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
             print("error")
         }
         
-        
+        //Saves the avatar image to core data
         let entityDescription2 =
             NSEntityDescription.entity(forEntityName: "UserInfo",
                                        in: managedObjectContext2)
@@ -105,7 +106,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
     }
     
     
-    
+    //References the story boards
     func sideBarDidSelectButtonAtIndex(_ index: Int) {
         
         //Storyboard 1
@@ -139,7 +140,7 @@ class MenuViewController: UIViewController, SideBarDelegate {
         //view.addSubview((controller?.view)!)
         controller4?.didMove(toParentViewController: self)
         
-        
+        //Index created to move to the other storyboards upon selection of the idex 
         if index == 0 {
             view.addSubview((controller?.view)!)
         } else if index == 1 {

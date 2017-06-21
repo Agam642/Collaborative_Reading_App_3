@@ -51,16 +51,35 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return books.count
     }
     
+    //Displays the image selected in collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BookViewCell
         
-        let bookItem = books[indexPath.row]
+        let entityDescription2 =
+            NSEntityDescription.entity(forEntityName: "Add_Books_Library",
+                                       in: managedObjextContext)
         
-        if let bookImage = UIImage(data: bookItem.bookCover! as Data) {
-            cell.imgCell.image = bookImage
+        let request2: NSFetchRequest<Add_Books_Library> = Add_Books_Library.fetchRequest()
+        request2.entity = entityDescription2
+        
+
+        
+        do {
+            var results2 = try managedObjextContext.fetch(request2 as!NSFetchRequest<NSFetchRequestResult>)
+            
+            if results2.count > 0 {
+                let match2 = results2[results2.count-1] as! NSManagedObject
+                
+                let iimage = match2.value(forKey: "bookCover") as? NSData
+                
+                cell.imgCell.image = UIImage(data: iimage! as Data)
+            } else {
+                print("Error in Name")
+            }
+            
+        } catch {
+            print("error")
         }
-        
-        cell.lblCell.text = bookItem.bookTitle
         
         //let holdToDelete = UILongPressGestureRecognizer(target: self, action: "longPressDelete:")
         //holdToDelete.minimumPressDuration = 1.00
@@ -152,7 +171,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         picker.dismiss(animated: true, completion: nil)
     }
     
-/*
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -160,23 +179,20 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 self.createBookItem(with: image)
             })
         }
-        
-        
     }
     
-
-    
-    func createBookItem (with image:UIImage) {
+    func createBookItem(with image:UIImage) {
         
         let entityDescription = NSEntityDescription.entity(forEntityName: "Add_Books_Library", in: self.managedObjextContext)
         
         
         let bookItem = Add_Books_Library(entity: entityDescription!,
                                         insertInto: self.managedObjextContext)
-        
+        //Saves the book cover to dore data
         bookItem.bookCover = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
         
         
+        //Creates an inputalter for the user to enter inall their information
         let inputAlert = UIAlertController(title: "New Book", message: "Enter the Book.", preferredStyle: .alert)
         inputAlert.addTextField { (textfield:UITextField) in
             textfield.placeholder = "Book"
@@ -194,6 +210,7 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let authorTextfield = inputAlert.textFields?[1]
             let pagesTextfield = inputAlert.textFields?[2]
             
+            //Saves the textfields into coredata
             bookItem.bookTitle = bookTextfield?.text!
             bookItem.author = authorTextfield?.text!
             bookItem.numberOfPages = pagesTextfield?.text!
@@ -207,17 +224,6 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
             
         }))
-        /*
-         //func that allows passing data with the segue
-         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         
-         let destination = segue.destination as! BookDecisionFinal
-         //sets the variable passedData (an empty string from avaterselction swift file) as the text inputted
-         destination.passedData = (bookTextfield?.text)!
-         destination.passedAuthor = (authorTextfield?.text)!
-         destination.passedPages = (pagesTextfield?.text)!
-         }
-         */
         
         inputAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
@@ -230,10 +236,9 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     
 
-*/
 
 
-}
+
 
 
 
